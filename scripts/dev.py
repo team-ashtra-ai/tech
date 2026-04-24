@@ -17,8 +17,14 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WATCH_DIRS = [ROOT / "src", ROOT / "scripts", ROOT / "schema", ROOT / "public"]
+# Watch only source inputs. `public/`, `schema/` and `dist/` are generated
+# during builds, so watching them creates a rebuild loop.
+WATCH_DIRS = [ROOT / "src", ROOT / "scripts"]
 WATCH_EXTENSIONS = {".py", ".json", ".html", ".css", ".js", ".md", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".avif", ".ico", ".mp4"}
+
+
+class ReusableTCPServer(socketserver.TCPServer):
+    allow_reuse_address = True
 
 
 def file_state() -> dict[str, float]:
@@ -55,9 +61,15 @@ def run_build() -> bool:
 def serve(port: int) -> None:
     os.chdir(ROOT / "dist")
     handler = http.server.SimpleHTTPRequestHandler
-    with socketserver.TCPServer(("127.0.0.1", port), handler) as httpd:
-        print(f"[dev] preview server running at http://127.0.0.1:{port}", flush=True)
-        httpd.serve_forever()
+    for candidate in range(port, port + 10):
+        try:
+            with ReusableTCPServer(("127.0.0.1", candidate), handler) as httpd:
+                print(f"[dev] preview server running at http://127.0.0.1:{candidate}", flush=True)
+                httpd.serve_forever()
+        except OSError as error:
+            if error.errno != 98 or candidate == port + 9:
+                raise
+            print(f"[dev] port {candidate} in use, trying {candidate + 1}", flush=True)
 
 
 def watch(interval: float) -> None:
