@@ -7,12 +7,12 @@ source files change so edits are visible on a local browser refresh.
 from __future__ import annotations
 
 import http.server
-import os
 import socketserver
 import subprocess
 import sys
 import threading
 import time
+from functools import partial
 from pathlib import Path
 
 
@@ -59,8 +59,9 @@ def run_build() -> bool:
 
 
 def serve(port: int) -> None:
-    os.chdir(ROOT / "dist")
-    handler = http.server.SimpleHTTPRequestHandler
+    # Keep the process cwd at the repo root. Builds replace `dist/`, and a
+    # process cwd inside a removed directory causes empty HTTP responses.
+    handler = partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT / "dist"))
     for candidate in range(port, port + 10):
         try:
             with ReusableTCPServer(("127.0.0.1", candidate), handler) as httpd:
