@@ -3,9 +3,14 @@
   color-scheme: dark;
   --color-ink: #08151d;
   --color-ink-2: #0d1d28;
+  --color-body: #08151d;
   --color-primary: #253657;
   --color-surface: #102630;
   --color-surface-2: #152f3d;
+  --color-panel: rgba(16, 38, 48, .82);
+  --color-panel-strong: rgba(8, 21, 29, .94);
+  --color-header: rgba(8, 21, 29, .86);
+  --color-hero-overlay: linear-gradient(90deg, rgba(8, 21, 29, .90), rgba(8, 21, 29, .62) 52%, rgba(8, 21, 29, .38));
   --color-text: #f5f1e8;
   --color-muted: #a7b6bb;
   --color-accent: #e7304d;
@@ -16,6 +21,7 @@
   --color-error: #ff5f6d;
   --color-border: rgba(245, 241, 232, .14);
   --color-focus: #9be1e5;
+  --body-background: radial-gradient(circle at 16% 12%, rgba(155, 225, 229, .16), transparent 28rem), linear-gradient(135deg, #08151d, #0d1d28);
   --font-heading: "Space Grotesk", "Aptos Display", "Segoe UI", sans-serif;
   --font-body: "Manrope", "Aptos", "Segoe UI", sans-serif;
   --space-4: .25rem;
@@ -42,16 +48,25 @@
   --z-header: 60;
   --z-menu: 80;
   --z-cookie: 100;
+  --z-widget: 90;
 }
 [data-theme="light"] {
   color-scheme: light;
-  --color-ink: #f4efe4;
-  --color-ink-2: #fffaf0;
+  --color-ink: #f3f7f8;
+  --color-ink-2: #ffffff;
+  --color-body: #f3f7f8;
   --color-surface: #ffffff;
-  --color-surface-2: #edf6f6;
+  --color-surface-2: #e8f1f2;
+  --color-panel: rgba(255, 255, 255, .88);
+  --color-panel-strong: rgba(255, 255, 255, .96);
+  --color-header: rgba(255, 255, 255, .86);
+  --color-hero-overlay: linear-gradient(90deg, rgba(244, 249, 249, .92), rgba(244, 249, 249, .74) 52%, rgba(244, 249, 249, .40));
   --color-text: #152335;
   --color-muted: #52656d;
+  --color-signal: #045f66;
+  --color-accent: #d51f43;
   --color-border: rgba(21, 35, 53, .16);
+  --body-background: radial-gradient(circle at 16% 12%, rgba(19, 104, 136, .12), transparent 28rem), linear-gradient(135deg, #f3f7f8, #ffffff);
   --shadow-soft: 0 24px 80px rgba(37, 54, 87, .14);
   --shadow-card: 0 16px 48px rgba(37, 54, 87, .12);
 }

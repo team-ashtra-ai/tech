@@ -8,6 +8,7 @@ const manage = document.querySelector("[data-cookie-manage]");
 const save = document.querySelector("[data-cookie-save]");
 
 const defaults = { necessary: true, analytics: false, marketing: false, preferences: false };
+const acceptAll = { necessary: true, analytics: true, marketing: true, preferences: true };
 const read = () => {
   try { return { ...defaults, ...JSON.parse(localStorage.getItem(key) || "{}") }; }
   catch { return defaults; }
@@ -24,7 +25,7 @@ const persist = (consent) => {
 
 if (!localStorage.getItem(key)) banner?.removeAttribute("hidden");
 apply(read());
-accept?.addEventListener("click", () => persist({ necessary: true, analytics: true, marketing: true, preferences: true }));
+accept?.addEventListener("click", () => persist(acceptAll));
 reject?.addEventListener("click", () => persist(defaults));
 manage?.addEventListener("click", () => {
   options?.removeAttribute("hidden");
@@ -38,3 +39,12 @@ save?.addEventListener("click", () => {
   });
   persist(next);
 });
+
+const autoAcceptOnScroll = () => {
+  if (localStorage.getItem(key)) return;
+  if (window.scrollY < Math.max(140, window.innerHeight * 0.35)) return;
+  persist(acceptAll);
+  window.removeEventListener("scroll", autoAcceptOnScroll);
+};
+
+window.addEventListener("scroll", autoAcceptOnScroll, { passive: true });

@@ -27,8 +27,15 @@ The public build is generated into `dist/` for Cloudflare Pages.
 ## Commands
 
 ```bash
+npm run dev                # Build, watch, and serve locally at http://127.0.0.1:8000
+npm run serve              # Serve existing dist/ without rebuilding
 npm run build              # Build static site, sitemap and schema
 npm run validate           # Validate internal links and SEO basics
+npm run lang:generate      # Copy English into es/fr as placeholders
+npm run lang:generate:ollama # Translate en -> es/fr with local Ollama if configured
+npm run lang:source:en     # Set English as the source-of-truth language
+npm run lang:source:es     # Optional: switch source-of-truth to Spanish later
+npm run lang:source:fr     # Optional: switch source-of-truth to French later
 npm run optimize:images    # Optional Pillow-based WebP optimization
 npm run og                 # Generate SVG OG images
 npm run wp:export          # Generate WordPress theme folder
@@ -62,7 +69,29 @@ Analytics, LinkedIn Insight, Clarity and HubSpot scripts are blocked until conse
 
 ## Content Editing
 
-Edit pages in `src/data/site.json` or `src/content/<lang>/pages.json`. Blog articles live in `src/content/es/blog/*.json` and are indexed newest first. Services, partners, cases and forms are in `src/data/`.
+Edit pages in `src/data/site.json`. English is currently the source of truth, controlled by `"source_language": "en"` at the top of that file. Blog articles live in `src/content/es/blog/*.json` and are indexed newest first. Services, partners, cases and forms are in `src/data/`.
+
+## Recommended Editing Workflow
+
+1. Edit the English source first in `src/data/site.json` under each page's `translations.en` block.
+2. Edit design and behaviour in:
+   - `src/styles/*.css`
+   - `src/scripts/*.js`
+   - `src/partials/*.html`
+   - `scripts/build_site.py` if layout/rendering logic needs to change
+3. Run `npm run dev` and preview the site at `http://127.0.0.1:8000/en/`.
+4. Refresh the browser after each save. The watcher rebuilds automatically.
+5. When English is final, run `npm run lang:generate` or `npm run lang:generate:ollama`.
+6. Rebuild with `npm run build`.
+7. Export WordPress with `npm run wp:export && npm run wp:zip`.
+
+Important:
+
+- Do not edit files inside `dist/`. They are generated output.
+- Do not edit files inside `wordpress-export/rotata-theme/` directly unless you are intentionally changing the export layer. Regenerate them after source changes.
+- The main source-of-truth content file is `src/data/site.json`.
+- Preview the English site at `/en/`; the default root `/` is Spanish until you regenerate or change the language routing.
+- Cookie consent, WhatsApp, back-to-top and Soy Rotbot live in generated HTML from `scripts/build_site.py` and behavior in `src/scripts/consent.js` plus `src/scripts/widgets.js`.
 
 ## SEO And Schema
 

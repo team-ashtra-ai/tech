@@ -1,7 +1,7 @@
 .form { display: grid; gap: var(--space-16); }
 .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-16); }
 label { display: grid; gap: .45rem; color: var(--color-text); font-weight: 750; }
-input, textarea, select { width: 100%; border: 1px solid var(--color-border); border-radius: 16px; background: rgba(245,241,232,.06); color: var(--color-text); padding: .92rem 1rem; }
+input, textarea, select { width: 100%; border: 1px solid var(--color-border); border-radius: 16px; background: color-mix(in srgb, var(--color-surface) 86%, transparent); color: var(--color-text); padding: .92rem 1rem; }
 textarea { min-height: 140px; resize: vertical; }
 input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--color-error); }
 .field-error { color: var(--color-error); font-size: .85rem; min-height: 1em; }

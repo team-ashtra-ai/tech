@@ -9,6 +9,7 @@ import re
 import shutil
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
@@ -72,16 +73,42 @@ def language_switcher(lang: str, page_key: str) -> str:
 
 def header(lang: str, page_key: str) -> str:
     ui = {
-        "es": {"skip": "Saltar al contenido", "home": "Inicio de Rotata", "theme": "Cambiar modo claro y oscuro"},
-        "en": {"skip": "Skip to content", "home": "Rotata home", "theme": "Toggle dark and light mode"},
-        "fr": {"skip": "Aller au contenu", "home": "Accueil Rotata", "theme": "Changer le mode clair et sombre"},
+        "es": {
+            "skip": "Saltar al contenido",
+            "home": "Inicio de Rotata",
+            "theme": "Cambiar modo claro y oscuro",
+            "theme_mode": "Dark",
+            "utility": "Sistemas B2B con CRM, datos, automatización y pipeline",
+            "close": "Cerrar menú",
+        },
+        "en": {
+            "skip": "Skip to content",
+            "home": "Rotata home",
+            "theme": "Toggle dark and light mode",
+            "theme_mode": "Dark",
+            "utility": "B2B systems with CRM, data, automation and pipeline",
+            "close": "Close menu",
+        },
+        "fr": {
+            "skip": "Aller au contenu",
+            "home": "Accueil Rotata",
+            "theme": "Changer le mode clair et sombre",
+            "theme_mode": "Dark",
+            "utility": "Systèmes B2B avec CRM, données, automatisation et pipeline",
+            "close": "Fermer le menu",
+        },
     }[lang]
     desktop = render_template(partial("navigation/nav-desktop.html"), {"items": nav_links(lang, page_key)})
-    mobile = render_template(partial("header/header-mobile.html"), {"items": render_template(partial("navigation/nav-mobile.html"), {"items": nav_links(lang, page_key, True)})})
+    mobile = render_template(partial("header/header-mobile.html"), {
+        "items": render_template(partial("navigation/nav-mobile.html"), {"items": nav_links(lang, page_key, True)}),
+        "close_label": ui["close"],
+    })
     return render_template(partial("header/header.html"), {
         "skip_label": ui["skip"],
         "home_label": ui["home"],
         "theme_label": ui["theme"],
+        "theme_mode_label": ui["theme_mode"],
+        "utility_label": ui["utility"],
         "home_url": page_url("home", lang),
         "logo": SITE["site"]["logo"],
         "nav_desktop": desktop,
@@ -99,12 +126,25 @@ def footer(lang: str) -> str:
         "fr": [("privacy", "Confidentialité"), ("legal", "Mentions légales"), ("cookies", "Cookies"), ("accessibility", "Accessibilité"), ("sitemap", "Plan du site")],
     }[lang]
     legal = "".join(f'<a href="{page_url(key, lang)}">{label}</a>' for key, label in legal_labels)
+    funding_text = {
+        "es": "Programa Kit Digital y financiación europea, conservado desde el sitio original de Rotata.",
+        "en": "Kit Digital and European funding area, preserved from the original Rotata site.",
+        "fr": "Espace Kit Digital et financement européen, conservé depuis le site original de Rotata.",
+    }[lang]
+    funding_strip = (
+        '<div class="container funding-strip">'
+        '<img src="/assets/partners/rotata-kit-digital-eu-funding.png" '
+        'alt="Kit Digital, Gobierno de España, Red.es, Next Generation EU y Plan de Recuperación">'
+        f"<span>{esc(funding_text)}</span>"
+        "</div>"
+    )
     return render_template(partial("footer/footer.html"), {
         "logo_white": SITE["site"]["logo_white"],
         "positioning": {"es": "El sistema detrás del crecimiento B2B.", "en": "The system behind B2B growth.", "fr": "Le système derrière la croissance B2B."}[lang],
         "language_switcher": language_switcher(lang, "home"),
         "footer_links": render_template(partial("footer/footer-links.html"), {"items": footer_items}),
         "contact_title": {"es": "Contacto", "en": "Contact", "fr": "Contact"}[lang],
+        "funding_strip": funding_strip,
         "footer_legal": render_template(partial("footer/footer-legal.html"), {"year": str(datetime.now().year), "links": legal}),
     })
 
@@ -193,6 +233,7 @@ def layout(lang: str, page_key: str, body: str) -> str:
       {header(lang, page_key)}
       <main id="main">{body}</main>
       {footer(lang)}
+      {widgets(lang)}
       {cookie_banner(lang)}
       <script type="module" src="/scripts/global.js"></script>
     </body>
@@ -213,10 +254,19 @@ def hero(t: dict, page_key: str) -> str:
         <div class="signal-row"><span>{}</span><strong>{}</strong></div>
       </div>
     </div>'''.format(*(esc(value) for pair in visual_labels for value in pair))
+    if page_key == "home":
+        media = (
+            '<video autoplay muted loop playsinline poster="/assets/diagrams/rotata-growth-system-overlay.svg">'
+            '<source src="/assets/video/rotata-ai-marketing-hero-video.mp4" type="video/mp4">'
+            "</video>"
+        )
+    else:
+        media = '<img src="/assets/diagrams/rotata-crm-architecture.svg" alt="">'
     return f'''
-    <section class="hero">
+    <section class="hero hero-{esc(page_key)}">
+      <div class="hero-media" aria-hidden="true">{media}</div>
       <div class="container hero-grid">
-        <div data-reveal>
+        <div class="hero-content" data-reveal>
           <p class="eyebrow">{esc(t["eyebrow"])}</p>
           <h1>{esc(t["h1"])}</h1>
           <p class="lead">{esc(t["intro"])}</p>
@@ -228,6 +278,87 @@ def hero(t: dict, page_key: str) -> str:
         {visual}
       </div>
     </section>'''
+
+def widgets(lang: str) -> str:
+    copy = {
+        "es": {
+            "top": "Volver arriba",
+            "wa": "Hablar por WhatsApp",
+            "bot": "Abrir Soy Rotbot",
+            "title": "Soy Rotbot",
+            "status": "Asistente de sistemas B2B",
+            "hello": "Hola. Puedo ayudarte a ubicar el problema: CRM, datos, outbound, ROI o automatización.",
+            "p1": "Quiero ordenar HubSpot",
+            "r1": "Primero revisaríamos datos, lifecycle stages, pipeline, workflows y dashboards. Después priorizamos lo que bloquea decisiones.",
+            "p2": "Necesito más reuniones cualificadas",
+            "r2": "La ruta suele ser targeting, señales de cuenta, mensajes, secuencias y medición conectada al CRM.",
+            "p3": "Calcular ROI",
+            "r3": "Usa la calculadora ROI y después podemos revisar supuestos comerciales, conversión y velocidad de pipeline.",
+            "contact": "Hablar con Rotata",
+        },
+        "en": {
+            "top": "Back to top",
+            "wa": "Talk on WhatsApp",
+            "bot": "Open Soy Rotbot",
+            "title": "Soy Rotbot",
+            "status": "B2B systems assistant",
+            "hello": "Hello. I can help locate the problem: CRM, data, outbound, ROI or automation.",
+            "p1": "I need to structure HubSpot",
+            "r1": "We would first audit data, lifecycle stages, pipeline, workflows and dashboards. Then we prioritize what blocks decisions.",
+            "p2": "I need more qualified meetings",
+            "r2": "The route is usually targeting, account signals, messaging, sequences and measurement connected to CRM.",
+            "p3": "Calculate ROI",
+            "r3": "Use the ROI calculator first, then we can review commercial assumptions, conversion and pipeline velocity.",
+            "contact": "Talk to Rotata",
+        },
+        "fr": {
+            "top": "Retour en haut",
+            "wa": "Parler sur WhatsApp",
+            "bot": "Ouvrir Soy Rotbot",
+            "title": "Soy Rotbot",
+            "status": "Assistant systèmes B2B",
+            "hello": "Bonjour. Je peux aider à situer le problème : CRM, données, outbound, ROI ou automatisation.",
+            "p1": "Je dois structurer HubSpot",
+            "r1": "Nous auditerions d’abord les données, lifecycle stages, pipeline, workflows et dashboards. Ensuite nous priorisons ce qui bloque les décisions.",
+            "p2": "Je veux plus de rendez-vous qualifiés",
+            "r2": "Le parcours combine ciblage, signaux de compte, messages, séquences et mesure connectée au CRM.",
+            "p3": "Calculer le ROI",
+            "r3": "Utilisez d’abord la calculatrice ROI, puis nous pouvons revoir les hypothèses commerciales, la conversion et la vélocité du pipeline.",
+            "contact": "Parler à Rotata",
+        },
+    }[lang]
+    wa_text = {
+        "es": "Hola Rotata, quiero revisar mi sistema de crecimiento B2B.",
+        "en": "Hello Rotata, I want to review my B2B growth system.",
+        "fr": "Bonjour Rotata, je veux revoir mon système de croissance B2B.",
+    }[lang]
+    contact = page_url("contact", lang)
+    roi = page_url("roi", lang)
+    return f'''
+    <div class="floating-actions" aria-label="Quick actions">
+      <button class="float-button back-to-top" type="button" data-back-to-top aria-label="{esc(copy["top"])}">↑</button>
+      <a class="float-button whatsapp" href="https://wa.me/34649498272?text={quote(wa_text)}" aria-label="{esc(copy["wa"])}" data-track="whatsapp_click">WA</a>
+      <button class="float-button rotbot-button" type="button" data-rotbot-toggle aria-expanded="false" aria-controls="rotbot-panel" aria-label="{esc(copy["bot"])}">
+        <img src="/assets/images/rotata-rotbot-ai-assistant.png" alt="">
+      </button>
+    </div>
+    <aside class="rotbot-panel" id="rotbot-panel" data-rotbot-panel hidden>
+      <div class="rotbot-head">
+        <img src="/assets/images/rotata-rotbot-ai-assistant.png" alt="">
+        <div><strong>{esc(copy["title"])}</strong><span>{esc(copy["status"])}</span></div>
+        <button class="rotbot-close" type="button" data-rotbot-close aria-label="Close">×</button>
+      </div>
+      <div class="rotbot-messages" data-rotbot-messages>
+        <p class="rotbot-message bot">{esc(copy["hello"])}</p>
+      </div>
+      <div class="rotbot-prompts">
+        <button type="button" data-rotbot-prompt data-rotbot-reply="{esc(copy["r1"])}">{esc(copy["p1"])}</button>
+        <button type="button" data-rotbot-prompt data-rotbot-reply="{esc(copy["r2"])}">{esc(copy["p2"])}</button>
+        <button type="button" data-rotbot-prompt data-rotbot-reply="{esc(copy["r3"])}">{esc(copy["p3"])}</button>
+        <a href="{roi}" data-track="roi_widget_click">{esc(copy["p3"])}</a>
+        <a href="{contact}" data-track="cta_click">{esc(copy["contact"])}</a>
+      </div>
+    </aside>'''
 
 def render_items(items, variant: str) -> str:
     if not items:
@@ -267,8 +398,9 @@ def section_html(section: dict, index: int) -> str:
         body = '<div class="grid-4">' + "".join(render_template(partial("cards/partner-card.html"), {"name": esc(p["name"]), "role": esc(p["role"]), "url": p["url"], "label": partner_label}) for p in PARTNERS) + "</div>"
     else:
         body = render_items(section.get("items", []), variant)
+    band = " section-band" if index % 2 else ""
     return f'''
-    <section class="section" data-reveal>
+    <section class="section{band}" data-reveal>
       <div class="container {'wide' if variant in {'cards','partners','blog-preview'} else ''}">
         <div class="section-heading">
           <p class="eyebrow">{esc(eyebrow_labels.get(variant, "Rotata"))}</p>
@@ -284,14 +416,26 @@ def standard_page(lang: str, page_key: str) -> str:
     CURRENT_LANG = lang
     t = SITE["pages"][page_key]["translations"][lang]
     body = hero(t, page_key)
+    sections = t.get("sections", [])
     if page_key == "roi":
+        for index, section in enumerate(sections[:2]):
+            body += section_html(section, index)
         body += roi_calculator(lang)
-    if page_key == "contact":
+        for index, section in enumerate(sections[2:], start=2):
+            body += section_html(section, index)
+    elif page_key == "contact":
+        for index, section in enumerate(sections[:3]):
+            body += section_html(section, index)
         body += contact_form(lang)
-    if page_key == "cases":
+        for index, section in enumerate(sections[3:], start=3):
+            body += section_html(section, index)
+    elif page_key == "cases":
         body += case_grid()
-    for index, section in enumerate(t.get("sections", [])):
-        body += section_html(section, index)
+        for index, section in enumerate(sections):
+            body += section_html(section, index)
+    else:
+        for index, section in enumerate(sections):
+            body += section_html(section, index)
     body += render_template(partial("cta/cta-primary.html"), {"heading": esc(t.get("final_cta", "")), "href": page_url("contact", lang), "label": esc(NAV[lang]["primary_cta"])})
     return layout(lang, page_key, body)
 
@@ -349,11 +493,16 @@ def blog_page(lang: str) -> str:
     CURRENT_LANG = lang
     t = SITE["pages"]["blog"]["translations"][lang]
     body = hero(t, "blog")
-    if lang == "es":
-        body += '<section class="section"><div class="container wide"><div class="section-heading"><p class="eyebrow">Featured</p><h2>Últimos artículos</h2></div>' + blog_cards(len(BLOG)) + "</div></section>"
-    else:
-        categories = ["CRM", "HubSpot", "Data", "AI", "Lead Generation", "Outbound", "SEO", "Strategy", "RevOps"]
-        body += '<section class="section"><div class="container"><div class="section-heading"><p class="eyebrow">Editorial system</p><h2>Structured topic tracks</h2><p class="lead">Localized long-form articles use the same content model and can be approved before publishing in each language.</p></div><ul class="pill-list">' + "".join(f"<li>{c}</li>" for c in categories) + "</ul></div></section>"
+    if t.get("sections"):
+        for index, section in enumerate(t["sections"]):
+            body += section_html(section, index)
+    latest_title = {"es": "Últimos artículos", "en": "Latest articles", "fr": "Derniers articles"}[lang]
+    latest_intro = {
+        "es": "La biblioteca se ordena automáticamente por fecha para que el contenido nuevo aparezca primero.",
+        "en": "The library is automatically ordered by date so new content appears first.",
+        "fr": "La bibliothèque est automatiquement triée par date pour afficher les nouveaux contenus en premier.",
+    }[lang]
+    body += f'<section class="section"><div class="container wide"><div class="section-heading"><p class="eyebrow">Featured</p><h2>{latest_title}</h2><p class="lead">{latest_intro}</p></div>' + blog_cards(len(BLOG)) + "</div></section>"
     body += render_template(partial("cta/cta-primary.html"), {"heading": esc(t["final_cta"]), "href": page_url("contact", lang), "label": esc(NAV[lang]["primary_cta"])})
     return layout(lang, "blog", body)
 
@@ -392,7 +541,7 @@ def article_page(post: dict) -> str:
     <link rel="icon" href="/assets/logo/rotata-favicon.png"><link rel="apple-touch-icon" href="/assets/logo/rotata-apple-touch-icon.png"><link rel="stylesheet" href="/styles/global.css">
     <script>window.ROTATA_CONFIG = {{}};</script><script type="application/ld+json">{schema}</script>
     '''
-    return f'<!doctype html><html lang="es" data-theme="dark"><head>{head_tags}</head><body>{header("es", "blog")}<main id="main">{body}</main>{footer("es")}{cookie_banner("es")}<script type="module" src="/scripts/global.js"></script></body></html>'
+    return f'<!doctype html><html lang="es" data-theme="dark"><head>{head_tags}</head><body>{header("es", "blog")}<main id="main">{body}</main>{footer("es")}{widgets("es")}{cookie_banner("es")}<script type="module" src="/scripts/global.js"></script></body></html>'
 
 def write_page(url: str, content: str) -> None:
     path = output_path(url)

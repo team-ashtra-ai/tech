@@ -389,30 +389,139 @@
           "sections": [
             {
               "heading": "Who we are",
-              "body": "A B2B growth system company working across strategy, operations, CRM, data, automation and applied AI.",
-              "items": [],
-              "variant": "text"
-            },
-            {
-              "heading": "Why we exist",
-              "body": "Many companies buy tools before defining the logic that should govern them. We reverse that order.",
+              "body": "Rotata is a B2B growth system company. We design and implement the structure behind marketing, sales, CRM, data and automation so teams can operate from one commercial reality.",
               "items": [
-                "System before tool",
-                "Criteria before automation",
-                "Measurement before volume"
+                "B2B companies with complex sales cycles",
+                "Teams using HubSpot or preparing to implement it",
+                "Sales and marketing leaders who need cleaner pipeline visibility",
+                "Founders who need growth to become operationally repeatable"
               ],
               "variant": "grid"
             },
             {
-              "heading": "Mission, vision and values",
-              "body": "Build serious, measurable and sustainable growth systems for B2B companies that need operating clarity.",
+              "heading": "Why we exist",
+              "body": "Most companies do not fail because they lack tools. They fail because every tool follows a different logic. Rotata exists to turn disconnected activity into a controlled system.",
               "items": [
-                "Precision",
-                "Structure",
-                "Accountability",
-                "Continuous improvement"
+                "Less improvisation",
+                "Fewer disconnected campaigns",
+                "Cleaner handoffs",
+                "Decisions based on the same data model"
+              ],
+              "variant": "problem"
+            },
+            {
+              "heading": "What Rotata builds",
+              "body": "We build the operating layer that allows demand generation, outbound, CRM, reporting and account intelligence to work together.",
+              "items": [
+                {
+                  "title": "Commercial architecture",
+                  "text": "Lifecycle stages, pipeline logic, handoffs and reporting designed around how revenue actually moves."
+                },
+                {
+                  "title": "CRM and data structure",
+                  "text": "Fields, properties, lists, segmentation and dashboards that support decisions instead of creating noise."
+                },
+                {
+                  "title": "Automation systems",
+                  "text": "Workflows, routing and follow-up that reduce manual friction while keeping human control."
+                },
+                {
+                  "title": "Acquisition systems",
+                  "text": "Outbound, content, SEO and account intelligence connected to conversion and pipeline."
+                }
               ],
               "variant": "cards"
+            },
+            {
+              "heading": "Our approach",
+              "body": "We do not begin with a software recommendation. We begin with diagnosis, then design the system, implement it, and optimize it with measured feedback.",
+              "items": [
+                "Diagnose current structure",
+                "Design the target operating system",
+                "Implement CRM, data and automation",
+                "Optimize around pipeline evidence"
+              ],
+              "variant": "process"
+            },
+            {
+              "heading": "Mission",
+              "body": "Our mission is to make B2B growth more structured, measurable and controllable for companies that depend on marketing and sales alignment.",
+              "items": [
+                "Structure before scale",
+                "Evidence before opinion",
+                "Systems before isolated tactics"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "Vision",
+              "body": "Rotata should be the partner companies call when growth activity exists, but the system behind it is not yet clear enough to scale.",
+              "items": [
+                "Clear CRM architecture",
+                "Connected growth workflows",
+                "Reliable reporting",
+                "Revenue teams working from one source of truth"
+              ],
+              "variant": "metrics"
+            },
+            {
+              "heading": "Values",
+              "body": "The work is technical, but the principles are simple: clarity, precision, accountability and measurable outcomes.",
+              "items": [
+                "Clarity in decisions",
+                "Precision in execution",
+                "Accountability in measurement",
+                "Respect for the buyer journey"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "Clients we are built for",
+              "body": "Rotata is designed for B2B organizations where pipeline quality, CRM discipline and commercial process matter.",
+              "items": [
+                "SaaS and IT companies",
+                "B2B service companies",
+                "Sales-led businesses",
+                "Marketing-led teams",
+                "RevOps and CRM owners"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "How the work looks",
+              "body": "The output is not a presentation. It is a working system: CRM structure, workflows, dashboards, data rules, content flows and commercial operating rhythm.",
+              "items": [
+                "Architecture map",
+                "Implementation backlog",
+                "Configured CRM workflows",
+                "Reporting dashboards",
+                "Optimization cadence"
+              ],
+              "variant": "cards"
+            },
+            {
+              "heading": "Technology stack",
+              "body": "Tools support the system. We work with leading platforms when they serve the operating model.",
+              "items": [
+                "HubSpot",
+                "ZoomInfo",
+                "La Growth Machine",
+                "Synapsale",
+                "Google Analytics 4",
+                "LinkedIn Insight Tag"
+              ],
+              "variant": "partners"
+            },
+            {
+              "heading": "Leadership and operating model",
+              "body": "Rotata works as a senior implementation partner: strategic enough to diagnose the system, technical enough to build it, and practical enough to keep it usable.",
+              "items": [
+                "Senior diagnosis",
+                "Lean implementation",
+                "Documentation and handover",
+                "Future WordPress and content editability"
+              ],
+              "variant": "grid"
             }
           ],
           "final_cta": "Talk about your structure"
@@ -527,46 +636,99 @@
           "intro": "We connect strategy, data, CRM, automation, outbound and conversion into a measurable architecture.",
           "sections": [
             {
-              "heading": "Problem",
-              "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+              "heading": "The problem: growth activity without operating structure",
+              "body": "Campaigns, CRM, outbound, automation and reporting often grow in separate layers. The result is activity that looks busy but does not produce clear pipeline decisions.",
               "items": [
-                "Incomplete data",
-                "Different criteria",
-                "Isolated automations"
+                "Disconnected tools",
+                "Unclear lead ownership",
+                "Weak lifecycle stages",
+                "Reports that do not explain next actions"
               ],
               "variant": "problem"
             },
             {
-              "heading": "What Rotata does",
-              "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+              "heading": "Overview: one system behind marketing and sales",
+              "body": "Rotata creates the shared architecture that connects acquisition, data, CRM, automation, sales handoff, reporting and optimization.",
+              "items": [
+                "Strategy",
+                "Data",
+                "CRM",
+                "Automation",
+                "Outbound",
+                "Conversion",
+                "Reporting"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "Systems we design",
+              "body": "Each system is designed around the same sequence: tool to system to outcome.",
               "items": [
                 {
-                  "title": "CRM architecture",
-                  "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+                  "title": "CRM operating system",
+                  "text": "Data model, properties, lifecycle stages, pipeline views and dashboards."
                 },
                 {
-                  "title": "Sales automation",
-                  "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
-                },
-                {
-                  "title": "Account intelligence",
-                  "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+                  "title": "Acquisition system",
+                  "text": "SEO, content, lead generation and conversion paths connected to CRM."
                 },
                 {
                   "title": "Outbound system",
-                  "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+                  "text": "Targeting, signals, sequences, messaging and performance tracking."
+                },
+                {
+                  "title": "RevOps system",
+                  "text": "Shared definitions, handoffs, automation and business reporting."
                 }
               ],
               "variant": "cards"
             },
             {
-              "heading": "Outcomes we target",
-              "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+              "heading": "Services",
+              "body": "Rotata can diagnose, design, implement and optimize the system depending on the maturity of your current setup.",
               "items": [
-                "Pipeline clarity",
-                "Traceable follow-up",
-                "Actionable data",
-                "Reliable reporting"
+                "Growth system audit",
+                "HubSpot implementation",
+                "Data and targeting architecture",
+                "Outbound implementation",
+                "Dashboard and reporting design",
+                "Content and lead generation engine"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "Tools",
+              "body": "Tools are selected because they support the architecture, not because the tool itself is the product.",
+              "items": [
+                "HubSpot for CRM and automation",
+                "ZoomInfo for data intelligence",
+                "La Growth Machine for structured outbound",
+                "Synapsale for account signals",
+                "Analytics for measurement"
+              ],
+              "variant": "partners"
+            },
+            {
+              "heading": "Process",
+              "body": "We move from diagnosis to implementation through controlled phases so the system stays understandable.",
+              "items": [
+                "Diagnose",
+                "Design",
+                "Implement",
+                "Measure",
+                "Optimize"
+              ],
+              "variant": "process"
+            },
+            {
+              "heading": "Outcomes",
+              "body": "The goal is pipeline clarity: better data, cleaner handoffs, stronger prioritization and decisions that can be defended.",
+              "items": [
+                "Cleaner CRM",
+                "More visible pipeline",
+                "More useful reporting",
+                "More consistent sales follow-up",
+                "Better account prioritization"
               ],
               "variant": "metrics"
             }
@@ -710,58 +872,80 @@
           "intro": "HubSpot should not be a repository of activity. It should be the infrastructure that makes selling, measuring and deciding easier.",
           "sections": [
             {
-              "heading": "Problem",
-              "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+              "heading": "Context",
+              "body": "HubSpot becomes powerful when the business structure underneath it is clear. Without that structure, the platform simply exposes confusion faster.",
               "items": [
-                "Incomplete data",
-                "Different criteria",
-                "Isolated automations"
+                "Current operating context",
+                "Commercial process reality",
+                "Data and CRM dependency"
+              ],
+              "variant": "text"
+            },
+            {
+              "heading": "Problem",
+              "body": "Teams often buy HubSpot expecting clarity, but import messy data, unclear stages, duplicated fields and workflows that mirror old habits.",
+              "items": [
+                "Messy data",
+                "Unclear ownership",
+                "Weak visibility",
+                "Manual follow-up"
               ],
               "variant": "problem"
             },
             {
               "heading": "What Rotata does",
-              "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+              "body": "We structure HubSpot around the real commercial process: data model, lifecycle stages, pipelines, workflows, lists, dashboards and handoffs.",
               "items": [
                 {
-                  "title": "CRM architecture",
-                  "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+                  "title": "Diagnose",
+                  "text": "Map the current setup and identify structural blockers."
                 },
                 {
-                  "title": "Sales automation",
-                  "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+                  "title": "Design",
+                  "text": "Define the operating model, data rules and conversion path."
                 },
                 {
-                  "title": "Account intelligence",
-                  "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+                  "title": "Implement",
+                  "text": "Configure the system in tools the team already uses."
                 },
                 {
-                  "title": "Outbound system",
-                  "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+                  "title": "Measure",
+                  "text": "Connect dashboards and feedback loops to business decisions."
                 }
               ],
               "variant": "cards"
             },
             {
-              "heading": "Outcomes we target",
-              "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+              "heading": "Outcomes",
+              "body": "HubSpot should make decisions easier: who to prioritize, what changed, what sales needs, and where pipeline is blocked.",
               "items": [
-                "Pipeline clarity",
-                "Traceable follow-up",
-                "Actionable data",
-                "Reliable reporting"
+                "Cleaner data",
+                "Clearer prioritization",
+                "Better handoffs",
+                "More useful reporting"
               ],
               "variant": "metrics"
             },
             {
-              "heading": "When it matters",
-              "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+              "heading": "When it is relevant",
+              "body": "This matters when HubSpot exists but reporting is weak, automation is inconsistent, sales adoption is low or leadership cannot trust the data.",
               "items": [
-                "Defined processes",
-                "Connected data",
-                "Automation with criteria"
+                "CRM adoption problems",
+                "Pipeline visibility issues",
+                "Sales and marketing misalignment",
+                "Growth activity without a system"
               ],
               "variant": "grid"
+            },
+            {
+              "heading": "System integration",
+              "body": "HubSpot connects to the wider growth system: acquisition, outbound, account intelligence, analytics and reporting rhythm.",
+              "items": [
+                "Tool",
+                "System",
+                "Outcome"
+              ],
+              "variant": "process"
             }
           ],
           "final_cta": "Structure this system"
@@ -913,58 +1097,80 @@
           "intro": "More data does not equal more growth. Value appears when account intelligence connects to CRM and sales process.",
           "sections": [
             {
-              "heading": "Problem",
-              "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+              "heading": "Context",
+              "body": "Better data only creates value when it is structured, filtered and connected to the commercial workflow.",
               "items": [
-                "Incomplete data",
-                "Different criteria",
-                "Isolated automations"
+                "Current operating context",
+                "Commercial process reality",
+                "Data and CRM dependency"
+              ],
+              "variant": "text"
+            },
+            {
+              "heading": "Problem",
+              "body": "More contacts can create more noise. Without targeting logic, data quality rules and CRM routing, teams burn time on the wrong accounts.",
+              "items": [
+                "Messy data",
+                "Unclear ownership",
+                "Weak visibility",
+                "Manual follow-up"
               ],
               "variant": "problem"
             },
             {
               "heading": "What Rotata does",
-              "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+              "body": "We turn ZoomInfo into a usable data layer: ICP definition, segmentation, enrichment logic, routing, lists and CRM activation.",
               "items": [
                 {
-                  "title": "CRM architecture",
-                  "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+                  "title": "Diagnose",
+                  "text": "Map the current setup and identify structural blockers."
                 },
                 {
-                  "title": "Sales automation",
-                  "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+                  "title": "Design",
+                  "text": "Define the operating model, data rules and conversion path."
                 },
                 {
-                  "title": "Account intelligence",
-                  "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+                  "title": "Implement",
+                  "text": "Configure the system in tools the team already uses."
                 },
                 {
-                  "title": "Outbound system",
-                  "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+                  "title": "Measure",
+                  "text": "Connect dashboards and feedback loops to business decisions."
                 }
               ],
               "variant": "cards"
             },
             {
-              "heading": "Outcomes we target",
-              "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+              "heading": "Outcomes",
+              "body": "The output is not a larger database. It is cleaner targeting, better prioritization and data that supports pipeline decisions.",
               "items": [
-                "Pipeline clarity",
-                "Traceable follow-up",
-                "Actionable data",
-                "Reliable reporting"
+                "Cleaner data",
+                "Clearer prioritization",
+                "Better handoffs",
+                "More useful reporting"
               ],
               "variant": "metrics"
             },
             {
-              "heading": "When it matters",
-              "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+              "heading": "When it is relevant",
+              "body": "Use this when teams need to improve targeting, enrich CRM records, validate segments or support outbound with better account data.",
               "items": [
-                "Defined processes",
-                "Connected data",
-                "Automation with criteria"
+                "CRM adoption problems",
+                "Pipeline visibility issues",
+                "Sales and marketing misalignment",
+                "Growth activity without a system"
               ],
               "variant": "grid"
+            },
+            {
+              "heading": "System integration",
+              "body": "ZoomInfo feeds the growth system through HubSpot properties, workflows, campaigns, outbound sequences and reporting.",
+              "items": [
+                "Tool",
+                "System",
+                "Outcome"
+              ],
+              "variant": "process"
             }
           ],
           "final_cta": "Structure this system"
@@ -1116,58 +1322,80 @@
           "intro": "We design multichannel prospecting with targeting, message relevance, sequences and performance tracking.",
           "sections": [
             {
-              "heading": "Problem",
-              "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+              "heading": "Context",
+              "body": "Outbound works when targeting, timing, message relevance and measurement are structured as one system.",
               "items": [
-                "Incomplete data",
-                "Different criteria",
-                "Isolated automations"
+                "Current operating context",
+                "Commercial process reality",
+                "Data and CRM dependency"
+              ],
+              "variant": "text"
+            },
+            {
+              "heading": "Problem",
+              "body": "Improvised outbound creates low response rates, inconsistent follow-up and no clear learning loop between sales activity and CRM data.",
+              "items": [
+                "Messy data",
+                "Unclear ownership",
+                "Weak visibility",
+                "Manual follow-up"
               ],
               "variant": "problem"
             },
             {
               "heading": "What Rotata does",
-              "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+              "body": "We design the outbound system: ICP, account lists, data checks, multichannel sequences, messaging, CRM sync and performance dashboards.",
               "items": [
                 {
-                  "title": "CRM architecture",
-                  "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+                  "title": "Diagnose",
+                  "text": "Map the current setup and identify structural blockers."
                 },
                 {
-                  "title": "Sales automation",
-                  "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+                  "title": "Design",
+                  "text": "Define the operating model, data rules and conversion path."
                 },
                 {
-                  "title": "Account intelligence",
-                  "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+                  "title": "Implement",
+                  "text": "Configure the system in tools the team already uses."
                 },
                 {
-                  "title": "Outbound system",
-                  "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+                  "title": "Measure",
+                  "text": "Connect dashboards and feedback loops to business decisions."
                 }
               ],
               "variant": "cards"
             },
             {
-              "heading": "Outcomes we target",
-              "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+              "heading": "Outcomes",
+              "body": "The goal is more qualified conversations with a repeatable learning loop, not more generic messages.",
               "items": [
-                "Pipeline clarity",
-                "Traceable follow-up",
-                "Actionable data",
-                "Reliable reporting"
+                "Cleaner data",
+                "Clearer prioritization",
+                "Better handoffs",
+                "More useful reporting"
               ],
               "variant": "metrics"
             },
             {
-              "heading": "When it matters",
-              "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+              "heading": "When it is relevant",
+              "body": "Use this when sales teams need more meetings, existing campaigns lack structure or outbound activity is not visible inside CRM.",
               "items": [
-                "Defined processes",
-                "Connected data",
-                "Automation with criteria"
+                "CRM adoption problems",
+                "Pipeline visibility issues",
+                "Sales and marketing misalignment",
+                "Growth activity without a system"
               ],
               "variant": "grid"
+            },
+            {
+              "heading": "System integration",
+              "body": "La Growth Machine and related tooling support the system through sequences, LinkedIn activity, email steps and CRM-connected measurement.",
+              "items": [
+                "Tool",
+                "System",
+                "Outcome"
+              ],
+              "variant": "process"
             }
           ],
           "final_cta": "Structure this system"
@@ -1319,58 +1547,80 @@
           "intro": "Account signals help prioritize timing, relevance and qualified meetings instead of adding noise to the CRM.",
           "sections": [
             {
-              "heading": "Problem",
-              "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+              "heading": "Context",
+              "body": "Account signals help teams focus on companies already showing relevant interest or movement.",
               "items": [
-                "Incomplete data",
-                "Different criteria",
-                "Isolated automations"
+                "Current operating context",
+                "Commercial process reality",
+                "Data and CRM dependency"
+              ],
+              "variant": "text"
+            },
+            {
+              "heading": "Problem",
+              "body": "Without prioritization, sales teams chase static lists while warmer accounts move unnoticed.",
+              "items": [
+                "Messy data",
+                "Unclear ownership",
+                "Weak visibility",
+                "Manual follow-up"
               ],
               "variant": "problem"
             },
             {
               "heading": "What Rotata does",
-              "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+              "body": "We connect account signals to prioritization rules, CRM workflows, sales tasks and campaign timing.",
               "items": [
                 {
-                  "title": "CRM architecture",
-                  "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+                  "title": "Diagnose",
+                  "text": "Map the current setup and identify structural blockers."
                 },
                 {
-                  "title": "Sales automation",
-                  "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+                  "title": "Design",
+                  "text": "Define the operating model, data rules and conversion path."
                 },
                 {
-                  "title": "Account intelligence",
-                  "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+                  "title": "Implement",
+                  "text": "Configure the system in tools the team already uses."
                 },
                 {
-                  "title": "Outbound system",
-                  "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+                  "title": "Measure",
+                  "text": "Connect dashboards and feedback loops to business decisions."
                 }
               ],
               "variant": "cards"
             },
             {
-              "heading": "Outcomes we target",
-              "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+              "heading": "Outcomes",
+              "body": "The system helps teams act on timing, focus on better-fit accounts and turn interest into qualified meetings.",
               "items": [
-                "Pipeline clarity",
-                "Traceable follow-up",
-                "Actionable data",
-                "Reliable reporting"
+                "Cleaner data",
+                "Clearer prioritization",
+                "Better handoffs",
+                "More useful reporting"
               ],
               "variant": "metrics"
             },
             {
-              "heading": "When it matters",
-              "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+              "heading": "When it is relevant",
+              "body": "Use this when sales capacity is limited, account timing matters or teams need a clearer signal layer before outreach.",
               "items": [
-                "Defined processes",
-                "Connected data",
-                "Automation with criteria"
+                "CRM adoption problems",
+                "Pipeline visibility issues",
+                "Sales and marketing misalignment",
+                "Growth activity without a system"
               ],
               "variant": "grid"
+            },
+            {
+              "heading": "System integration",
+              "body": "Synapsale-style signals feed HubSpot, outbound sequences, lifecycle changes and dashboards so intent becomes action.",
+              "items": [
+                "Tool",
+                "System",
+                "Outcome"
+              ],
+              "variant": "process"
             }
           ],
           "final_cta": "Structure this system"
@@ -1465,7 +1715,60 @@
           "eyebrow": "Insights",
           "h1": "Insights on B2B growth, AI and marketing systems",
           "intro": "An editorial library built from Rotata source material and ready to scale with new content.",
-          "sections": [],
+          "sections": [
+            {
+              "heading": "Featured thinking",
+              "body": "The blog should work like a content machine: each article supports search, LinkedIn distribution, sales education and internal linking.",
+              "items": [
+                "Editorial strategy",
+                "Search intent",
+                "LinkedIn angles",
+                "Sales enablement"
+              ],
+              "variant": "cards"
+            },
+            {
+              "heading": "Categories",
+              "body": "The library is organized around the subjects Rotata should own in B2B growth systems.",
+              "items": [
+                "CRM",
+                "HubSpot",
+                "Data",
+                "AI",
+                "Lead Generation",
+                "Outbound",
+                "SEO",
+                "Strategy",
+                "RevOps"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "Topics we publish around",
+              "body": "Every topic connects back to the core positioning: tools support the system, and the system creates the outcome.",
+              "items": [
+                "CRM structure and reporting",
+                "B2B data quality",
+                "Outbound systems",
+                "AI-supported growth",
+                "Marketing and sales alignment",
+                "ROI and attribution"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "Newsletter and content workflow",
+              "body": "The static site can display articles now, while the future WordPress export can make publishing editable by the client.",
+              "items": [
+                "Draft in English",
+                "Generate language versions",
+                "Review and approve",
+                "Publish newest first",
+                "Distribute on LinkedIn"
+              ],
+              "variant": "process"
+            }
+          ],
           "final_cta": "Get insights"
         },
         "fr": {
@@ -1528,26 +1831,71 @@
           "intro": "Before investing in more tools, estimate the impact of improving conversion, sales velocity and data quality.",
           "sections": [
             {
-              "heading": "What this calculator measures",
-              "body": "It estimates incremental value from leads, conversion, average contract value and expected system improvement.",
+              "heading": "What the calculator explains",
+              "body": "ROI becomes easier to discuss when leads, conversion, deal value and system improvement are visible in one model.",
               "items": [
-                "More useful opportunities",
-                "Less friction loss",
-                "Better follow-up",
-                "Revenue-linked reporting"
+                "Monthly lead volume",
+                "Opportunity conversion",
+                "Average deal value",
+                "Expected improvement"
+              ],
+              "variant": "text"
+            },
+            {
+              "heading": "Inputs before the calculator",
+              "body": "Use realistic numbers. The calculator is a diagnostic tool for thinking through commercial assumptions, not a financial guarantee.",
+              "items": [
+                "Lead volume",
+                "Conversion rate",
+                "Average value",
+                "Improvement from structure"
               ],
               "variant": "grid"
             },
             {
+              "heading": "How to read the result",
+              "body": "The result shows estimated incremental value if the system improves conversion or sales efficiency. It should trigger better questions, not replace a commercial model.",
+              "items": [
+                "What improved?",
+                "Where does the improvement come from?",
+                "What needs to change in the CRM?",
+                "How will sales act differently?"
+              ],
+              "variant": "problem"
+            },
+            {
               "heading": "ROI drivers",
-              "body": "ROI does not come from adding software. It comes when the system improves focus, speed, conversion and traceability.",
+              "body": "The highest leverage usually comes from cleaner data, better prioritization, faster follow-up and stronger reporting.",
               "items": [
                 "Data quality",
-                "Account priority",
+                "Lead qualification",
+                "Sales velocity",
                 "Automation",
-                "Marketing-sales alignment"
+                "Pipeline visibility"
               ],
-              "variant": "cards"
+              "variant": "metrics"
+            },
+            {
+              "heading": "Implementation logic",
+              "body": "A better ROI model depends on implementation: lifecycle stages, source tracking, CRM workflows, dashboards and sales rhythm.",
+              "items": [
+                "Audit",
+                "Model",
+                "Implement",
+                "Measure",
+                "Optimize"
+              ],
+              "variant": "process"
+            },
+            {
+              "heading": "FAQ",
+              "body": "The calculator is designed for a first diagnostic conversation and HubSpot-ready tracking hooks are already in place.",
+              "items": [
+                "Is it exact? No, it is an estimate.",
+                "Can it connect to HubSpot? Yes, hooks are ready.",
+                "Can we adapt the formula? Yes, the static code is editable."
+              ],
+              "variant": "grid"
             }
           ],
           "final_cta": "Review my ROI"
@@ -1644,35 +1992,79 @@
           "intro": "Tell us what is happening in your CRM, pipeline, reporting or demand generation. We will reply with concrete next steps.",
           "sections": [
             {
-              "heading": "What happens next",
-              "body": "We review context, identify the critical area and propose a diagnostic conversation, not a generic sales call.",
+              "heading": "Context",
+              "body": "The first conversation is about your current setup, not a generic sales pitch. We want to understand where the system is unclear.",
               "items": [
-                "Initial response",
-                "Fit diagnosis",
-                "Clear next step"
+                "CRM state",
+                "Pipeline visibility",
+                "Data quality",
+                "Automation",
+                "Sales and marketing handoff"
+              ],
+              "variant": "text"
+            },
+            {
+              "heading": "What happens after contact",
+              "body": "You will get a practical review of where structure is missing and what should be fixed first.",
+              "items": [
+                "We review the current setup",
+                "We identify blockers",
+                "We define the first system priorities"
               ],
               "variant": "process"
             },
             {
-              "heading": "Who it is for",
-              "body": "B2B companies with consultative sales, CRM in place or a clear need to structure marketing, sales and data.",
+              "heading": "What you get",
+              "body": "The conversation should leave you with more clarity on how your current marketing and sales system is working.",
               "items": [
-                "SaaS",
-                "IT",
-                "B2B services",
-                "HubSpot teams"
+                "Structural diagnosis",
+                "Priority map",
+                "Tool to system to outcome logic"
+              ],
+              "variant": "cards"
+            },
+            {
+              "heading": "Direct contact",
+              "body": "If you prefer direct contact, use WhatsApp, email or LinkedIn. All tracking hooks are prepared but no private keys are committed.",
+              "items": [
+                "WhatsApp: +34 649 49 82 72",
+                "Email: info@rotata.com",
+                "LinkedIn: Rotata Consulting SL"
               ],
               "variant": "grid"
             },
             {
-              "heading": "Who it is not for",
-              "body": "We are not a campaign factory or a reseller selling tools without systems.",
+              "heading": "Who this is for",
+              "body": "The best fit is a B2B company that needs a more reliable system behind growth.",
               "items": [
-                "No data ownership",
-                "No internal owner",
-                "Only isolated execution"
+                "HubSpot users",
+                "CRM owners",
+                "B2B sales teams",
+                "Marketing directors",
+                "Founders and CEOs"
+              ],
+              "variant": "grid"
+            },
+            {
+              "heading": "Who this is not for",
+              "body": "Rotata is not a quick-template agency or a tool reseller. If the goal is only a cheap campaign, this is probably not the right fit.",
+              "items": [
+                "No generic templates",
+                "No tool-first selling",
+                "No fake guarantees"
               ],
               "variant": "problem"
+            },
+            {
+              "heading": "Reassurance",
+              "body": "The site is static-first now, Cloudflare-ready, and prepared for a future WordPress export so the client can edit content later.",
+              "items": [
+                "No secrets in code",
+                "Consent-aware tracking",
+                "HubSpot-ready forms",
+                "WordPress exportable"
+              ],
+              "variant": "metrics"
             }
           ],
           "final_cta": "Send diagnosis"
@@ -1768,8 +2160,8 @@
           "intro": "We do not fake metrics. Honest placeholders remain until approved client stories are documented.",
           "sections": [
             {
-              "heading": "Case pattern",
-              "body": "Each case documents the business problem, the implemented system and the verifiable result.",
+              "heading": "Case detail pattern",
+              "body": "Real case studies should be published only when results can be defended. Until then, use the structure without inventing numbers.",
               "items": [
                 "Problem",
                 "System",
@@ -1778,15 +2170,16 @@
               "variant": "process"
             },
             {
-              "heading": "Typical areas",
-              "body": "CRM, reporting, automation, outbound, intent data and marketing-sales alignment.",
+              "heading": "Metrics to document",
+              "body": "Each future case should connect the system change to visible operating metrics.",
               "items": [
-                "HubSpot",
-                "ZoomInfo",
-                "Outbound",
-                "RevOps"
+                "Pipeline clarity",
+                "Lead quality",
+                "Conversion rate",
+                "Sales velocity",
+                "Reporting trust"
               ],
-              "variant": "cards"
+              "variant": "metrics"
             }
           ],
           "final_cta": "Document my case"
@@ -1892,43 +2285,60 @@
           "sections": [
             {
               "heading": "Diagnose",
-              "body": "We map CRM, data, pipeline, processes, reporting, friction and commercial goals.",
+              "body": "We map the current system: CRM data, lifecycle stages, lead sources, workflows, outbound process, dashboards and handoffs.",
               "items": [
-                "Audit",
-                "Gap map",
-                "Priorities"
+                "Audit the CRM",
+                "Review data quality",
+                "Map handoffs",
+                "Identify reporting gaps"
               ],
-              "variant": "grid"
+              "variant": "problem"
             },
             {
               "heading": "Design",
-              "body": "We define architecture, criteria, objects, stages, automation and measurement before execution.",
+              "body": "We define the target operating architecture before changing tools.",
               "items": [
-                "Model",
-                "Process",
-                "Metrics"
+                "Data model",
+                "Pipeline logic",
+                "Automation plan",
+                "Reporting model",
+                "Acquisition paths"
               ],
               "variant": "grid"
             },
             {
               "heading": "Implement",
-              "body": "We configure structure, migrate or clean data, activate workflows and document the system.",
+              "body": "We configure the system in the tools the team uses, with documentation and clean handover.",
               "items": [
-                "CRM",
-                "Data",
-                "Automation"
+                "HubSpot setup",
+                "Workflow build",
+                "Data cleanup",
+                "Dashboard setup",
+                "Form and tracking hooks"
               ],
-              "variant": "grid"
+              "variant": "cards"
             },
             {
               "heading": "Optimize",
-              "body": "We measure the system in operation and adjust rules, conversions, reporting and input quality.",
+              "body": "We improve the system from evidence: conversion, velocity, quality and usage.",
               "items": [
-                "Performance",
-                "Quality",
-                "Scale"
+                "Review performance",
+                "Remove friction",
+                "Refine automation",
+                "Improve reporting"
               ],
-              "variant": "grid"
+              "variant": "metrics"
+            },
+            {
+              "heading": "Timeline",
+              "body": "The right timeline depends on the current mess and the number of systems involved, but the process stays controlled.",
+              "items": [
+                "Week 1: diagnosis",
+                "Weeks 2-3: architecture",
+                "Weeks 4-6: implementation",
+                "Ongoing: optimization"
+              ],
+              "variant": "process"
             }
           ],
           "final_cta": "Start diagnosis"
@@ -2378,5 +2788,6 @@
         }
       }
     }
-  }
+  },
+  "source_language": "en"
 }

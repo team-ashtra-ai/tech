@@ -1,7 +1,9 @@
 const header = document.querySelector("[data-site-header]");
 const toggle = document.querySelector("[data-menu-toggle]");
 const panel = document.querySelector("[data-mobile-menu]");
+const closeButton = document.querySelector("[data-menu-close]");
 const themeToggle = document.querySelector("[data-theme-toggle]");
+const themeLabel = document.querySelector("[data-theme-label]");
 
 const setScrolled = () => header?.classList.toggle("is-scrolled", window.scrollY > 12);
 setScrolled();
@@ -26,6 +28,7 @@ toggle?.addEventListener("click", () => {
     closeMenu();
   }
 });
+closeButton?.addEventListener("click", closeMenu);
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeMenu();
@@ -36,9 +39,15 @@ panel?.addEventListener("click", (event) => {
 
 const storedTheme = localStorage.getItem("rotata-theme");
 if (storedTheme) document.documentElement.dataset.theme = storedTheme;
+const syncThemeLabel = () => {
+  if (!themeLabel) return;
+  themeLabel.textContent = document.documentElement.dataset.theme === "light" ? "Light" : "Dark";
+};
+syncThemeLabel();
 themeToggle?.addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
   document.documentElement.dataset.theme = next;
   localStorage.setItem("rotata-theme", next);
+  syncThemeLabel();
   window.rotataTrack?.("theme_toggle", { theme: next });
 });

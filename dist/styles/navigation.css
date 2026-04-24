@@ -1,19 +1,24 @@
-.site-header { position: fixed; inset: 0 0 auto 0; z-index: var(--z-header); transition: background var(--motion-medium), border-color var(--motion-medium), transform var(--motion-medium); }
-.site-header.is-scrolled { background: rgba(8, 21, 29, .82); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(18px); }
-.header-shell { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-16); }
+.site-header { position: fixed; inset: 0 0 auto 0; z-index: var(--z-header); background: var(--color-header); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(18px); transition: background var(--motion-medium), border-color var(--motion-medium), transform var(--motion-medium); }
+.site-header.is-scrolled { box-shadow: 0 14px 40px rgba(0, 0, 0, .16); }
+.utility-bar { border-bottom: 1px solid var(--color-border); font-size: .78rem; }
+.utility-shell { min-height: 30px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-16); }
+.utility-line { color: var(--color-muted); font-weight: 750; }
+.utility-controls { display: flex; align-items: center; gap: var(--space-12); }
+.header-shell { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-16); }
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
 .brand img { display: block; }
 .nav-desktop { display: flex; align-items: center; gap: .25rem; }
 .nav-desktop a, .nav-mobile a { text-decoration: none; color: var(--color-muted); font-weight: 750; padding: .62rem .78rem; border-radius: 999px; }
-.nav-desktop a[aria-current="page"], .nav-desktop a:hover, .nav-mobile a:hover { color: var(--color-text); background: rgba(245,241,232,.07); }
+.nav-desktop a[aria-current="page"], .nav-desktop a:hover, .nav-mobile a:hover { color: var(--color-text); background: color-mix(in srgb, var(--color-signal) 12%, transparent); }
 .header-actions { display: flex; align-items: center; gap: var(--space-8); }
 .language-switcher { display: inline-flex; gap: .25rem; align-items: center; }
 .language-switcher a { text-decoration: none; border: 1px solid var(--color-border); border-radius: 999px; padding: .35rem .55rem; color: var(--color-muted); font-size: .78rem; font-weight: 850; text-transform: uppercase; }
 .language-switcher a[aria-current="true"] { color: var(--color-text); border-color: rgba(155,225,229,.5); }
-.menu-toggle { display: none; width: 46px; height: 46px; border: 1px solid var(--color-border); border-radius: 999px; background: rgba(245,241,232,.08); }
+.menu-toggle { display: none; width: 46px; height: 46px; border: 1px solid var(--color-border); border-radius: 999px; background: color-mix(in srgb, var(--color-surface) 82%, transparent); }
 .menu-toggle span { display: block; width: 18px; height: 2px; margin: 4px auto; background: var(--color-text); transition: transform var(--motion-fast), opacity var(--motion-fast); }
-.mobile-panel { position: fixed; inset: 0; z-index: var(--z-menu); padding: 96px 24px 32px; background: radial-gradient(circle at 80% 20%, rgba(231,48,77,.18), transparent 28rem), rgba(8,21,29,.97); }
+.mobile-panel { position: fixed; inset: 0; z-index: var(--z-menu); padding: 96px 24px 32px; background: radial-gradient(circle at 14% 12%, color-mix(in srgb, var(--color-signal) 20%, transparent), transparent 24rem), var(--color-panel-strong); }
 .mobile-panel.is-open { display: block; }
-.nav-mobile { display: grid; gap: .75rem; }
-.nav-mobile a { font-size: clamp(1.8rem, 9vw, 3.8rem); font-family: var(--font-heading); letter-spacing: -.04em; color: var(--color-text); }
+.mobile-close { position: fixed; top: 18px; right: 18px; width: 44px; height: 44px; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-surface); color: var(--color-text); font-size: 2rem; line-height: 1; cursor: pointer; }
+.nav-mobile { display: grid; gap: .45rem; max-width: 520px; }
+.nav-mobile a { display: flex; align-items: center; min-height: 54px; border-bottom: 1px solid var(--color-border); font-size: clamp(1.35rem, 8vw, 2.8rem); font-family: var(--font-heading); letter-spacing: 0; color: var(--color-text); border-radius: 0; }
 body.menu-open { overflow: hidden; }

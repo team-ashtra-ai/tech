@@ -5,3 +5,4 @@ import "./language.js";
 import "./forms.js";
 import "./analytics.js";
 import "./animations.js";
+import "./widgets.js";
