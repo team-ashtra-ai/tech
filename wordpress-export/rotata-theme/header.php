@@ -6,7 +6,7 @@
       <span class="utility-line"><?php esc_html_e('Sistemas B2B con CRM, datos, automatización y pipeline', 'rotata'); ?></span>
       <div class="utility-controls">
         
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="<?php esc_attr_e('Cambiar modo claro y oscuro', 'rotata'); ?>">
+        <button class="theme-toggle" type="button" data-theme-toggle data-theme-dark-label="<?php esc_attr_e('Oscuro', 'rotata'); ?>" data-theme-light-label="<?php esc_attr_e('Claro', 'rotata'); ?>" aria-label="<?php esc_attr_e('Cambiar modo claro y oscuro', 'rotata'); ?>">
           <span aria-hidden="true"></span>
           <em data-theme-label><?php esc_html_e('Dark', 'rotata'); ?></em>
         </button>

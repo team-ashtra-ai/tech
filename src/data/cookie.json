@@ -1,11 +1,10 @@
 {
   "es": {
     "title": "Privacidad y cookies",
-    "body": "Usamos cookies necesarias para que el sitio funcione y, solo con tu consentimiento, analítica y marketing.",
+    "body": "Usamos cookies necesarias para que el sitio funcione. Si aceptas, activamos también analítica, marketing y preferencias para mejorar la experiencia.",
     "accept": "Aceptar todo",
-    "reject": "Rechazar todo",
-    "manage": "Gestionar",
-    "save": "Guardar preferencias",
+    "necessary_only": "Solo necesarias",
+    "reject": "Rechazar",
     "categories": {
       "necessary": "Necesarias",
       "analytics": "Analítica",
@@ -15,11 +14,10 @@
   },
   "en": {
     "title": "Privacy and cookies",
-    "body": "We use necessary cookies for the site to work and, only with consent, analytics and marketing cookies.",
+    "body": "We use necessary cookies to keep the site running. If you accept, we also enable analytics, marketing and preferences to improve the experience.",
     "accept": "Accept all",
-    "reject": "Reject all",
-    "manage": "Manage",
-    "save": "Save preferences",
+    "necessary_only": "Necessary only",
+    "reject": "Reject",
     "categories": {
       "necessary": "Necessary",
       "analytics": "Analytics",
@@ -29,11 +27,10 @@
   },
   "fr": {
     "title": "Confidentialité et cookies",
-    "body": "Nous utilisons des cookies nécessaires au fonctionnement du site et, avec consentement, analytics et marketing.",
+    "body": "Nous utilisons les cookies nécessaires au fonctionnement du site. Si vous acceptez, nous activons aussi analytics, marketing et préférences pour améliorer l'expérience.",
     "accept": "Tout accepter",
-    "reject": "Tout refuser",
-    "manage": "Gérer",
-    "save": "Enregistrer",
+    "necessary_only": "Nécessaires uniquement",
+    "reject": "Refuser",
     "categories": {
       "necessary": "Nécessaires",
       "analytics": "Analytics",

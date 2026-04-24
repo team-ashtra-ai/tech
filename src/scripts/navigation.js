@@ -41,7 +41,9 @@ const storedTheme = localStorage.getItem("rotata-theme");
 if (storedTheme) document.documentElement.dataset.theme = storedTheme;
 const syncThemeLabel = () => {
   if (!themeLabel) return;
-  themeLabel.textContent = document.documentElement.dataset.theme === "light" ? "Light" : "Dark";
+  const lightLabel = themeToggle?.dataset.themeLightLabel || "Light";
+  const darkLabel = themeToggle?.dataset.themeDarkLabel || "Dark";
+  themeLabel.textContent = document.documentElement.dataset.theme === "light" ? lightLabel : darkLabel;
 };
 syncThemeLabel();
 themeToggle?.addEventListener("click", () => {

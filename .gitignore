@@ -7,3 +7,7 @@ node_modules/
 .cache/
 .wrangler/
 npm-debug.log*
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md

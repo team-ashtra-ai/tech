@@ -1,16 +1,37 @@
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <img src="{{logo_white}}" width="156" height="40" alt="Rotata" />
-      <p>{{positioning}}</p>
-      {{language_switcher}}
+  <div class="container footer-shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="eyebrow">{{footer_eyebrow}}</p>
+        <img src="{{logo_white}}" width="156" height="40" alt="Rotata" />
+        <p class="footer-positioning">{{positioning}}</p>
+        <p class="footer-summary">{{footer_summary}}</p>
+        <div class="footer-inline-tools">
+          {{language_switcher}}
+          <a class="btn btn-secondary" href="{{footer_cta_url}}" data-track="cta_click">{{footer_cta_label}}</a>
+        </div>
+      </div>
+      <div class="footer-highlights">
+        {{footer_highlights}}
+      </div>
     </div>
-    {{footer_links}}
-    <div>
-      <h2 class="footer-heading">{{contact_title}}</h2>
-      <p><a href="tel:+34649498272">+34 649 49 82 72</a></p>
-      <p><a href="mailto:info@rotata.com">info@rotata.com</a></p>
-      <p><a href="https://www.linkedin.com/company/rotata-consulting-sl/" data-track="linkedin_click">LinkedIn</a></p>
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h2 class="footer-heading">{{footer_nav_title}}</h2>
+        {{footer_links}}
+      </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">{{footer_system_title}}</h2>
+        <div class="footer-system-list">{{footer_system_items}}</div>
+      </div>
+      <div class="footer-column">
+        <h2 class="footer-heading">{{contact_title}}</h2>
+        <p><a href="tel:+34649498272">+34 649 49 82 72</a></p>
+        <p><a href="mailto:info@rotata.com">info@rotata.com</a></p>
+        <p><a href="https://www.linkedin.com/company/rotata-consulting-sl/" data-track="linkedin_click">LinkedIn</a></p>
+        <p><a href="{{cookie_policy_url}}" data-open-cookie-preferences>{{cookie_preferences_label}}</a></p>
+        <p><a href="{{cookie_policy_url}}">{{cookie_policy_label}}</a></p>
+      </div>
     </div>
   </div>
   {{funding_strip}}

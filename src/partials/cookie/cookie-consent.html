@@ -1,13 +1,15 @@
 <section class="cookie-banner" data-cookie-banner hidden aria-label="Cookie preferences">
   <div class="cookie-copy">
-    <strong>{{title}}</strong>
-    <span>{{body}}</span>
-    <div class="cookie-options" data-cookie-options hidden>{{categories}}</div>
+    <p class="cookie-label">{{eyebrow}}</p>
+    <div>
+      <strong>{{title}}</strong>
+      <span>{{body}}</span>
+    </div>
   </div>
   <div class="cookie-actions">
-    <button class="btn btn-secondary" type="button" data-cookie-reject>{{reject}}</button>
-    <button class="btn btn-secondary" type="button" data-cookie-manage>{{manage}}</button>
-    <button class="btn btn-primary" type="button" data-cookie-accept>{{accept}}</button>
-    <button class="btn btn-primary" type="button" data-cookie-save hidden>{{save}}</button>
+    <button class="cookie-chip cookie-chip-accept" type="button" data-cookie-accept>{{accept}}</button>
+    <a class="cookie-chip" href="{{policy_url}}">{{policy}}</a>
+    <button class="cookie-chip" type="button" data-cookie-necessary>{{necessary_only}}</button>
+    <button class="cookie-chip cookie-chip-reject" type="button" data-cookie-reject>{{reject}}</button>
   </div>
 </section>

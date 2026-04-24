@@ -1,7 +1,47 @@
-[data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity 520ms ease, transform 520ms ease; }
-[data-reveal].is-visible { opacity: 1; transform: none; }
-.hero-visual::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(155,225,229,.16), transparent); animation: signalSweep 7s linear infinite; z-index: 1; }
-@keyframes signalSweep { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 620ms cubic-bezier(.2, .8, .2, 1), transform 620ms cubic-bezier(.2, .8, .2, 1);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-visual::before,
+.section-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(112deg, transparent, rgba(255, 255, 255, .12), transparent);
+  transform: translateX(-100%);
+  animation: surfaceSweep 10s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-scroll-cue {
+  animation: scrollCue 2.4s ease-in-out infinite;
+}
+
+@keyframes surfaceSweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes scrollCue {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .001ms !important; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+  }
 }

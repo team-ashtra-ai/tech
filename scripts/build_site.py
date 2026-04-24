@@ -77,7 +77,9 @@ def header(lang: str, page_key: str) -> str:
             "skip": "Saltar al contenido",
             "home": "Inicio de Rotata",
             "theme": "Cambiar modo claro y oscuro",
-            "theme_mode": "Dark",
+            "theme_mode": "Oscuro",
+            "theme_dark": "Oscuro",
+            "theme_light": "Claro",
             "utility": "Sistemas B2B con CRM, datos, automatización y pipeline",
             "close": "Cerrar menú",
         },
@@ -86,6 +88,8 @@ def header(lang: str, page_key: str) -> str:
             "home": "Rotata home",
             "theme": "Toggle dark and light mode",
             "theme_mode": "Dark",
+            "theme_dark": "Dark",
+            "theme_light": "Light",
             "utility": "B2B systems with CRM, data, automation and pipeline",
             "close": "Close menu",
         },
@@ -93,7 +97,9 @@ def header(lang: str, page_key: str) -> str:
             "skip": "Aller au contenu",
             "home": "Accueil Rotata",
             "theme": "Changer le mode clair et sombre",
-            "theme_mode": "Dark",
+            "theme_mode": "Sombre",
+            "theme_dark": "Sombre",
+            "theme_light": "Clair",
             "utility": "Systèmes B2B avec CRM, données, automatisation et pipeline",
             "close": "Fermer le menu",
         },
@@ -108,6 +114,8 @@ def header(lang: str, page_key: str) -> str:
         "home_label": ui["home"],
         "theme_label": ui["theme"],
         "theme_mode_label": ui["theme_mode"],
+        "theme_dark_label": ui["theme_dark"],
+        "theme_light_label": ui["theme_light"],
         "utility_label": ui["utility"],
         "home_url": page_url("home", lang),
         "logo": SITE["site"]["logo"],
@@ -125,12 +133,85 @@ def footer(lang: str) -> str:
         "en": [("privacy", "Privacy"), ("legal", "Legal"), ("cookies", "Cookies"), ("accessibility", "Accessibility"), ("sitemap", "Sitemap")],
         "fr": [("privacy", "Confidentialité"), ("legal", "Mentions légales"), ("cookies", "Cookies"), ("accessibility", "Accessibilité"), ("sitemap", "Plan du site")],
     }[lang]
-    legal = "".join(f'<a href="{page_url(key, lang)}">{label}</a>' for key, label in legal_labels)
+    legal = "".join(
+        f'<a href="{page_url(key, lang)}"' + (' data-open-cookie-preferences' if key == "cookies" else "") + f'>{label}</a>'
+        for key, label in legal_labels
+    )
     funding_text = {
         "es": "Programa Kit Digital y financiación europea, conservado desde el sitio original de Rotata.",
         "en": "Kit Digital and European funding area, preserved from the original Rotata site.",
         "fr": "Espace Kit Digital et financement européen, conservé depuis le site original de Rotata.",
     }[lang]
+    copy = {
+        "es": {
+            "eyebrow": "Sistema B2B",
+            "summary": "Rotata estructura CRM, datos, automatización y pipeline dentro de un único sistema operativo comercial.",
+            "cta": "Diagnosticar sistema",
+            "nav_title": "Explorar",
+            "system_title": "Lo que ordenamos",
+            "system_items": [
+                "Arquitectura CRM",
+                "Señales y priorización",
+                "Automatización y handoffs",
+                "Medición conectada al pipeline",
+            ],
+            "cookie_preferences": "Preferencias de cookies",
+            "cookie_policy": "Política de cookies",
+            "legal_note": "Diseñado para claridad operativa, señal comercial y crecimiento medible.",
+            "highlights": [
+                ("Estructura primero", "La herramienta entra después de definir la lógica operativa."),
+                ("Una lectura compartida", "Marketing, ventas y reporting trabajan sobre la misma estructura."),
+                ("Movimiento medible", "La mejora se lee en datos, velocidad y calidad de pipeline."),
+            ],
+        },
+        "en": {
+            "eyebrow": "B2B system",
+            "summary": "Rotata structures CRM, data, automation and pipeline inside one operating system for commercial growth.",
+            "cta": "Audit the system",
+            "nav_title": "Explore",
+            "system_title": "What we structure",
+            "system_items": [
+                "CRM architecture",
+                "Signals and prioritization",
+                "Automation and handoffs",
+                "Measurement tied to pipeline",
+            ],
+            "cookie_preferences": "Cookie preferences",
+            "cookie_policy": "Cookie policy",
+            "legal_note": "Built for operating clarity, commercial signal and measurable growth.",
+            "highlights": [
+                ("Structure first", "The tool only matters after the operating logic is defined."),
+                ("One shared read", "Marketing, sales and reporting work from the same system."),
+                ("Measured movement", "Improvement shows up in data quality, speed and pipeline clarity."),
+            ],
+        },
+        "fr": {
+            "eyebrow": "Système B2B",
+            "summary": "Rotata structure CRM, données, automatisation et pipeline dans un système opérationnel unique pour la croissance commerciale.",
+            "cta": "Auditer le système",
+            "nav_title": "Explorer",
+            "system_title": "Ce que nous structurons",
+            "system_items": [
+                "Architecture CRM",
+                "Signaux et priorisation",
+                "Automatisation et relais",
+                "Mesure reliée au pipeline",
+            ],
+            "cookie_preferences": "Préférences cookies",
+            "cookie_policy": "Politique cookies",
+            "legal_note": "Pensé pour la clarté opérationnelle, le signal commercial et une croissance mesurable.",
+            "highlights": [
+                ("La structure d’abord", "L’outil vient après la logique opérationnelle."),
+                ("Une lecture partagée", "Marketing, ventes et reporting avancent sur le même système."),
+                ("Du mouvement mesuré", "L’amélioration se lit dans les données, le rythme et la clarté du pipeline."),
+            ],
+        },
+    }[lang]
+    system_items = "".join(f"<span>{esc(item)}</span>" for item in copy["system_items"])
+    footer_highlights = "".join(
+        f'<article class="footer-highlight"><span>{index:02d}</span><strong>{esc(title)}</strong><p>{esc(text)}</p></article>'
+        for index, (title, text) in enumerate(copy["highlights"], start=1)
+    )
     funding_strip = (
         '<div class="container funding-strip">'
         '<img src="/assets/partners/rotata-kit-digital-eu-funding.png" '
@@ -141,27 +222,44 @@ def footer(lang: str) -> str:
     return render_template(partial("footer/footer.html"), {
         "logo_white": SITE["site"]["logo_white"],
         "positioning": {"es": "El sistema detrás del crecimiento B2B.", "en": "The system behind B2B growth.", "fr": "Le système derrière la croissance B2B."}[lang],
+        "footer_eyebrow": copy["eyebrow"],
+        "footer_summary": copy["summary"],
+        "footer_cta_url": page_url("contact", lang),
+        "footer_cta_label": copy["cta"],
+        "footer_nav_title": copy["nav_title"],
+        "footer_system_title": copy["system_title"],
+        "footer_system_items": system_items,
+        "footer_highlights": footer_highlights,
         "language_switcher": language_switcher(lang, "home"),
         "footer_links": render_template(partial("footer/footer-links.html"), {"items": footer_items}),
         "contact_title": {"es": "Contacto", "en": "Contact", "fr": "Contact"}[lang],
+        "cookie_policy_url": page_url("cookies", lang),
+        "cookie_preferences_label": copy["cookie_preferences"],
+        "cookie_policy_label": copy["cookie_policy"],
         "funding_strip": funding_strip,
-        "footer_legal": render_template(partial("footer/footer-legal.html"), {"year": str(datetime.now().year), "links": legal}),
+        "footer_legal": render_template(partial("footer/footer-legal.html"), {
+            "year": str(datetime.now().year),
+            "legal_note": copy["legal_note"],
+            "links": legal,
+        }),
     })
 
 def cookie_banner(lang: str) -> str:
     data = COOKIE[lang]
-    categories = []
-    for key, label in data["categories"].items():
-        checked = " checked disabled" if key == "necessary" else ""
-        categories.append(f'<label><input type="checkbox" value="{key}" data-cookie-category{checked}> {esc(label)}</label>')
+    extra = {
+        "es": {"eyebrow": "Cookies", "policy": "Leer política"},
+        "en": {"eyebrow": "Cookies", "policy": "Read policy"},
+        "fr": {"eyebrow": "Cookies", "policy": "Lire la politique"},
+    }[lang]
     return render_template(partial("cookie/cookie-consent.html"), {
+        "eyebrow": esc(extra["eyebrow"]),
         "title": esc(data["title"]),
         "body": esc(data["body"]),
         "accept": esc(data["accept"]),
+        "necessary_only": esc(data["necessary_only"]),
         "reject": esc(data["reject"]),
-        "manage": esc(data["manage"]),
-        "save": esc(data["save"]),
-        "categories": "".join(categories),
+        "policy": esc(extra["policy"]),
+        "policy_url": page_url("cookies", lang),
     })
 
 def schema_for(page_key: str, lang: str, title: str, description: str, url: str) -> str:
@@ -229,9 +327,9 @@ def layout(lang: str, page_key: str, body: str) -> str:
     return f'''<!doctype html>
     <html lang="{lang}" data-theme="dark">
     <head>{head(lang, page_key, t["title"], t["description"], url)}</head>
-    <body>
+    <body class="page page-{esc(page_key)}">
       {header(lang, page_key)}
-      <main id="main">{body}</main>
+      <main id="main" class="site-main">{body}</main>
       {footer(lang)}
       {widgets(lang)}
       {cookie_banner(lang)}
@@ -239,29 +337,85 @@ def layout(lang: str, page_key: str, body: str) -> str:
     </body>
     </html>'''
 
+def hero_visual_path(page_key: str) -> str:
+    return f"/assets/section-visuals/hero-{page_key}.webp"
+
+
+def section_visual_path(page_key: str, index: int, variant: str) -> str:
+    return f"/assets/section-visuals/{page_key}-{index + 1:02d}-{variant}.webp"
+
+
+def service_icon(title: str = "", text: str = "") -> str:
+    target = f"{title} {text}".lower()
+    if any(token in target for token in ("crm", "hubspot", "pipeline", "lifecycle", "reporting")):
+        return "/assets/icons/rotata-crm-icon.svg"
+    if any(token in target for token in ("automation", "workflow", "handoff", "outbound", "sequence")):
+        return "/assets/icons/rotata-automation-icon.svg"
+    if any(token in target for token in ("data", "signal", "intent", "account", "segment")):
+        return "/assets/icons/rotata-data-icon.svg"
+    if any(token in target for token in ("meeting", "velocity", "conversion", "roi")):
+        return "/assets/icons/rotata-pipeline-icon.svg"
+    if any(token in target for token in ("ai", "ia", "intelligence")):
+        return "/assets/icons/rotata-ai-icon.svg"
+    return "/assets/icons/rotata-system-icon.svg"
+
+
 def hero(t: dict, page_key: str) -> str:
     visual_labels = {
-        "es": [("Modelo de datos", "limpio"), ("Pipeline", "visible"), ("Automatización", "controlada")],
-        "en": [("Data model", "clean"), ("Pipeline", "visible"), ("Automation", "controlled")],
-        "fr": [("Modèle de données", "propre"), ("Pipeline", "visible"), ("Automatisation", "contrôlée")],
+        "es": {
+            "board": "Vista operativa",
+            "title": "Sistema conectado",
+            "status": [("Modelo CRM", "estructurado"), ("Pipeline", "legible"), ("Automatización", "orquestada")],
+            "footer": [("Datos", "seguros"), ("Señales", "priorizadas"), ("Seguimiento", "consistente")],
+            "proof": ["Arquitectura CRM", "Claridad pipeline", "Automatización controlada"],
+            "scroll": "Explorar sistema",
+        },
+        "en": {
+            "board": "Operating view",
+            "title": "Connected system",
+            "status": [("CRM model", "structured"), ("Pipeline", "readable"), ("Automation", "orchestrated")],
+            "footer": [("Data", "clean"), ("Signals", "prioritized"), ("Follow-up", "consistent")],
+            "proof": ["CRM architecture", "Pipeline clarity", "Automation control"],
+            "scroll": "Explore the system",
+        },
+        "fr": {
+            "board": "Vue opérationnelle",
+            "title": "Système connecté",
+            "status": [("Modèle CRM", "structuré"), ("Pipeline", "lisible"), ("Automatisation", "orchestrée")],
+            "footer": [("Données", "propres"), ("Signaux", "priorisés"), ("Suivi", "constant")],
+            "proof": ["Architecture CRM", "Clarté pipeline", "Automatisation pilotée"],
+            "scroll": "Explorer le système",
+        },
     }[CURRENT_LANG]
     visual = '''
     <div class="hero-visual" aria-hidden="true">
-      <img src="/assets/diagrams/rotata-growth-system-overlay.svg" alt="">
-      <div class="hero-panel">
-        <div class="signal-row"><span>{}</span><strong>{}</strong></div>
-        <div class="signal-row"><span>{}</span><strong>{}</strong></div>
-        <div class="signal-row"><span>{}</span><strong>{}</strong></div>
+      <div class="hero-visual-head">
+        <span>{}</span>
+        <strong>{}</strong>
       </div>
-    </div>'''.format(*(esc(value) for pair in visual_labels for value in pair))
-    if page_key == "home":
-        media = (
-            '<video autoplay muted loop playsinline poster="/assets/diagrams/rotata-growth-system-overlay.svg">'
-            '<source src="/assets/video/rotata-ai-marketing-hero-video.mp4" type="video/mp4">'
-            "</video>"
-        )
-    else:
-        media = '<img src="/assets/diagrams/rotata-crm-architecture.svg" alt="">'
+      <div class="hero-visual-surface">
+        <div class="hero-panel">
+          <div class="signal-row"><span>{}</span><strong>{}</strong></div>
+          <div class="signal-row"><span>{}</span><strong>{}</strong></div>
+          <div class="signal-row"><span>{}</span><strong>{}</strong></div>
+        </div>
+        <div class="hero-metric-strip">
+          <div><span>{}</span><strong>{}</strong></div>
+          <div><span>{}</span><strong>{}</strong></div>
+          <div><span>{}</span><strong>{}</strong></div>
+        </div>
+      </div>
+    </div>'''.format(
+        esc(visual_labels["board"]),
+        esc(visual_labels["title"]),
+        *(esc(value) for pair in visual_labels["status"] for value in pair),
+        *(esc(value) for pair in visual_labels["footer"] for value in pair),
+    )
+    media = f'<img src="{hero_visual_path(page_key)}" alt="" loading="eager" width="1920" height="1280">'
+    proof = "".join(f"<span>{esc(item)}</span>" for item in visual_labels["proof"])
+    scroll = ""
+    if t.get("sections"):
+        scroll = f'<a class="hero-scroll-cue" href="#section-01" aria-label="{esc(visual_labels["scroll"])}"><span></span><em>{esc(visual_labels["scroll"])}</em></a>'
     return f'''
     <section class="hero hero-{esc(page_key)}">
       <div class="hero-media" aria-hidden="true">{media}</div>
@@ -274,9 +428,11 @@ def hero(t: dict, page_key: str) -> str:
             <a class="btn btn-primary" data-track="cta_click" href="{page_url("contact", CURRENT_LANG)}">{esc(t.get("primary_cta", t.get("final_cta", "Contact")))}</a>
             <a class="btn btn-secondary" data-track="cta_click" href="{page_url("solutions", CURRENT_LANG)}">{esc(t.get("secondary_cta", "Solutions"))}</a>
           </div>
+          <div class="hero-proof">{proof}</div>
         </div>
         {visual}
       </div>
+      {scroll}
     </section>'''
 
 def widgets(lang: str) -> str:
@@ -364,9 +520,23 @@ def render_items(items, variant: str) -> str:
     if not items:
         return ""
     if variant == "process":
-        return '<ol class="timeline">' + "".join(f"<li>{esc(item)}</li>" for item in items) + "</ol>"
+        return '<ol class="timeline">' + "".join(f"<li><strong>{index:02d}</strong><span>{esc(item)}</span></li>" for index, item in enumerate(items, start=1)) + "</ol>"
     if all(isinstance(item, dict) for item in items):
-        return '<div class="grid-4">' + "".join(render_template(partial("cards/service-card.html"), {"icon": "/assets/icons/rotata-system-icon.svg", "title": esc(item.get("title", "")), "text": esc(item.get("text", ""))}) for item in items) + "</div>"
+        return '<div class="grid-4">' + "".join(
+            render_template(
+                partial("cards/service-card.html"),
+                {
+                    "icon": service_icon(item.get("title", ""), item.get("text", "")),
+                    "title": esc(item.get("title", "")),
+                    "text": esc(item.get("text", "")),
+                },
+            )
+            for item in items
+        ) + "</div>"
+    if variant == "metrics":
+        return '<div class="pill-grid">' + "".join(f'<article class="pill-card"><span>{index:02d}</span><p>{esc(item)}</p></article>' for index, item in enumerate(items, start=1)) + "</div>"
+    if variant in {"grid", "problem", "text"}:
+        return '<div class="feature-list">' + "".join(f'<article class="feature-item"><span>{index:02d}</span><p>{esc(item)}</p></article>' for index, item in enumerate(items, start=1)) + "</div>"
     return '<ul class="pill-list">' + "".join(f"<li>{esc(item)}</li>" for item in items) + "</ul>"
 
 def blog_cards(limit: int = 3) -> str:
@@ -384,12 +554,20 @@ def blog_cards(limit: int = 3) -> str:
         }))
     return '<div class="grid-3">' + "".join(cards) + "</div>"
 
-def section_html(section: dict, index: int) -> str:
+def section_visual(page_key: str, section: dict, index: int, label: str) -> str:
+    return f'''
+    <figure class="section-visual" aria-hidden="true">
+      <img src="{section_visual_path(page_key, index, section.get("variant", "grid"))}" alt="" loading="lazy" width="1600" height="1120">
+      <div class="section-visual-caption"><span>{index + 1:02d}</span><strong>{esc(label)}</strong></div>
+    </figure>'''
+
+
+def section_html(page_key: str, section: dict, index: int) -> str:
     variant = section.get("variant", "text")
     eyebrow_labels = {
-        "es": {"problem": "Diagnóstico", "cards": "Sistema", "grid": "Arquitectura", "process": "Proceso", "metrics": "Medición", "partners": "Plataformas", "blog-preview": "Insights", "text": "Rotata"},
-        "en": {"problem": "Diagnosis", "cards": "System", "grid": "Architecture", "process": "Process", "metrics": "Measurement", "partners": "Platforms", "blog-preview": "Insights", "text": "Rotata"},
-        "fr": {"problem": "Diagnostic", "cards": "Système", "grid": "Architecture", "process": "Processus", "metrics": "Mesure", "partners": "Plateformes", "blog-preview": "Insights", "text": "Rotata"},
+        "es": {"problem": "Fricción", "cards": "Capas del sistema", "grid": "Modelo operativo", "process": "Cadencia", "metrics": "Lectura de impacto", "partners": "Stack conectado", "blog-preview": "Biblioteca", "text": "Contexto"},
+        "en": {"problem": "Friction", "cards": "System layers", "grid": "Operating model", "process": "Execution rhythm", "metrics": "Impact readout", "partners": "Connected stack", "blog-preview": "Library", "text": "Context"},
+        "fr": {"problem": "Friction", "cards": "Couches du système", "grid": "Modèle opératoire", "process": "Cadence", "metrics": "Lecture d’impact", "partners": "Stack connecté", "blog-preview": "Bibliothèque", "text": "Contexte"},
     }[CURRENT_LANG]
     if variant == "blog-preview":
         body = blog_cards(3)
@@ -398,16 +576,26 @@ def section_html(section: dict, index: int) -> str:
         body = '<div class="grid-4">' + "".join(render_template(partial("cards/partner-card.html"), {"name": esc(p["name"]), "role": esc(p["role"]), "url": p["url"], "label": partner_label}) for p in PARTNERS) + "</div>"
     else:
         body = render_items(section.get("items", []), variant)
-    band = " section-band" if index % 2 else ""
+    label = eyebrow_labels.get(variant, "Rotata")
+    shell = f'''
+        <div class="section-shell{' is-reversed' if index % 2 else ''}">
+          <div class="section-copy">
+            <div class="section-meta">
+              <span class="section-number">{index + 1:02d}</span>
+              <p class="eyebrow">{esc(label)}</p>
+            </div>
+            <div class="section-heading">
+              <h2>{esc(section.get("heading", ""))}</h2>
+              <p class="lead">{esc(section.get("body", ""))}</p>
+            </div>
+          </div>
+          {section_visual(page_key, section, index, label)}
+        </div>'''
     return f'''
-    <section class="section{band}" data-reveal>
+    <section class="section section-{esc(variant)}" id="section-{index + 1:02d}" data-reveal>
       <div class="container {'wide' if variant in {'cards','partners','blog-preview'} else ''}">
-        <div class="section-heading">
-          <p class="eyebrow">{esc(eyebrow_labels.get(variant, "Rotata"))}</p>
-          <h2>{esc(section.get("heading", ""))}</h2>
-          <p class="lead">{esc(section.get("body", ""))}</p>
-        </div>
-        {body}
+        {shell}
+        <div class="section-body section-body-{esc(variant)}">{body}</div>
       </div>
     </section>'''
 
@@ -419,23 +607,23 @@ def standard_page(lang: str, page_key: str) -> str:
     sections = t.get("sections", [])
     if page_key == "roi":
         for index, section in enumerate(sections[:2]):
-            body += section_html(section, index)
+            body += section_html(page_key, section, index)
         body += roi_calculator(lang)
         for index, section in enumerate(sections[2:], start=2):
-            body += section_html(section, index)
+            body += section_html(page_key, section, index)
     elif page_key == "contact":
         for index, section in enumerate(sections[:3]):
-            body += section_html(section, index)
+            body += section_html(page_key, section, index)
         body += contact_form(lang)
         for index, section in enumerate(sections[3:], start=3):
-            body += section_html(section, index)
+            body += section_html(page_key, section, index)
     elif page_key == "cases":
         body += case_grid()
         for index, section in enumerate(sections):
-            body += section_html(section, index)
+            body += section_html(page_key, section, index)
     else:
         for index, section in enumerate(sections):
-            body += section_html(section, index)
+            body += section_html(page_key, section, index)
     body += render_template(partial("cta/cta-primary.html"), {"heading": esc(t.get("final_cta", "")), "href": page_url("contact", lang), "label": esc(NAV[lang]["primary_cta"])})
     return layout(lang, page_key, body)
 
@@ -495,7 +683,7 @@ def blog_page(lang: str) -> str:
     body = hero(t, "blog")
     if t.get("sections"):
         for index, section in enumerate(t["sections"]):
-            body += section_html(section, index)
+            body += section_html("blog", section, index)
     latest_title = {"es": "Últimos artículos", "en": "Latest articles", "fr": "Derniers articles"}[lang]
     latest_intro = {
         "es": "La biblioteca se ordena automáticamente por fecha para que el contenido nuevo aparezca primero.",
@@ -541,7 +729,7 @@ def article_page(post: dict) -> str:
     <link rel="icon" href="/assets/logo/rotata-favicon.png"><link rel="apple-touch-icon" href="/assets/logo/rotata-apple-touch-icon.png"><link rel="stylesheet" href="/styles/global.css">
     <script>window.ROTATA_CONFIG = {{}};</script><script type="application/ld+json">{schema}</script>
     '''
-    return f'<!doctype html><html lang="es" data-theme="dark"><head>{head_tags}</head><body>{header("es", "blog")}<main id="main">{body}</main>{footer("es")}{widgets("es")}{cookie_banner("es")}<script type="module" src="/scripts/global.js"></script></body></html>'
+    return f'<!doctype html><html lang="es" data-theme="dark"><head>{head_tags}</head><body class="page page-article">{header("es", "blog")}<main id="main" class="site-main">{body}</main>{footer("es")}{widgets("es")}{cookie_banner("es")}<script type="module" src="/scripts/global.js"></script></body></html>'
 
 def write_page(url: str, content: str) -> None:
     path = output_path(url)

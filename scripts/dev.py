@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # during builds, so watching them creates a rebuild loop.
 WATCH_DIRS = [ROOT / "src", ROOT / "scripts"]
 WATCH_EXTENSIONS = {".py", ".json", ".html", ".css", ".js", ".md", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".avif", ".ico", ".mp4"}
+IGNORED_DIRS = {ROOT / "src" / "assets" / "section-visuals"}
 
 
 class ReusableTCPServer(socketserver.TCPServer):
@@ -35,6 +36,8 @@ def file_state() -> dict[str, float]:
         for path in base.rglob("*"):
             if not path.is_file():
                 continue
+            if any(ignored in path.parents for ignored in IGNORED_DIRS):
+                continue
             if path.suffix.lower() not in WATCH_EXTENSIONS:
                 continue
             state[str(path)] = path.stat().st_mtime
@@ -43,6 +46,14 @@ def file_state() -> dict[str, float]:
 
 def run_build() -> bool:
     print("[dev] building site...", flush=True)
+    section_visuals = subprocess.run(
+        ["python3", "scripts/generate_section_visuals.py"],
+        cwd=ROOT,
+        check=False,
+    )
+    if section_visuals.returncode != 0:
+        print("[dev] visual generation failed", flush=True)
+        return False
     result = subprocess.run(
         ["python3", "scripts/build_site.py"],
         cwd=ROOT,

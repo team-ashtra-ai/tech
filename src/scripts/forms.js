@@ -2,6 +2,27 @@
 const params = new URLSearchParams(location.search);
 const config = window.ROTATA_CONFIG || {};
 const hiddenNames = ["utm_source", "utm_medium", "utm_campaign"];
+const lang = document.documentElement.lang || "es";
+const messages = {
+  es: {
+    required: "Completa los campos obligatorios.",
+    connection: "Hubo un problema de conexión. Escribe a info@rotata.com.",
+    success: "Solicitud recibida. Rotata revisará el contexto y responderá con los siguientes pasos.",
+    locale: "es-ES",
+  },
+  en: {
+    required: "Please complete the required fields.",
+    connection: "There was a connection issue. Please email info@rotata.com.",
+    success: "Request received. Rotata will review the context and respond with next steps.",
+    locale: "en-GB",
+  },
+  fr: {
+    required: "Merci de compléter les champs obligatoires.",
+    connection: "Un problème de connexion est survenu. Écrivez à info@rotata.com.",
+    success: "Demande reçue. Rotata va revoir le contexte et répondre avec les prochaines étapes.",
+    locale: "fr-FR",
+  },
+}[lang.startsWith("en") ? "en" : lang.startsWith("fr") ? "fr" : "es"];
 
 document.querySelectorAll("form[data-form]").forEach((form) => {
   hiddenNames.forEach((name) => {
@@ -24,7 +45,7 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
       valid = valid && ok;
     });
     if (!valid) {
-      status.textContent = "Please complete the required fields.";
+      status.textContent = messages.required;
       return;
     }
     const payload = Object.fromEntries(new FormData(form).entries());
@@ -33,11 +54,11 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
       try {
         await fetch(config.formsEndpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       } catch (error) {
-        status.textContent = "There was a connection issue. Please email info@rotata.com.";
+        status.textContent = messages.connection;
         return;
       }
     }
-    status.textContent = "Request received. Rotata will review the context and respond with next steps.";
+    status.textContent = messages.success;
     form.reset();
   });
 });
@@ -52,7 +73,7 @@ if (calculator) {
     const improvement = Number(calculator.querySelector('[name="system_improvement"]').value || 0) / 100;
     const base = leads * conversion * acv;
     const incremental = base * improvement;
-    output.textContent = new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(incremental);
+    output.textContent = new Intl.NumberFormat(messages.locale, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(incremental);
     window.rotataTrack?.("roi_interaction", { incremental_value: Math.round(incremental) });
   };
   calculator.addEventListener("input", update);
