@@ -1,0 +1,16 @@
+<a class="skip-link" href="#main">{{skip_label}}</a>
+<header class="site-header" data-site-header>
+  <div class="container header-shell">
+      <a class="brand" href="{{home_url}}" aria-label="{{home_label}}">
+      <img src="{{logo}}" width="154" height="40" alt="Rotata" />
+    </a>
+    {{nav_desktop}}
+    <div class="header-actions">
+      {{language_switcher}}
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="{{theme_label}}"><span></span></button>
+      <a class="btn btn-primary" data-track="cta_click" href="{{cta_url}}">{{cta_label}}</a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  {{nav_mobile}}
+</header>

@@ -1,0 +1,31 @@
+@import url("./tokens.css");
+@import url("./layout.css");
+@import url("./typography.css");
+@import url("./components.css");
+@import url("./navigation.css");
+@import url("./forms.css");
+@import url("./cards.css");
+@import url("./animations.css");
+@import url("./responsive.css");
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(155, 225, 229, .18), transparent 32rem),
+    radial-gradient(circle at 86% 18%, rgba(231, 48, 77, .12), transparent 28rem),
+    linear-gradient(135deg, var(--color-ink), var(--color-ink-2));
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration-color: rgba(155, 225, 229, .55); text-underline-offset: .22em; }
+img, svg { max-width: 100%; height: auto; }
+button, input, textarea, select { font: inherit; }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+.skip-link { position: fixed; top: -100px; left: 1rem; z-index: 999; background: var(--color-text); color: var(--color-ink); padding: .75rem 1rem; border-radius: 999px; }
+.skip-link:focus { top: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }

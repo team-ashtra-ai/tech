@@ -1,0 +1,2351 @@
+{
+  "home": {
+    "template": "home",
+    "routes": {
+      "es": "",
+      "en": "",
+      "fr": ""
+    },
+    "seo_keyword": "B2B growth systems",
+    "translations": {
+      "es": {
+        "title": "Rotata | Sistemas de crecimiento B2B con CRM, datos e IA",
+        "description": "Rotata diseña e implementa sistemas estructurados de marketing y ventas B2B con CRM, automatización, datos e IA.",
+        "eyebrow": "Sistema de crecimiento B2B",
+        "h1": "Construimos el sistema detrás de tu crecimiento",
+        "intro": "Diseñamos la estructura que conecta estrategia, datos, CRM, automatización y pipeline para que marketing y ventas operen con claridad.",
+        "primary_cta": "Analizar mi sistema",
+        "secondary_cta": "Ver soluciones",
+        "sections": [
+          {
+            "heading": "El crecimiento parece impredecible cuando el sistema no está claro",
+            "body": "La mayoría de problemas no nacen por falta de herramientas. Nacen porque datos, procesos, equipos y reporting no siguen una arquitectura común.",
+            "items": [
+              "CRM con campos sin criterio",
+              "Leads sin priorización real",
+              "Dashboards que no explican decisiones",
+              "Marketing y ventas midiendo cosas distintas"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Construimos sistemas estructurados de crecimiento B2B",
+            "body": "Rotata convierte herramientas como HubSpot, ZoomInfo, La Growth Machine y Synapsale en una infraestructura operativa orientada a resultados.",
+            "items": [
+              {
+                "title": "Arquitectura CRM",
+                "text": "Modelo de datos, lifecycle stages, pipelines y reporting diseñados para representar la realidad comercial."
+              },
+              {
+                "title": "Automatización comercial",
+                "text": "Flujos que reducen fricción, mantienen seguimiento consistente y conectan marketing con ventas."
+              },
+              {
+                "title": "Inteligencia de cuentas",
+                "text": "Datos, señales e intent que ayudan a priorizar cuentas con mayor probabilidad de avanzar."
+              },
+              {
+                "title": "Sistema outbound",
+                "text": "Segmentación, secuencias, mensajes y medición para que la prospección no dependa de improvisación."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Qué incluye tu sistema de crecimiento",
+            "body": "Estrategia, datos, CRM, automatización, outbound, reporting y optimización trabajan como una secuencia: herramienta → sistema → resultado.",
+            "items": [
+              "Modelo de datos y segmentación",
+              "Pipeline y lifecycle stages",
+              "Automatizaciones y handoffs",
+              "Cuadros de mando de negocio",
+              "Captación, nurturing y outbound",
+              "Revisión continua del rendimiento"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Cómo trabajamos",
+            "body": "Diagnosticamos la estructura actual, diseñamos el sistema, lo implementamos y lo optimizamos con métricas compartidas.",
+            "items": [
+              "Diagnosticar",
+              "Diseñar",
+              "Implementar",
+              "Optimizar"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Construido para resultados medibles",
+            "body": "No prometemos cifras inventadas. Diseñamos el sistema para medir conversión, velocidad, calidad de lead, eficiencia comercial y contribución a pipeline.",
+            "items": [
+              "Pipeline más legible",
+              "Datos más fiables",
+              "Seguimiento más consistente",
+              "Decisiones más rápidas"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Impulsado por plataformas líderes",
+            "body": "Las herramientas soportan el sistema. El sistema es el producto.",
+            "items": [
+              "HubSpot",
+              "ZoomInfo",
+              "La Growth Machine",
+              "Synapsale"
+            ],
+            "variant": "partners"
+          },
+          {
+            "heading": "Insights sobre crecimiento B2B, IA y sistemas de marketing",
+            "body": "Usamos el contenido existente de Rotata y lo ordenamos en una biblioteca editorial preparada para crecer.",
+            "items": [],
+            "variant": "blog-preview"
+          }
+        ],
+        "final_cta": "Construyamos tu sistema de crecimiento"
+      },
+      "en": {
+        "title": "Rotata | B2B growth systems with CRM, data and AI",
+        "description": "Rotata designs and implements structured B2B marketing and sales systems with CRM, automation, data and AI.",
+        "eyebrow": "B2B growth system",
+        "h1": "We build the system behind your growth",
+        "intro": "We design the structure that connects strategy, data, CRM, automation and pipeline so marketing and sales operate with clarity.",
+        "primary_cta": "Audit my system",
+        "secondary_cta": "View solutions",
+        "sections": [
+          {
+            "heading": "Growth feels unpredictable when the system behind it is unclear",
+            "body": "Most growth problems are not caused by missing tools. They come from data, process, teams and reporting running without one architecture.",
+            "items": [
+              "CRM fields without logic",
+              "Leads without real prioritization",
+              "Dashboards that do not guide decisions",
+              "Marketing and sales measuring different things"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "We build structured B2B growth systems",
+            "body": "Rotata turns tools like HubSpot, ZoomInfo, La Growth Machine and Synapsale into an operating infrastructure focused on outcomes.",
+            "items": [
+              {
+                "title": "CRM architecture",
+                "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+              },
+              {
+                "title": "Sales automation",
+                "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+              },
+              {
+                "title": "Account intelligence",
+                "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+              },
+              {
+                "title": "Outbound system",
+                "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "What your growth system includes",
+            "body": "Strategy, data, CRM, automation, outbound, reporting and optimization work as one sequence: tool → system → outcome.",
+            "items": [
+              "Data model and segmentation",
+              "Pipeline and lifecycle stages",
+              "Automation and handoffs",
+              "Business dashboards",
+              "Demand, nurturing and outbound",
+              "Continuous performance review"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "How we work",
+            "body": "We diagnose the current structure, design the system, implement it and optimize it through shared metrics.",
+            "items": [
+              "Diagnose",
+              "Design",
+              "Implement",
+              "Optimize"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Built for measurable outcomes",
+            "body": "We do not invent results. We design the system to measure conversion, velocity, lead quality, sales efficiency and pipeline contribution.",
+            "items": [
+              "Clearer pipeline",
+              "More reliable data",
+              "More consistent follow-up",
+              "Faster decisions"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Powered by leading platforms",
+            "body": "Tools support the system. The system is the product.",
+            "items": [
+              "HubSpot",
+              "ZoomInfo",
+              "La Growth Machine",
+              "Synapsale"
+            ],
+            "variant": "partners"
+          },
+          {
+            "heading": "Insights on B2B growth, AI and marketing systems",
+            "body": "The existing Rotata content is organized into an editorial engine built to scale.",
+            "items": [],
+            "variant": "blog-preview"
+          }
+        ],
+        "final_cta": "Let's build your growth system"
+      },
+      "fr": {
+        "title": "Rotata | Systèmes de croissance B2B avec CRM, données et IA",
+        "description": "Rotata conçoit et met en œuvre des systèmes marketing et commerciaux B2B structurés avec CRM, automatisation, données et IA.",
+        "eyebrow": "Système de croissance B2B",
+        "h1": "Nous construisons le système derrière votre croissance",
+        "intro": "Nous concevons la structure qui relie stratégie, données, CRM, automatisation et pipeline pour aligner marketing et ventes.",
+        "primary_cta": "Auditer mon système",
+        "secondary_cta": "Voir les solutions",
+        "sections": [
+          {
+            "heading": "La croissance semble imprévisible quand le système n'est pas clair",
+            "body": "La plupart des problèmes ne viennent pas d'un manque d'outils, mais de données, processus, équipes et reporting sans architecture commune.",
+            "items": [
+              "CRM sans logique de champs",
+              "Leads sans priorisation réelle",
+              "Dashboards qui n'éclairent pas les décisions",
+              "Marketing et ventes avec des mesures différentes"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Nous construisons des systèmes B2B structurés",
+            "body": "Rotata transforme HubSpot, ZoomInfo, La Growth Machine et Synapsale en infrastructure opérationnelle orientée résultats.",
+            "items": [
+              {
+                "title": "Architecture CRM",
+                "text": "Modèle de données, cycles de vie, pipelines et reporting conçus autour du processus commercial réel."
+              },
+              {
+                "title": "Automatisation commerciale",
+                "text": "Workflows qui réduisent la friction, sécurisent le suivi et relient marketing et ventes."
+              },
+              {
+                "title": "Intelligence comptes",
+                "text": "Données, signaux et intention pour prioriser les comptes les plus susceptibles d'avancer."
+              },
+              {
+                "title": "Système outbound",
+                "text": "Ciblage, séquences, messages et mesure pour éviter une prospection improvisée."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Ce que comprend votre système",
+            "body": "Stratégie, données, CRM, automatisation, outbound, reporting et optimisation fonctionnent comme une séquence: outil → système → résultat.",
+            "items": [
+              "Modèle de données et segmentation",
+              "Pipeline et lifecycle stages",
+              "Automatisations et handoffs",
+              "Dashboards business",
+              "Demand generation, nurturing et outbound",
+              "Optimisation continue"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Notre méthode",
+            "body": "Nous diagnostiquons la structure, concevons le système, l'implémentons puis l'optimisons avec des métriques partagées.",
+            "items": [
+              "Diagnostiquer",
+              "Concevoir",
+              "Implémenter",
+              "Optimiser"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Conçu pour des résultats mesurables",
+            "body": "Nous concevons le système pour mesurer conversion, vitesse, qualité des leads, efficacité commerciale et contribution au pipeline.",
+            "items": [
+              "Pipeline plus lisible",
+              "Données plus fiables",
+              "Suivi plus cohérent",
+              "Décisions plus rapides"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Propulsé par des plateformes leaders",
+            "body": "Les outils soutiennent le système. Le système est le produit.",
+            "items": [
+              "HubSpot",
+              "ZoomInfo",
+              "La Growth Machine",
+              "Synapsale"
+            ],
+            "variant": "partners"
+          },
+          {
+            "heading": "Insights sur la croissance B2B, l'IA et les systèmes marketing",
+            "body": "Le contenu Rotata existant devient un moteur éditorial structuré.",
+            "items": [],
+            "variant": "blog-preview"
+          }
+        ],
+        "final_cta": "Construisons votre système de croissance"
+      }
+    }
+  },
+  "about": {
+    "template": "standard",
+    "routes": {
+      "es": "about",
+      "en": "about",
+      "fr": "about"
+    },
+    "seo_keyword": "B2B growth partner",
+    "translations": {
+      "es": {
+        "title": "Sobre Rotata | Partner de crecimiento B2B",
+        "description": "Rotata diseña los sistemas detrás del crecimiento B2B: CRM, datos, automatización y alineación marketing-ventas.",
+        "eyebrow": "Sobre Rotata",
+        "h1": "Diseñamos los sistemas detrás del crecimiento B2B",
+        "intro": "Rotata existe para poner estructura donde el crecimiento se ha vuelto difícil de medir, escalar o explicar.",
+        "sections": [
+          {
+            "heading": "Quiénes somos",
+            "body": "Una compañía B2B growth system que trabaja entre estrategia, operaciones, CRM, datos, automatización e IA aplicada.",
+            "items": [],
+            "variant": "text"
+          },
+          {
+            "heading": "Por qué existimos",
+            "body": "Muchas empresas compran herramientas antes de definir la lógica que debe gobernarlas. Nosotros invertimos ese orden.",
+            "items": [
+              "Sistema antes que herramienta",
+              "Criterio antes que automatización",
+              "Medición antes que volumen"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Misión, visión y valores",
+            "body": "Construir sistemas de crecimiento serios, medibles y sostenibles para empresas B2B que necesitan claridad operativa.",
+            "items": [
+              "Precisión",
+              "Estructura",
+              "Responsabilidad",
+              "Mejora continua"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Hablemos de tu estructura"
+      },
+      "en": {
+        "title": "About Rotata | B2B growth partner",
+        "description": "Rotata designs the systems behind B2B growth: CRM, data, automation and marketing-sales alignment.",
+        "eyebrow": "About Rotata",
+        "h1": "We design the systems behind B2B growth",
+        "intro": "Rotata exists to bring structure where growth has become hard to measure, scale or explain.",
+        "sections": [
+          {
+            "heading": "Who we are",
+            "body": "A B2B growth system company working across strategy, operations, CRM, data, automation and applied AI.",
+            "items": [],
+            "variant": "text"
+          },
+          {
+            "heading": "Why we exist",
+            "body": "Many companies buy tools before defining the logic that should govern them. We reverse that order.",
+            "items": [
+              "System before tool",
+              "Criteria before automation",
+              "Measurement before volume"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Mission, vision and values",
+            "body": "Build serious, measurable and sustainable growth systems for B2B companies that need operating clarity.",
+            "items": [
+              "Precision",
+              "Structure",
+              "Accountability",
+              "Continuous improvement"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Talk about your structure"
+      },
+      "fr": {
+        "title": "À propos de Rotata | Partenaire croissance B2B",
+        "description": "Rotata conçoit les systèmes derrière la croissance B2B: CRM, données, automatisation et alignement marketing-ventes.",
+        "eyebrow": "À propos",
+        "h1": "Nous concevons les systèmes derrière la croissance B2B",
+        "intro": "Rotata apporte de la structure là où la croissance devient difficile à mesurer, scaler ou expliquer.",
+        "sections": [
+          {
+            "heading": "Qui nous sommes",
+            "body": "Une société de systèmes de croissance B2B entre stratégie, opérations, CRM, données, automatisation et IA appliquée.",
+            "items": [],
+            "variant": "text"
+          },
+          {
+            "heading": "Pourquoi nous existons",
+            "body": "Beaucoup d'entreprises achètent des outils avant de définir la logique qui doit les gouverner. Nous inversons cet ordre.",
+            "items": [
+              "Système avant outil",
+              "Critère avant automatisation",
+              "Mesure avant volume"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Mission, vision et valeurs",
+            "body": "Construire des systèmes de croissance sérieux, mesurables et durables pour les entreprises B2B.",
+            "items": [
+              "Précision",
+              "Structure",
+              "Responsabilité",
+              "Amélioration continue"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Parlons structure"
+      }
+    }
+  },
+  "solutions": {
+    "template": "standard",
+    "routes": {
+      "es": "solutions",
+      "en": "solutions",
+      "fr": "solutions"
+    },
+    "seo_keyword": "AI-driven marketing and sales systems",
+    "translations": {
+      "es": {
+        "title": "Soluciones | Sistemas de marketing y ventas con IA",
+        "description": "Sistemas estructurados para crecimiento B2B: estrategia, datos, CRM, automatización, outbound y reporting.",
+        "eyebrow": "Soluciones",
+        "h1": "Sistemas estructurados para crecimiento B2B",
+        "intro": "Unimos estrategia, datos, CRM, automatización, outbound y conversión en una arquitectura medible.",
+        "sections": [
+          {
+            "heading": "Problema",
+            "body": "La herramienta por sí sola no corrige un proceso mal diseñado. Si no existe estructura, la operación escala el desorden.",
+            "items": [
+              "Datos incompletos",
+              "Criterios distintos",
+              "Automatizaciones aisladas"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Qué hace Rotata",
+            "body": "Diseñamos la arquitectura operativa: datos, procesos, automatización, reporting y handoffs entre equipos.",
+            "items": [
+              {
+                "title": "Arquitectura CRM",
+                "text": "Modelo de datos, lifecycle stages, pipelines y reporting diseñados para representar la realidad comercial."
+              },
+              {
+                "title": "Automatización comercial",
+                "text": "Flujos que reducen fricción, mantienen seguimiento consistente y conectan marketing con ventas."
+              },
+              {
+                "title": "Inteligencia de cuentas",
+                "text": "Datos, señales e intent que ayudan a priorizar cuentas con mayor probabilidad de avanzar."
+              },
+              {
+                "title": "Sistema outbound",
+                "text": "Segmentación, secuencias, mensajes y medición para que la prospección no dependa de improvisación."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Resultados que buscamos",
+            "body": "Mejor visibilidad, mejor priorización, menos fricción y una forma común de medir el crecimiento.",
+            "items": [
+              "Claridad de pipeline",
+              "Seguimiento trazable",
+              "Datos accionables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          }
+        ],
+        "final_cta": "Diseñar mi sistema"
+      },
+      "en": {
+        "title": "Solutions | AI-driven marketing and sales systems",
+        "description": "Structured systems for B2B growth: strategy, data, CRM, automation, outbound and reporting.",
+        "eyebrow": "Solutions",
+        "h1": "Structured systems for B2B growth",
+        "intro": "We connect strategy, data, CRM, automation, outbound and conversion into a measurable architecture.",
+        "sections": [
+          {
+            "heading": "Problem",
+            "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+            "items": [
+              "Incomplete data",
+              "Different criteria",
+              "Isolated automations"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "What Rotata does",
+            "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+            "items": [
+              {
+                "title": "CRM architecture",
+                "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+              },
+              {
+                "title": "Sales automation",
+                "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+              },
+              {
+                "title": "Account intelligence",
+                "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+              },
+              {
+                "title": "Outbound system",
+                "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Outcomes we target",
+            "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+            "items": [
+              "Pipeline clarity",
+              "Traceable follow-up",
+              "Actionable data",
+              "Reliable reporting"
+            ],
+            "variant": "metrics"
+          }
+        ],
+        "final_cta": "Design my system"
+      },
+      "fr": {
+        "title": "Solutions | Systèmes marketing et ventes avec IA",
+        "description": "Systèmes structurés de croissance B2B: stratégie, données, CRM, automatisation, outbound et reporting.",
+        "eyebrow": "Solutions",
+        "h1": "Systèmes structurés pour la croissance B2B",
+        "intro": "Nous connectons stratégie, données, CRM, automatisation, outbound et conversion dans une architecture mesurable.",
+        "sections": [
+          {
+            "heading": "Problème",
+            "body": "Un outil seul ne corrige pas un processus faible. Sans structure, l'opération amplifie le désordre.",
+            "items": [
+              "Données incomplètes",
+              "Critères différents",
+              "Automatisations isolées"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Ce que fait Rotata",
+            "body": "Nous concevons l'architecture opérationnelle: données, processus, automatisation, reporting et handoffs.",
+            "items": [
+              {
+                "title": "Architecture CRM",
+                "text": "Modèle de données, cycles de vie, pipelines et reporting conçus autour du processus commercial réel."
+              },
+              {
+                "title": "Automatisation commerciale",
+                "text": "Workflows qui réduisent la friction, sécurisent le suivi et relient marketing et ventes."
+              },
+              {
+                "title": "Intelligence comptes",
+                "text": "Données, signaux et intention pour prioriser les comptes les plus susceptibles d'avancer."
+              },
+              {
+                "title": "Système outbound",
+                "text": "Ciblage, séquences, messages et mesure pour éviter une prospection improvisée."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Résultats visés",
+            "body": "Plus de visibilité, meilleure priorisation, moins de friction et une façon commune de mesurer la croissance.",
+            "items": [
+              "Clarté pipeline",
+              "Suivi traçable",
+              "Données actionnables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          }
+        ],
+        "final_cta": "Concevoir mon système"
+      }
+    }
+  },
+  "hubspot": {
+    "template": "standard",
+    "routes": {
+      "es": "hubspot",
+      "en": "hubspot",
+      "fr": "hubspot"
+    },
+    "seo_keyword": "HubSpot implementation Spain",
+    "translations": {
+      "es": {
+        "title": "HubSpot, estructurado para cómo funciona realmente tu negocio | Rotata",
+        "description": "HubSpot no debe ser un repositorio de actividad. Debe ser la infraestructura que hace más fácil vender, medir y decidir.",
+        "eyebrow": "Hubspot",
+        "h1": "HubSpot, estructurado para cómo funciona realmente tu negocio",
+        "intro": "HubSpot no debe ser un repositorio de actividad. Debe ser la infraestructura que hace más fácil vender, medir y decidir.",
+        "sections": [
+          {
+            "heading": "Problema",
+            "body": "La herramienta por sí sola no corrige un proceso mal diseñado. Si no existe estructura, la operación escala el desorden.",
+            "items": [
+              "Datos incompletos",
+              "Criterios distintos",
+              "Automatizaciones aisladas"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Qué hace Rotata",
+            "body": "Diseñamos la arquitectura operativa: datos, procesos, automatización, reporting y handoffs entre equipos.",
+            "items": [
+              {
+                "title": "Arquitectura CRM",
+                "text": "Modelo de datos, lifecycle stages, pipelines y reporting diseñados para representar la realidad comercial."
+              },
+              {
+                "title": "Automatización comercial",
+                "text": "Flujos que reducen fricción, mantienen seguimiento consistente y conectan marketing con ventas."
+              },
+              {
+                "title": "Inteligencia de cuentas",
+                "text": "Datos, señales e intent que ayudan a priorizar cuentas con mayor probabilidad de avanzar."
+              },
+              {
+                "title": "Sistema outbound",
+                "text": "Segmentación, secuencias, mensajes y medición para que la prospección no dependa de improvisación."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Resultados que buscamos",
+            "body": "Mejor visibilidad, mejor priorización, menos fricción y una forma común de medir el crecimiento.",
+            "items": [
+              "Claridad de pipeline",
+              "Seguimiento trazable",
+              "Datos accionables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Cuándo tiene sentido",
+            "body": "Cuando quieres que la herramienta se convierta en sistema operativo de crecimiento, no en otra capa de actividad.",
+            "items": [
+              "Procesos definidos",
+              "Datos conectados",
+              "Automatización con criterio"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Ordenar este sistema"
+      },
+      "en": {
+        "title": "HubSpot, structured for how your business actually works | Rotata",
+        "description": "HubSpot should not be a repository of activity. It should be the infrastructure that makes selling, measuring and deciding easier.",
+        "eyebrow": "Hubspot",
+        "h1": "HubSpot, structured for how your business actually works",
+        "intro": "HubSpot should not be a repository of activity. It should be the infrastructure that makes selling, measuring and deciding easier.",
+        "sections": [
+          {
+            "heading": "Problem",
+            "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+            "items": [
+              "Incomplete data",
+              "Different criteria",
+              "Isolated automations"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "What Rotata does",
+            "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+            "items": [
+              {
+                "title": "CRM architecture",
+                "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+              },
+              {
+                "title": "Sales automation",
+                "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+              },
+              {
+                "title": "Account intelligence",
+                "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+              },
+              {
+                "title": "Outbound system",
+                "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Outcomes we target",
+            "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+            "items": [
+              "Pipeline clarity",
+              "Traceable follow-up",
+              "Actionable data",
+              "Reliable reporting"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "When it matters",
+            "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+            "items": [
+              "Defined processes",
+              "Connected data",
+              "Automation with criteria"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structure this system"
+      },
+      "fr": {
+        "title": "HubSpot, structuré selon votre fonctionnement réel | Rotata",
+        "description": "HubSpot ne doit pas être un simple dépôt d'activité. Il doit aider à vendre, mesurer et décider.",
+        "eyebrow": "Hubspot",
+        "h1": "HubSpot, structuré selon votre fonctionnement réel",
+        "intro": "HubSpot ne doit pas être un simple dépôt d'activité. Il doit aider à vendre, mesurer et décider.",
+        "sections": [
+          {
+            "heading": "Problème",
+            "body": "Un outil seul ne corrige pas un processus faible. Sans structure, l'opération amplifie le désordre.",
+            "items": [
+              "Données incomplètes",
+              "Critères différents",
+              "Automatisations isolées"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Ce que fait Rotata",
+            "body": "Nous concevons l'architecture opérationnelle: données, processus, automatisation, reporting et handoffs.",
+            "items": [
+              {
+                "title": "Architecture CRM",
+                "text": "Modèle de données, cycles de vie, pipelines et reporting conçus autour du processus commercial réel."
+              },
+              {
+                "title": "Automatisation commerciale",
+                "text": "Workflows qui réduisent la friction, sécurisent le suivi et relient marketing et ventes."
+              },
+              {
+                "title": "Intelligence comptes",
+                "text": "Données, signaux et intention pour prioriser les comptes les plus susceptibles d'avancer."
+              },
+              {
+                "title": "Système outbound",
+                "text": "Ciblage, séquences, messages et mesure pour éviter une prospection improvisée."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Résultats visés",
+            "body": "Plus de visibilité, meilleure priorisation, moins de friction et une façon commune de mesurer la croissance.",
+            "items": [
+              "Clarté pipeline",
+              "Suivi traçable",
+              "Données actionnables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Quand c'est pertinent",
+            "body": "Quand l'outil doit devenir le système opérationnel de croissance, pas une couche d'activité de plus.",
+            "items": [
+              "Processus définis",
+              "Données connectées",
+              "Automatisation avec critères"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structurer ce système"
+      }
+    }
+  },
+  "zoominfo": {
+    "template": "standard",
+    "routes": {
+      "es": "zoominfo",
+      "en": "zoominfo",
+      "fr": "zoominfo"
+    },
+    "seo_keyword": "B2B data intelligence",
+    "translations": {
+      "es": {
+        "title": "Mejores datos, usados correctamente | Rotata",
+        "description": "Más datos no equivalen a más crecimiento. El valor aparece cuando la inteligencia de cuentas se conecta al CRM y al proceso comercial.",
+        "eyebrow": "Zoominfo",
+        "h1": "Mejores datos, usados correctamente",
+        "intro": "Más datos no equivalen a más crecimiento. El valor aparece cuando la inteligencia de cuentas se conecta al CRM y al proceso comercial.",
+        "sections": [
+          {
+            "heading": "Problema",
+            "body": "La herramienta por sí sola no corrige un proceso mal diseñado. Si no existe estructura, la operación escala el desorden.",
+            "items": [
+              "Datos incompletos",
+              "Criterios distintos",
+              "Automatizaciones aisladas"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Qué hace Rotata",
+            "body": "Diseñamos la arquitectura operativa: datos, procesos, automatización, reporting y handoffs entre equipos.",
+            "items": [
+              {
+                "title": "Arquitectura CRM",
+                "text": "Modelo de datos, lifecycle stages, pipelines y reporting diseñados para representar la realidad comercial."
+              },
+              {
+                "title": "Automatización comercial",
+                "text": "Flujos que reducen fricción, mantienen seguimiento consistente y conectan marketing con ventas."
+              },
+              {
+                "title": "Inteligencia de cuentas",
+                "text": "Datos, señales e intent que ayudan a priorizar cuentas con mayor probabilidad de avanzar."
+              },
+              {
+                "title": "Sistema outbound",
+                "text": "Segmentación, secuencias, mensajes y medición para que la prospección no dependa de improvisación."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Resultados que buscamos",
+            "body": "Mejor visibilidad, mejor priorización, menos fricción y una forma común de medir el crecimiento.",
+            "items": [
+              "Claridad de pipeline",
+              "Seguimiento trazable",
+              "Datos accionables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Cuándo tiene sentido",
+            "body": "Cuando quieres que la herramienta se convierta en sistema operativo de crecimiento, no en otra capa de actividad.",
+            "items": [
+              "Procesos definidos",
+              "Datos conectados",
+              "Automatización con criterio"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Ordenar este sistema"
+      },
+      "en": {
+        "title": "Better data, used properly | Rotata",
+        "description": "More data does not equal more growth. Value appears when account intelligence connects to CRM and sales process.",
+        "eyebrow": "Zoominfo",
+        "h1": "Better data, used properly",
+        "intro": "More data does not equal more growth. Value appears when account intelligence connects to CRM and sales process.",
+        "sections": [
+          {
+            "heading": "Problem",
+            "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+            "items": [
+              "Incomplete data",
+              "Different criteria",
+              "Isolated automations"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "What Rotata does",
+            "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+            "items": [
+              {
+                "title": "CRM architecture",
+                "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+              },
+              {
+                "title": "Sales automation",
+                "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+              },
+              {
+                "title": "Account intelligence",
+                "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+              },
+              {
+                "title": "Outbound system",
+                "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Outcomes we target",
+            "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+            "items": [
+              "Pipeline clarity",
+              "Traceable follow-up",
+              "Actionable data",
+              "Reliable reporting"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "When it matters",
+            "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+            "items": [
+              "Defined processes",
+              "Connected data",
+              "Automation with criteria"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structure this system"
+      },
+      "fr": {
+        "title": "De meilleures données, bien utilisées | Rotata",
+        "description": "Plus de données ne signifie pas plus de croissance. La valeur vient quand l'intelligence comptes se connecte au CRM.",
+        "eyebrow": "Zoominfo",
+        "h1": "De meilleures données, bien utilisées",
+        "intro": "Plus de données ne signifie pas plus de croissance. La valeur vient quand l'intelligence comptes se connecte au CRM.",
+        "sections": [
+          {
+            "heading": "Problème",
+            "body": "Un outil seul ne corrige pas un processus faible. Sans structure, l'opération amplifie le désordre.",
+            "items": [
+              "Données incomplètes",
+              "Critères différents",
+              "Automatisations isolées"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Ce que fait Rotata",
+            "body": "Nous concevons l'architecture opérationnelle: données, processus, automatisation, reporting et handoffs.",
+            "items": [
+              {
+                "title": "Architecture CRM",
+                "text": "Modèle de données, cycles de vie, pipelines et reporting conçus autour du processus commercial réel."
+              },
+              {
+                "title": "Automatisation commerciale",
+                "text": "Workflows qui réduisent la friction, sécurisent le suivi et relient marketing et ventes."
+              },
+              {
+                "title": "Intelligence comptes",
+                "text": "Données, signaux et intention pour prioriser les comptes les plus susceptibles d'avancer."
+              },
+              {
+                "title": "Système outbound",
+                "text": "Ciblage, séquences, messages et mesure pour éviter une prospection improvisée."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Résultats visés",
+            "body": "Plus de visibilité, meilleure priorisation, moins de friction et une façon commune de mesurer la croissance.",
+            "items": [
+              "Clarté pipeline",
+              "Suivi traçable",
+              "Données actionnables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Quand c'est pertinent",
+            "body": "Quand l'outil doit devenir le système opérationnel de croissance, pas une couche d'activité de plus.",
+            "items": [
+              "Processus définis",
+              "Données connectées",
+              "Automatisation avec critères"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structurer ce système"
+      }
+    }
+  },
+  "outbound": {
+    "template": "standard",
+    "routes": {
+      "es": "outbound",
+      "en": "outbound",
+      "fr": "outbound"
+    },
+    "seo_keyword": "B2B outbound system",
+    "translations": {
+      "es": {
+        "title": "Outbound estructurado, no improvisado | Rotata",
+        "description": "Diseñamos prospección multicanal con segmentación, relevancia de mensaje, secuencias y tracking de rendimiento.",
+        "eyebrow": "Outbound",
+        "h1": "Outbound estructurado, no improvisado",
+        "intro": "Diseñamos prospección multicanal con segmentación, relevancia de mensaje, secuencias y tracking de rendimiento.",
+        "sections": [
+          {
+            "heading": "Problema",
+            "body": "La herramienta por sí sola no corrige un proceso mal diseñado. Si no existe estructura, la operación escala el desorden.",
+            "items": [
+              "Datos incompletos",
+              "Criterios distintos",
+              "Automatizaciones aisladas"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Qué hace Rotata",
+            "body": "Diseñamos la arquitectura operativa: datos, procesos, automatización, reporting y handoffs entre equipos.",
+            "items": [
+              {
+                "title": "Arquitectura CRM",
+                "text": "Modelo de datos, lifecycle stages, pipelines y reporting diseñados para representar la realidad comercial."
+              },
+              {
+                "title": "Automatización comercial",
+                "text": "Flujos que reducen fricción, mantienen seguimiento consistente y conectan marketing con ventas."
+              },
+              {
+                "title": "Inteligencia de cuentas",
+                "text": "Datos, señales e intent que ayudan a priorizar cuentas con mayor probabilidad de avanzar."
+              },
+              {
+                "title": "Sistema outbound",
+                "text": "Segmentación, secuencias, mensajes y medición para que la prospección no dependa de improvisación."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Resultados que buscamos",
+            "body": "Mejor visibilidad, mejor priorización, menos fricción y una forma común de medir el crecimiento.",
+            "items": [
+              "Claridad de pipeline",
+              "Seguimiento trazable",
+              "Datos accionables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Cuándo tiene sentido",
+            "body": "Cuando quieres que la herramienta se convierta en sistema operativo de crecimiento, no en otra capa de actividad.",
+            "items": [
+              "Procesos definidos",
+              "Datos conectados",
+              "Automatización con criterio"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Ordenar este sistema"
+      },
+      "en": {
+        "title": "Outbound that is structured, not improvised | Rotata",
+        "description": "We design multichannel prospecting with targeting, message relevance, sequences and performance tracking.",
+        "eyebrow": "Outbound",
+        "h1": "Outbound that is structured, not improvised",
+        "intro": "We design multichannel prospecting with targeting, message relevance, sequences and performance tracking.",
+        "sections": [
+          {
+            "heading": "Problem",
+            "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+            "items": [
+              "Incomplete data",
+              "Different criteria",
+              "Isolated automations"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "What Rotata does",
+            "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+            "items": [
+              {
+                "title": "CRM architecture",
+                "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+              },
+              {
+                "title": "Sales automation",
+                "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+              },
+              {
+                "title": "Account intelligence",
+                "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+              },
+              {
+                "title": "Outbound system",
+                "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Outcomes we target",
+            "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+            "items": [
+              "Pipeline clarity",
+              "Traceable follow-up",
+              "Actionable data",
+              "Reliable reporting"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "When it matters",
+            "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+            "items": [
+              "Defined processes",
+              "Connected data",
+              "Automation with criteria"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structure this system"
+      },
+      "fr": {
+        "title": "Outbound structuré, pas improvisé | Rotata",
+        "description": "Nous concevons une prospection multicanale avec ciblage, pertinence des messages, séquences et mesure.",
+        "eyebrow": "Outbound",
+        "h1": "Outbound structuré, pas improvisé",
+        "intro": "Nous concevons une prospection multicanale avec ciblage, pertinence des messages, séquences et mesure.",
+        "sections": [
+          {
+            "heading": "Problème",
+            "body": "Un outil seul ne corrige pas un processus faible. Sans structure, l'opération amplifie le désordre.",
+            "items": [
+              "Données incomplètes",
+              "Critères différents",
+              "Automatisations isolées"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Ce que fait Rotata",
+            "body": "Nous concevons l'architecture opérationnelle: données, processus, automatisation, reporting et handoffs.",
+            "items": [
+              {
+                "title": "Architecture CRM",
+                "text": "Modèle de données, cycles de vie, pipelines et reporting conçus autour du processus commercial réel."
+              },
+              {
+                "title": "Automatisation commerciale",
+                "text": "Workflows qui réduisent la friction, sécurisent le suivi et relient marketing et ventes."
+              },
+              {
+                "title": "Intelligence comptes",
+                "text": "Données, signaux et intention pour prioriser les comptes les plus susceptibles d'avancer."
+              },
+              {
+                "title": "Système outbound",
+                "text": "Ciblage, séquences, messages et mesure pour éviter une prospection improvisée."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Résultats visés",
+            "body": "Plus de visibilité, meilleure priorisation, moins de friction et une façon commune de mesurer la croissance.",
+            "items": [
+              "Clarté pipeline",
+              "Suivi traçable",
+              "Données actionnables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Quand c'est pertinent",
+            "body": "Quand l'outil doit devenir le système opérationnel de croissance, pas une couche d'activité de plus.",
+            "items": [
+              "Processus définis",
+              "Données connectées",
+              "Automatisation avec critères"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structurer ce système"
+      }
+    }
+  },
+  "synapsale": {
+    "template": "standard",
+    "routes": {
+      "es": "synapsale",
+      "en": "synapsale",
+      "fr": "synapsale"
+    },
+    "seo_keyword": "account engagement",
+    "translations": {
+      "es": {
+        "title": "Foco en cuentas que realmente muestran interés | Rotata",
+        "description": "Las señales de cuenta sirven para priorizar timing, relevancia y reuniones cualificadas, no para añadir ruido al CRM.",
+        "eyebrow": "Synapsale",
+        "h1": "Foco en cuentas que realmente muestran interés",
+        "intro": "Las señales de cuenta sirven para priorizar timing, relevancia y reuniones cualificadas, no para añadir ruido al CRM.",
+        "sections": [
+          {
+            "heading": "Problema",
+            "body": "La herramienta por sí sola no corrige un proceso mal diseñado. Si no existe estructura, la operación escala el desorden.",
+            "items": [
+              "Datos incompletos",
+              "Criterios distintos",
+              "Automatizaciones aisladas"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Qué hace Rotata",
+            "body": "Diseñamos la arquitectura operativa: datos, procesos, automatización, reporting y handoffs entre equipos.",
+            "items": [
+              {
+                "title": "Arquitectura CRM",
+                "text": "Modelo de datos, lifecycle stages, pipelines y reporting diseñados para representar la realidad comercial."
+              },
+              {
+                "title": "Automatización comercial",
+                "text": "Flujos que reducen fricción, mantienen seguimiento consistente y conectan marketing con ventas."
+              },
+              {
+                "title": "Inteligencia de cuentas",
+                "text": "Datos, señales e intent que ayudan a priorizar cuentas con mayor probabilidad de avanzar."
+              },
+              {
+                "title": "Sistema outbound",
+                "text": "Segmentación, secuencias, mensajes y medición para que la prospección no dependa de improvisación."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Resultados que buscamos",
+            "body": "Mejor visibilidad, mejor priorización, menos fricción y una forma común de medir el crecimiento.",
+            "items": [
+              "Claridad de pipeline",
+              "Seguimiento trazable",
+              "Datos accionables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Cuándo tiene sentido",
+            "body": "Cuando quieres que la herramienta se convierta en sistema operativo de crecimiento, no en otra capa de actividad.",
+            "items": [
+              "Procesos definidos",
+              "Datos conectados",
+              "Automatización con criterio"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Ordenar este sistema"
+      },
+      "en": {
+        "title": "Focus on accounts that actually show interest | Rotata",
+        "description": "Account signals help prioritize timing, relevance and qualified meetings instead of adding noise to the CRM.",
+        "eyebrow": "Synapsale",
+        "h1": "Focus on accounts that actually show interest",
+        "intro": "Account signals help prioritize timing, relevance and qualified meetings instead of adding noise to the CRM.",
+        "sections": [
+          {
+            "heading": "Problem",
+            "body": "A tool alone does not fix a weak process. Without structure, the operation scales disorder.",
+            "items": [
+              "Incomplete data",
+              "Different criteria",
+              "Isolated automations"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "What Rotata does",
+            "body": "We design the operating architecture: data, processes, automation, reporting and handoffs between teams.",
+            "items": [
+              {
+                "title": "CRM architecture",
+                "text": "Data model, lifecycle stages, pipelines and reporting designed around the real sales process."
+              },
+              {
+                "title": "Sales automation",
+                "text": "Workflows that reduce friction, keep follow-up consistent and connect marketing with sales."
+              },
+              {
+                "title": "Account intelligence",
+                "text": "Data, signals and intent used to prioritize accounts with a higher chance of moving forward."
+              },
+              {
+                "title": "Outbound system",
+                "text": "Targeting, sequences, messaging and measurement so prospecting is not improvised."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Outcomes we target",
+            "body": "Better visibility, stronger prioritization, less friction and a common way to measure growth.",
+            "items": [
+              "Pipeline clarity",
+              "Traceable follow-up",
+              "Actionable data",
+              "Reliable reporting"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "When it matters",
+            "body": "When the tool needs to become the operating system for growth, not another layer of activity.",
+            "items": [
+              "Defined processes",
+              "Connected data",
+              "Automation with criteria"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structure this system"
+      },
+      "fr": {
+        "title": "Priorité aux comptes qui montrent un réel intérêt | Rotata",
+        "description": "Les signaux comptes aident à prioriser le timing, la pertinence et les rendez-vous qualifiés.",
+        "eyebrow": "Synapsale",
+        "h1": "Priorité aux comptes qui montrent un réel intérêt",
+        "intro": "Les signaux comptes aident à prioriser le timing, la pertinence et les rendez-vous qualifiés.",
+        "sections": [
+          {
+            "heading": "Problème",
+            "body": "Un outil seul ne corrige pas un processus faible. Sans structure, l'opération amplifie le désordre.",
+            "items": [
+              "Données incomplètes",
+              "Critères différents",
+              "Automatisations isolées"
+            ],
+            "variant": "problem"
+          },
+          {
+            "heading": "Ce que fait Rotata",
+            "body": "Nous concevons l'architecture opérationnelle: données, processus, automatisation, reporting et handoffs.",
+            "items": [
+              {
+                "title": "Architecture CRM",
+                "text": "Modèle de données, cycles de vie, pipelines et reporting conçus autour du processus commercial réel."
+              },
+              {
+                "title": "Automatisation commerciale",
+                "text": "Workflows qui réduisent la friction, sécurisent le suivi et relient marketing et ventes."
+              },
+              {
+                "title": "Intelligence comptes",
+                "text": "Données, signaux et intention pour prioriser les comptes les plus susceptibles d'avancer."
+              },
+              {
+                "title": "Système outbound",
+                "text": "Ciblage, séquences, messages et mesure pour éviter une prospection improvisée."
+              }
+            ],
+            "variant": "cards"
+          },
+          {
+            "heading": "Résultats visés",
+            "body": "Plus de visibilité, meilleure priorisation, moins de friction et une façon commune de mesurer la croissance.",
+            "items": [
+              "Clarté pipeline",
+              "Suivi traçable",
+              "Données actionnables",
+              "Reporting fiable"
+            ],
+            "variant": "metrics"
+          },
+          {
+            "heading": "Quand c'est pertinent",
+            "body": "Quand l'outil doit devenir le système opérationnel de croissance, pas une couche d'activité de plus.",
+            "items": [
+              "Processus définis",
+              "Données connectées",
+              "Automatisation avec critères"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Structurer ce système"
+      }
+    }
+  },
+  "blog": {
+    "template": "blog",
+    "routes": {
+      "es": "blog",
+      "en": "blog",
+      "fr": "blog"
+    },
+    "seo_keyword": "B2B marketing insights",
+    "translations": {
+      "es": {
+        "title": "Blog | Insights sobre crecimiento B2B, IA y sistemas de marketing",
+        "description": "Artículos de Rotata sobre CRM, HubSpot, datos, IA, generación de leads, outbound, SEO, estrategia y RevOps.",
+        "eyebrow": "Insights",
+        "h1": "Insights sobre crecimiento B2B, IA y sistemas de marketing",
+        "intro": "Biblioteca editorial basada en el contenido existente de Rotata y preparada para crecer con nuevas piezas.",
+        "sections": [],
+        "final_cta": "Recibir insights"
+      },
+      "en": {
+        "title": "Blog | B2B growth, AI and marketing systems insights",
+        "description": "Rotata insights on CRM, HubSpot, data, AI, lead generation, outbound, SEO, strategy and RevOps.",
+        "eyebrow": "Insights",
+        "h1": "Insights on B2B growth, AI and marketing systems",
+        "intro": "An editorial library built from Rotata source material and ready to scale with new content.",
+        "sections": [],
+        "final_cta": "Get insights"
+      },
+      "fr": {
+        "title": "Blog | Insights croissance B2B, IA et systèmes marketing",
+        "description": "Articles Rotata sur CRM, HubSpot, données, IA, génération de leads, outbound, SEO, stratégie et RevOps.",
+        "eyebrow": "Insights",
+        "h1": "Insights sur la croissance B2B, l'IA et les systèmes marketing",
+        "intro": "Une bibliothèque éditoriale basée sur le contenu Rotata et prête à se développer.",
+        "sections": [],
+        "final_cta": "Recevoir les insights"
+      }
+    }
+  },
+  "roi": {
+    "template": "roi",
+    "routes": {
+      "es": "calculadora-roi",
+      "en": "calculadora-roi",
+      "fr": "calculadora-roi"
+    },
+    "seo_keyword": "marketing sales ROI calculator",
+    "translations": {
+      "es": {
+        "title": "Calculadora ROI | Marketing y ventas B2B",
+        "description": "Calcula el retorno potencial de un sistema de marketing y ventas mejor estructurado.",
+        "eyebrow": "ROI",
+        "h1": "Calcula el ROI de tu sistema de marketing y ventas",
+        "intro": "Antes de invertir en más herramientas, estima el impacto de mejorar conversión, velocidad comercial y calidad de datos.",
+        "sections": [
+          {
+            "heading": "Qué mide esta calculadora",
+            "body": "La calculadora estima valor incremental a partir de leads, conversión, ticket medio y mejora esperada del sistema.",
+            "items": [
+              "Más oportunidades útiles",
+              "Menos pérdida por fricción",
+              "Mejor seguimiento",
+              "Reporting conectado a ingresos"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Drivers de ROI",
+            "body": "El ROI no aparece por añadir software. Aparece cuando el sistema mejora foco, velocidad, conversión y trazabilidad.",
+            "items": [
+              "Calidad de datos",
+              "Prioridad de cuentas",
+              "Automatización",
+              "Alineación marketing-ventas"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Revisar mi ROI"
+      },
+      "en": {
+        "title": "ROI Calculator | B2B marketing and sales",
+        "description": "Estimate the potential return from a better structured marketing and sales system.",
+        "eyebrow": "ROI",
+        "h1": "Calculate the ROI of your marketing and sales system",
+        "intro": "Before investing in more tools, estimate the impact of improving conversion, sales velocity and data quality.",
+        "sections": [
+          {
+            "heading": "What this calculator measures",
+            "body": "It estimates incremental value from leads, conversion, average contract value and expected system improvement.",
+            "items": [
+              "More useful opportunities",
+              "Less friction loss",
+              "Better follow-up",
+              "Revenue-linked reporting"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "ROI drivers",
+            "body": "ROI does not come from adding software. It comes when the system improves focus, speed, conversion and traceability.",
+            "items": [
+              "Data quality",
+              "Account priority",
+              "Automation",
+              "Marketing-sales alignment"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Review my ROI"
+      },
+      "fr": {
+        "title": "Calculateur ROI | Marketing et ventes B2B",
+        "description": "Estimez le retour potentiel d'un système marketing et commercial mieux structuré.",
+        "eyebrow": "ROI",
+        "h1": "Calculez le ROI de votre système marketing et ventes",
+        "intro": "Avant d'investir dans plus d'outils, estimez l'impact d'une meilleure conversion, vitesse commerciale et qualité de données.",
+        "sections": [
+          {
+            "heading": "Ce que mesure ce calculateur",
+            "body": "Il estime la valeur incrémentale à partir des leads, de la conversion, du panier moyen et de l'amélioration attendue.",
+            "items": [
+              "Opportunités plus utiles",
+              "Moins de friction",
+              "Meilleur suivi",
+              "Reporting lié au revenu"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Drivers de ROI",
+            "body": "Le ROI ne vient pas d'un logiciel de plus. Il vient d'un système qui améliore focus, vitesse, conversion et traçabilité.",
+            "items": [
+              "Qualité des données",
+              "Priorité comptes",
+              "Automatisation",
+              "Alignement marketing-ventes"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Analyser mon ROI"
+      }
+    }
+  },
+  "contact": {
+    "template": "contact",
+    "routes": {
+      "es": "contacto",
+      "en": "contacto",
+      "fr": "contacto"
+    },
+    "seo_keyword": "B2B growth consultation",
+    "translations": {
+      "es": {
+        "title": "Contacto | Hablemos de tu sistema actual",
+        "description": "Contacta con Rotata para revisar tu CRM, datos, automatización, outbound o sistema de crecimiento B2B.",
+        "eyebrow": "Contacto",
+        "h1": "Hablemos de tu configuración actual",
+        "intro": "Cuéntanos qué está pasando en tu CRM, pipeline, reporting o captación. Te responderemos con próximos pasos concretos.",
+        "sections": [
+          {
+            "heading": "Qué ocurre después",
+            "body": "Revisamos tu contexto, identificamos el área crítica y proponemos una conversación centrada en diagnóstico, no en venta genérica.",
+            "items": [
+              "Respuesta inicial",
+              "Diagnóstico de encaje",
+              "Siguiente paso claro"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Para quién es",
+            "body": "Empresas B2B con ventas consultivas, CRM en uso o intención clara de ordenar marketing, ventas y datos.",
+            "items": [
+              "SaaS",
+              "IT",
+              "Servicios B2B",
+              "Equipos con HubSpot"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Para quién no es",
+            "body": "No somos una fábrica de campañas sueltas ni un reseller que vende herramienta sin sistema.",
+            "items": [
+              "Sin compromiso con datos",
+              "Sin dueño interno",
+              "Solo ejecución aislada"
+            ],
+            "variant": "problem"
+          }
+        ],
+        "final_cta": "Enviar diagnóstico"
+      },
+      "en": {
+        "title": "Contact | Talk about your current setup",
+        "description": "Contact Rotata to review your CRM, data, automation, outbound or B2B growth system.",
+        "eyebrow": "Contact",
+        "h1": "Let's talk about your current setup",
+        "intro": "Tell us what is happening in your CRM, pipeline, reporting or demand generation. We will reply with concrete next steps.",
+        "sections": [
+          {
+            "heading": "What happens next",
+            "body": "We review context, identify the critical area and propose a diagnostic conversation, not a generic sales call.",
+            "items": [
+              "Initial response",
+              "Fit diagnosis",
+              "Clear next step"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Who it is for",
+            "body": "B2B companies with consultative sales, CRM in place or a clear need to structure marketing, sales and data.",
+            "items": [
+              "SaaS",
+              "IT",
+              "B2B services",
+              "HubSpot teams"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Who it is not for",
+            "body": "We are not a campaign factory or a reseller selling tools without systems.",
+            "items": [
+              "No data ownership",
+              "No internal owner",
+              "Only isolated execution"
+            ],
+            "variant": "problem"
+          }
+        ],
+        "final_cta": "Send diagnosis"
+      },
+      "fr": {
+        "title": "Contact | Parlons de votre configuration actuelle",
+        "description": "Contactez Rotata pour revoir votre CRM, données, automatisation, outbound ou système de croissance B2B.",
+        "eyebrow": "Contact",
+        "h1": "Parlons de votre configuration actuelle",
+        "intro": "Expliquez ce qui se passe dans votre CRM, pipeline, reporting ou acquisition. Nous répondrons avec des étapes concrètes.",
+        "sections": [
+          {
+            "heading": "Ce qui se passe ensuite",
+            "body": "Nous analysons le contexte, identifions la zone critique et proposons une conversation de diagnostic.",
+            "items": [
+              "Réponse initiale",
+              "Diagnostic de fit",
+              "Prochaine étape claire"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Pour qui",
+            "body": "Entreprises B2B avec vente consultative, CRM en place ou besoin clair de structurer marketing, ventes et données.",
+            "items": [
+              "SaaS",
+              "IT",
+              "Services B2B",
+              "Équipes HubSpot"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Pour qui ce n'est pas",
+            "body": "Nous ne sommes pas une usine à campagnes ni un revendeur d'outils sans système.",
+            "items": [
+              "Pas de gouvernance data",
+              "Pas de responsable interne",
+              "Seulement exécution isolée"
+            ],
+            "variant": "problem"
+          }
+        ],
+        "final_cta": "Envoyer diagnostic"
+      }
+    }
+  },
+  "cases": {
+    "template": "standard",
+    "routes": {
+      "es": "cases",
+      "en": "cases",
+      "fr": "cases"
+    },
+    "seo_keyword": "B2B growth case studies",
+    "translations": {
+      "es": {
+        "title": "Casos | Patrones de sistema Rotata",
+        "description": "Casos y patrones de trabajo de Rotata estructurados en problema, sistema y resultado.",
+        "eyebrow": "Casos",
+        "h1": "Casos estructurados por problema, sistema y resultado",
+        "intro": "No inventamos métricas. Usamos placeholders honestos hasta documentar casos aprobados por cliente.",
+        "sections": [
+          {
+            "heading": "Patrón de caso",
+            "body": "Cada caso se documenta con el problema de negocio, el sistema implementado y el resultado verificable.",
+            "items": [
+              "Problema",
+              "Sistema",
+              "Resultado"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Áreas habituales",
+            "body": "CRM, reporting, automatización, outbound, datos de intención y alineación marketing-ventas.",
+            "items": [
+              "HubSpot",
+              "ZoomInfo",
+              "Outbound",
+              "RevOps"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Documentar mi caso"
+      },
+      "en": {
+        "title": "Cases | Rotata system patterns",
+        "description": "Rotata case patterns structured around problem, system and result.",
+        "eyebrow": "Cases",
+        "h1": "Cases structured by problem, system and result",
+        "intro": "We do not fake metrics. Honest placeholders remain until approved client stories are documented.",
+        "sections": [
+          {
+            "heading": "Case pattern",
+            "body": "Each case documents the business problem, the implemented system and the verifiable result.",
+            "items": [
+              "Problem",
+              "System",
+              "Result"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Typical areas",
+            "body": "CRM, reporting, automation, outbound, intent data and marketing-sales alignment.",
+            "items": [
+              "HubSpot",
+              "ZoomInfo",
+              "Outbound",
+              "RevOps"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Document my case"
+      },
+      "fr": {
+        "title": "Cas | Patterns de système Rotata",
+        "description": "Cas Rotata structurés autour du problème, du système et du résultat.",
+        "eyebrow": "Cas",
+        "h1": "Cas structurés par problème, système et résultat",
+        "intro": "Nous n'inventons pas de métriques. Les placeholders restent honnêtes jusqu'à validation client.",
+        "sections": [
+          {
+            "heading": "Pattern de cas",
+            "body": "Chaque cas documente le problème business, le système mis en œuvre et le résultat vérifiable.",
+            "items": [
+              "Problème",
+              "Système",
+              "Résultat"
+            ],
+            "variant": "process"
+          },
+          {
+            "heading": "Domaines fréquents",
+            "body": "CRM, reporting, automatisation, outbound, intent data et alignement marketing-ventes.",
+            "items": [
+              "HubSpot",
+              "ZoomInfo",
+              "Outbound",
+              "RevOps"
+            ],
+            "variant": "cards"
+          }
+        ],
+        "final_cta": "Documenter mon cas"
+      }
+    }
+  },
+  "process": {
+    "template": "standard",
+    "routes": {
+      "es": "process",
+      "en": "process",
+      "fr": "process"
+    },
+    "seo_keyword": "B2B growth process",
+    "translations": {
+      "es": {
+        "title": "Proceso | De diagnóstico a escala",
+        "description": "Proceso Rotata para diseñar, implementar y optimizar sistemas de crecimiento B2B.",
+        "eyebrow": "Proceso",
+        "h1": "Un enfoque estructurado desde diagnóstico hasta escala",
+        "intro": "El sistema se construye en fases para evitar automatizar problemas mal definidos.",
+        "sections": [
+          {
+            "heading": "Diagnosticar",
+            "body": "Mapeamos CRM, datos, pipeline, procesos, reporting, fricciones y objetivos comerciales.",
+            "items": [
+              "Auditoría",
+              "Gap map",
+              "Prioridades"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Diseñar",
+            "body": "Definimos arquitectura, criterios, objetos, etapas, automatizaciones y medición antes de ejecutar.",
+            "items": [
+              "Modelo",
+              "Proceso",
+              "Métricas"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Implementar",
+            "body": "Configuramos la estructura, migramos o limpiamos datos, activamos workflows y documentamos el sistema.",
+            "items": [
+              "CRM",
+              "Datos",
+              "Automatización"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Optimizar",
+            "body": "Medimos el sistema en operación y ajustamos reglas, conversiones, reporting y calidad de entrada.",
+            "items": [
+              "Rendimiento",
+              "Calidad",
+              "Escala"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Empezar diagnóstico"
+      },
+      "en": {
+        "title": "Process | From diagnosis to scale",
+        "description": "Rotata process to design, implement and optimize B2B growth systems.",
+        "eyebrow": "Process",
+        "h1": "A structured approach from diagnosis to scale",
+        "intro": "The system is built in phases to avoid automating badly defined problems.",
+        "sections": [
+          {
+            "heading": "Diagnose",
+            "body": "We map CRM, data, pipeline, processes, reporting, friction and commercial goals.",
+            "items": [
+              "Audit",
+              "Gap map",
+              "Priorities"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Design",
+            "body": "We define architecture, criteria, objects, stages, automation and measurement before execution.",
+            "items": [
+              "Model",
+              "Process",
+              "Metrics"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Implement",
+            "body": "We configure structure, migrate or clean data, activate workflows and document the system.",
+            "items": [
+              "CRM",
+              "Data",
+              "Automation"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Optimize",
+            "body": "We measure the system in operation and adjust rules, conversions, reporting and input quality.",
+            "items": [
+              "Performance",
+              "Quality",
+              "Scale"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Start diagnosis"
+      },
+      "fr": {
+        "title": "Processus | Du diagnostic à l'échelle",
+        "description": "Processus Rotata pour concevoir, implémenter et optimiser les systèmes de croissance B2B.",
+        "eyebrow": "Processus",
+        "h1": "Une approche structurée du diagnostic à l'échelle",
+        "intro": "Le système se construit par phases pour éviter d'automatiser des problèmes mal définis.",
+        "sections": [
+          {
+            "heading": "Diagnostiquer",
+            "body": "Nous cartographions CRM, données, pipeline, processus, reporting, frictions et objectifs.",
+            "items": [
+              "Audit",
+              "Gap map",
+              "Priorités"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Concevoir",
+            "body": "Nous définissons architecture, critères, objets, étapes, automatisation et mesure avant exécution.",
+            "items": [
+              "Modèle",
+              "Processus",
+              "Métriques"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Implémenter",
+            "body": "Nous configurons la structure, nettoyons les données, activons les workflows et documentons.",
+            "items": [
+              "CRM",
+              "Données",
+              "Automatisation"
+            ],
+            "variant": "grid"
+          },
+          {
+            "heading": "Optimiser",
+            "body": "Nous mesurons le système en production et ajustons règles, conversions, reporting et qualité.",
+            "items": [
+              "Performance",
+              "Qualité",
+              "Échelle"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Commencer le diagnostic"
+      }
+    }
+  },
+  "privacy": {
+    "template": "standard",
+    "routes": {
+      "es": "privacy",
+      "en": "privacy",
+      "fr": "privacy"
+    },
+    "seo_keyword": "Privacy policy",
+    "translations": {
+      "es": {
+        "title": "Política de privacidad | Rotata",
+        "description": "Información de política de privacidad de Rotata.",
+        "eyebrow": "Legal",
+        "h1": "Política de privacidad",
+        "intro": "Contenido preparado para publicación estática y actualización futura en WordPress.",
+        "sections": [
+          {
+            "heading": "Política de privacidad",
+            "body": "Rotata Consulting SL mantiene esta página para ofrecer información clara sobre condiciones, privacidad, cookies, accesibilidad y navegación del sitio.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contacto: info@rotata.com",
+              "Actualización: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Volver al inicio"
+      },
+      "en": {
+        "title": "Privacy policy | Rotata",
+        "description": "Rotata privacy policy information.",
+        "eyebrow": "Legal",
+        "h1": "Privacy policy",
+        "intro": "Content prepared for static publication and future WordPress editing.",
+        "sections": [
+          {
+            "heading": "Privacy policy",
+            "body": "Rotata Consulting SL keeps this page to provide clear information about terms, privacy, cookies, accessibility and site navigation.",
+            "items": [
+              "Controller: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Updated: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Back to home"
+      },
+      "fr": {
+        "title": "Politique de confidentialité | Rotata",
+        "description": "Information Rotata: politique de confidentialité.",
+        "eyebrow": "Legal",
+        "h1": "Politique de confidentialité",
+        "intro": "Contenu préparé pour publication statique et édition future dans WordPress.",
+        "sections": [
+          {
+            "heading": "Politique de confidentialité",
+            "body": "Rotata Consulting SL maintient cette page pour informer sur les conditions, la confidentialité, les cookies, l'accessibilité et la navigation.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Mise à jour: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Retour accueil"
+      }
+    }
+  },
+  "legal": {
+    "template": "standard",
+    "routes": {
+      "es": "legal",
+      "en": "legal",
+      "fr": "legal"
+    },
+    "seo_keyword": "Legal notice",
+    "translations": {
+      "es": {
+        "title": "Aviso legal | Rotata",
+        "description": "Información de aviso legal de Rotata.",
+        "eyebrow": "Legal",
+        "h1": "Aviso legal",
+        "intro": "Contenido preparado para publicación estática y actualización futura en WordPress.",
+        "sections": [
+          {
+            "heading": "Aviso legal",
+            "body": "Rotata Consulting SL mantiene esta página para ofrecer información clara sobre condiciones, privacidad, cookies, accesibilidad y navegación del sitio.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contacto: info@rotata.com",
+              "Actualización: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Volver al inicio"
+      },
+      "en": {
+        "title": "Legal notice | Rotata",
+        "description": "Rotata legal notice information.",
+        "eyebrow": "Legal",
+        "h1": "Legal notice",
+        "intro": "Content prepared for static publication and future WordPress editing.",
+        "sections": [
+          {
+            "heading": "Legal notice",
+            "body": "Rotata Consulting SL keeps this page to provide clear information about terms, privacy, cookies, accessibility and site navigation.",
+            "items": [
+              "Controller: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Updated: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Back to home"
+      },
+      "fr": {
+        "title": "Mentions légales | Rotata",
+        "description": "Information Rotata: mentions légales.",
+        "eyebrow": "Legal",
+        "h1": "Mentions légales",
+        "intro": "Contenu préparé pour publication statique et édition future dans WordPress.",
+        "sections": [
+          {
+            "heading": "Mentions légales",
+            "body": "Rotata Consulting SL maintient cette page pour informer sur les conditions, la confidentialité, les cookies, l'accessibilité et la navigation.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Mise à jour: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Retour accueil"
+      }
+    }
+  },
+  "cookies": {
+    "template": "standard",
+    "routes": {
+      "es": "cookies",
+      "en": "cookies",
+      "fr": "cookies"
+    },
+    "seo_keyword": "Cookie policy",
+    "translations": {
+      "es": {
+        "title": "Política de cookies | Rotata",
+        "description": "Información de política de cookies de Rotata.",
+        "eyebrow": "Legal",
+        "h1": "Política de cookies",
+        "intro": "Contenido preparado para publicación estática y actualización futura en WordPress.",
+        "sections": [
+          {
+            "heading": "Política de cookies",
+            "body": "Rotata Consulting SL mantiene esta página para ofrecer información clara sobre condiciones, privacidad, cookies, accesibilidad y navegación del sitio.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contacto: info@rotata.com",
+              "Actualización: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Volver al inicio"
+      },
+      "en": {
+        "title": "Cookie policy | Rotata",
+        "description": "Rotata cookie policy information.",
+        "eyebrow": "Legal",
+        "h1": "Cookie policy",
+        "intro": "Content prepared for static publication and future WordPress editing.",
+        "sections": [
+          {
+            "heading": "Cookie policy",
+            "body": "Rotata Consulting SL keeps this page to provide clear information about terms, privacy, cookies, accessibility and site navigation.",
+            "items": [
+              "Controller: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Updated: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Back to home"
+      },
+      "fr": {
+        "title": "Politique de cookies | Rotata",
+        "description": "Information Rotata: politique de cookies.",
+        "eyebrow": "Legal",
+        "h1": "Politique de cookies",
+        "intro": "Contenu préparé pour publication statique et édition future dans WordPress.",
+        "sections": [
+          {
+            "heading": "Politique de cookies",
+            "body": "Rotata Consulting SL maintient cette page pour informer sur les conditions, la confidentialité, les cookies, l'accessibilité et la navigation.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Mise à jour: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Retour accueil"
+      }
+    }
+  },
+  "accessibility": {
+    "template": "standard",
+    "routes": {
+      "es": "accessibility",
+      "en": "accessibility",
+      "fr": "accessibility"
+    },
+    "seo_keyword": "Accessibility",
+    "translations": {
+      "es": {
+        "title": "Accesibilidad | Rotata",
+        "description": "Información de accesibilidad de Rotata.",
+        "eyebrow": "Legal",
+        "h1": "Accesibilidad",
+        "intro": "Contenido preparado para publicación estática y actualización futura en WordPress.",
+        "sections": [
+          {
+            "heading": "Accesibilidad",
+            "body": "Rotata Consulting SL mantiene esta página para ofrecer información clara sobre condiciones, privacidad, cookies, accesibilidad y navegación del sitio.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contacto: info@rotata.com",
+              "Actualización: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Volver al inicio"
+      },
+      "en": {
+        "title": "Accessibility | Rotata",
+        "description": "Rotata accessibility information.",
+        "eyebrow": "Legal",
+        "h1": "Accessibility",
+        "intro": "Content prepared for static publication and future WordPress editing.",
+        "sections": [
+          {
+            "heading": "Accessibility",
+            "body": "Rotata Consulting SL keeps this page to provide clear information about terms, privacy, cookies, accessibility and site navigation.",
+            "items": [
+              "Controller: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Updated: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Back to home"
+      },
+      "fr": {
+        "title": "Accessibilité | Rotata",
+        "description": "Information Rotata: accessibilité.",
+        "eyebrow": "Legal",
+        "h1": "Accessibilité",
+        "intro": "Contenu préparé pour publication statique et édition future dans WordPress.",
+        "sections": [
+          {
+            "heading": "Accessibilité",
+            "body": "Rotata Consulting SL maintient cette page pour informer sur les conditions, la confidentialité, les cookies, l'accessibilité et la navigation.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Mise à jour: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Retour accueil"
+      }
+    }
+  },
+  "sitemap": {
+    "template": "standard",
+    "routes": {
+      "es": "sitemap",
+      "en": "sitemap",
+      "fr": "sitemap"
+    },
+    "seo_keyword": "Sitemap",
+    "translations": {
+      "es": {
+        "title": "Mapa del sitio | Rotata",
+        "description": "Información de mapa del sitio de Rotata.",
+        "eyebrow": "Legal",
+        "h1": "Mapa del sitio",
+        "intro": "Contenido preparado para publicación estática y actualización futura en WordPress.",
+        "sections": [
+          {
+            "heading": "Mapa del sitio",
+            "body": "Rotata Consulting SL mantiene esta página para ofrecer información clara sobre condiciones, privacidad, cookies, accesibilidad y navegación del sitio.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contacto: info@rotata.com",
+              "Actualización: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Volver al inicio"
+      },
+      "en": {
+        "title": "Sitemap | Rotata",
+        "description": "Rotata sitemap information.",
+        "eyebrow": "Legal",
+        "h1": "Sitemap",
+        "intro": "Content prepared for static publication and future WordPress editing.",
+        "sections": [
+          {
+            "heading": "Sitemap",
+            "body": "Rotata Consulting SL keeps this page to provide clear information about terms, privacy, cookies, accessibility and site navigation.",
+            "items": [
+              "Controller: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Updated: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Back to home"
+      },
+      "fr": {
+        "title": "Plan du site | Rotata",
+        "description": "Information Rotata: plan du site.",
+        "eyebrow": "Legal",
+        "h1": "Plan du site",
+        "intro": "Contenu préparé pour publication statique et édition future dans WordPress.",
+        "sections": [
+          {
+            "heading": "Plan du site",
+            "body": "Rotata Consulting SL maintient cette page pour informer sur les conditions, la confidentialité, les cookies, l'accessibilité et la navigation.",
+            "items": [
+              "Responsable: Rotata Consulting SL",
+              "Contact: info@rotata.com",
+              "Mise à jour: 2026"
+            ],
+            "variant": "grid"
+          }
+        ],
+        "final_cta": "Retour accueil"
+      }
+    }
+  },
+  "404": {
+    "template": "standard",
+    "routes": {
+      "es": "404",
+      "en": "404",
+      "fr": "404"
+    },
+    "seo_keyword": "404",
+    "translations": {
+      "es": {
+        "title": "Página no encontrada | Rotata",
+        "description": "La página solicitada no existe.",
+        "eyebrow": "404",
+        "h1": "Página no encontrada",
+        "intro": "La ruta no existe o ha cambiado. Vuelve al sistema principal.",
+        "sections": [],
+        "final_cta": "Volver al inicio"
+      },
+      "en": {
+        "title": "Page not found | Rotata",
+        "description": "The requested page does not exist.",
+        "eyebrow": "404",
+        "h1": "Page not found",
+        "intro": "This route does not exist or has changed. Return to the main system.",
+        "sections": [],
+        "final_cta": "Back to home"
+      },
+      "fr": {
+        "title": "Page introuvable | Rotata",
+        "description": "La page demandée n'existe pas.",
+        "eyebrow": "404",
+        "h1": "Page introuvable",
+        "intro": "Cette route n'existe pas ou a changé. Retournez au système principal.",
+        "sections": [],
+        "final_cta": "Retour accueil"
+      }
+    }
+  }
+}

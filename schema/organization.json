@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rotata Consulting SL",
+  "url": "https://rotata.es",
+  "logo": "https://rotata.es/assets/logo/rotata-b2b-growth-system-logo.svg",
+  "sameAs": [
+    "https://www.linkedin.com/company/rotata-consulting-sl/"
+  ]
+}

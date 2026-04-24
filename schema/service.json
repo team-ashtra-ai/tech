@@ -1,0 +1,52 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Structured systems for B2B growth",
+    "serviceType": "AI-driven marketing and sales systems",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "HubSpot, structured for how your business actually works",
+    "serviceType": "HubSpot implementation Spain",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Better data, used properly",
+    "serviceType": "B2B data intelligence",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Outbound that is structured, not improvised",
+    "serviceType": "B2B outbound system",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Focus on accounts that actually show interest",
+    "serviceType": "account engagement",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Rotata",
+  "url": "https://rotata.es",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rotata Consulting SL"
+  }
+}

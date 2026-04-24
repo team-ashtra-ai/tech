@@ -1,0 +1,22 @@
+[
+  {
+    "name": "HubSpot",
+    "role": "CRM, marketing automation and reporting",
+    "url": "/hubspot/"
+  },
+  {
+    "name": "ZoomInfo",
+    "role": "B2B data intelligence and account targeting",
+    "url": "/zoominfo/"
+  },
+  {
+    "name": "La Growth Machine",
+    "role": "Multichannel outbound sequencing",
+    "url": "/outbound/"
+  },
+  {
+    "name": "Synapsale",
+    "role": "Account engagement signals and prioritization",
+    "url": "/synapsale/"
+  }
+]

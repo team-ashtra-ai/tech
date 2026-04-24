@@ -1,0 +1,44 @@
+{
+  "es": {
+    "title": "Privacidad y cookies",
+    "body": "Usamos cookies necesarias para que el sitio funcione y, solo con tu consentimiento, analítica y marketing.",
+    "accept": "Aceptar todo",
+    "reject": "Rechazar todo",
+    "manage": "Gestionar",
+    "save": "Guardar preferencias",
+    "categories": {
+      "necessary": "Necesarias",
+      "analytics": "Analítica",
+      "marketing": "Marketing",
+      "preferences": "Preferencias"
+    }
+  },
+  "en": {
+    "title": "Privacy and cookies",
+    "body": "We use necessary cookies for the site to work and, only with consent, analytics and marketing cookies.",
+    "accept": "Accept all",
+    "reject": "Reject all",
+    "manage": "Manage",
+    "save": "Save preferences",
+    "categories": {
+      "necessary": "Necessary",
+      "analytics": "Analytics",
+      "marketing": "Marketing",
+      "preferences": "Preferences"
+    }
+  },
+  "fr": {
+    "title": "Confidentialité et cookies",
+    "body": "Nous utilisons des cookies nécessaires au fonctionnement du site et, avec consentement, analytics et marketing.",
+    "accept": "Tout accepter",
+    "reject": "Tout refuser",
+    "manage": "Gérer",
+    "save": "Enregistrer",
+    "categories": {
+      "necessary": "Nécessaires",
+      "analytics": "Analytics",
+      "marketing": "Marketing",
+      "preferences": "Préférences"
+    }
+  }
+}

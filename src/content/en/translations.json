@@ -1,0 +1,50 @@
+{
+  "language": "en",
+  "navigation": {
+    "primary_cta": "Diagnose system",
+    "items": [
+      {
+        "label": "Home",
+        "page": "home"
+      },
+      {
+        "label": "Solutions",
+        "page": "solutions"
+      },
+      {
+        "label": "Services",
+        "page": "hubspot"
+      },
+      {
+        "label": "Partners",
+        "page": "zoominfo"
+      },
+      {
+        "label": "Insights",
+        "page": "blog"
+      },
+      {
+        "label": "About",
+        "page": "about"
+      },
+      {
+        "label": "Contact",
+        "page": "contact"
+      }
+    ]
+  },
+  "cookie": {
+    "title": "Privacy and cookies",
+    "body": "We use necessary cookies for the site to work and, only with consent, analytics and marketing cookies.",
+    "accept": "Accept all",
+    "reject": "Reject all",
+    "manage": "Manage",
+    "save": "Save preferences",
+    "categories": {
+      "necessary": "Necessary",
+      "analytics": "Analytics",
+      "marketing": "Marketing",
+      "preferences": "Preferences"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.system-card, .blog-card, .case-card, .partner-card { position: relative; overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: linear-gradient(145deg, rgba(245,241,232,.08), rgba(155,225,229,.035)); box-shadow: var(--shadow-card); }
+.system-card, .case-card, .partner-card { padding: var(--space-24); }
+.system-card::before, .partner-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent, rgba(155,225,229,.08), transparent); transform: translateX(-100%); transition: transform 700ms ease; }
+.system-card:hover::before, .partner-card:hover::before { transform: translateX(100%); }
+.system-card img { width: 54px; height: 54px; margin-bottom: var(--space-16); }
+.blog-card a { display: grid; color: inherit; text-decoration: none; }
+.blog-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--color-surface); }
+.blog-card span, .blog-card h3, .blog-card p, .blog-card small { margin-inline: var(--space-24); }
+.blog-card span { margin-top: var(--space-24); color: var(--color-signal); font-weight: 850; text-transform: uppercase; letter-spacing: .1em; font-size: .72rem; }
+.blog-card small { margin-bottom: var(--space-24); }
+.partner-card h3 { color: var(--color-signal); }

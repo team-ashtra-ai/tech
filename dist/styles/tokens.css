@@ -1,0 +1,57 @@
+/* Rotata design tokens: one controlled system for color, spacing, type, surfaces and motion. */
+:root {
+  color-scheme: dark;
+  --color-ink: #08151d;
+  --color-ink-2: #0d1d28;
+  --color-primary: #253657;
+  --color-surface: #102630;
+  --color-surface-2: #152f3d;
+  --color-text: #f5f1e8;
+  --color-muted: #a7b6bb;
+  --color-accent: #e7304d;
+  --color-signal: #9be1e5;
+  --color-teal: #136888;
+  --color-success: #29d391;
+  --color-warning: #f2b84b;
+  --color-error: #ff5f6d;
+  --color-border: rgba(245, 241, 232, .14);
+  --color-focus: #9be1e5;
+  --font-heading: "Space Grotesk", "Aptos Display", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Aptos", "Segoe UI", sans-serif;
+  --space-4: .25rem;
+  --space-8: .5rem;
+  --space-12: .75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-96: 6rem;
+  --space-128: 8rem;
+  --container-small: 760px;
+  --container-medium: 980px;
+  --container-large: 1180px;
+  --container-wide: 1360px;
+  --radius-sm: 12px;
+  --radius-md: 22px;
+  --radius-lg: 34px;
+  --shadow-soft: 0 24px 80px rgba(0, 0, 0, .32);
+  --shadow-card: 0 16px 48px rgba(0, 0, 0, .24);
+  --motion-fast: 160ms ease;
+  --motion-medium: 280ms cubic-bezier(.2, .8, .2, 1);
+  --z-header: 60;
+  --z-menu: 80;
+  --z-cookie: 100;
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --color-ink: #f4efe4;
+  --color-ink-2: #fffaf0;
+  --color-surface: #ffffff;
+  --color-surface-2: #edf6f6;
+  --color-text: #152335;
+  --color-muted: #52656d;
+  --color-border: rgba(21, 35, 53, .16);
+  --shadow-soft: 0 24px 80px rgba(37, 54, 87, .14);
+  --shadow-card: 0 16px 48px rgba(37, 54, 87, .12);
+}

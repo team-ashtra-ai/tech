@@ -1,0 +1,20 @@
+[
+  {
+    "title": "CRM reporting reset",
+    "problem": "HubSpot data did not explain pipeline movement.",
+    "system": "Lifecycle, pipeline, objects and dashboards rebuilt.",
+    "result": "Result metrics pending client approval."
+  },
+  {
+    "title": "Outbound operating model",
+    "problem": "Prospecting relied on manual interpretation.",
+    "system": "Targeting, sequencing, CRM handoffs and performance rhythm.",
+    "result": "Result metrics pending client approval."
+  },
+  {
+    "title": "Account intelligence layer",
+    "problem": "Sales could not prioritize accounts showing interest.",
+    "system": "Signals, scoring, CRM sync and meeting workflow.",
+    "result": "Result metrics pending client approval."
+  }
+]

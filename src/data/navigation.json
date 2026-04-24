@@ -1,0 +1,101 @@
+{
+  "es": {
+    "primary_cta": "Diagnosticar sistema",
+    "items": [
+      {
+        "label": "Inicio",
+        "page": "home"
+      },
+      {
+        "label": "Soluciones",
+        "page": "solutions"
+      },
+      {
+        "label": "Servicios",
+        "page": "hubspot"
+      },
+      {
+        "label": "Partners",
+        "page": "zoominfo"
+      },
+      {
+        "label": "Insights",
+        "page": "blog"
+      },
+      {
+        "label": "Sobre Rotata",
+        "page": "about"
+      },
+      {
+        "label": "Contacto",
+        "page": "contact"
+      }
+    ]
+  },
+  "en": {
+    "primary_cta": "Diagnose system",
+    "items": [
+      {
+        "label": "Home",
+        "page": "home"
+      },
+      {
+        "label": "Solutions",
+        "page": "solutions"
+      },
+      {
+        "label": "Services",
+        "page": "hubspot"
+      },
+      {
+        "label": "Partners",
+        "page": "zoominfo"
+      },
+      {
+        "label": "Insights",
+        "page": "blog"
+      },
+      {
+        "label": "About",
+        "page": "about"
+      },
+      {
+        "label": "Contact",
+        "page": "contact"
+      }
+    ]
+  },
+  "fr": {
+    "primary_cta": "Diagnostiquer",
+    "items": [
+      {
+        "label": "Accueil",
+        "page": "home"
+      },
+      {
+        "label": "Solutions",
+        "page": "solutions"
+      },
+      {
+        "label": "Services",
+        "page": "hubspot"
+      },
+      {
+        "label": "Partenaires",
+        "page": "zoominfo"
+      },
+      {
+        "label": "Insights",
+        "page": "blog"
+      },
+      {
+        "label": "À propos",
+        "page": "about"
+      },
+      {
+        "label": "Contact",
+        "page": "contact"
+      }
+    ]
+  }
+}

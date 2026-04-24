@@ -1,0 +1,50 @@
+{
+  "service_interests": [
+    "CRM architecture",
+    "HubSpot",
+    "ZoomInfo",
+    "Outbound",
+    "Synapsale",
+    "ROI",
+    "Analytics",
+    "Other"
+  ],
+  "labels": {
+    "es": {
+      "first_name": "Nombre",
+      "last_name": "Apellidos",
+      "email": "Email",
+      "phone": "Teléfono opcional",
+      "company": "Empresa",
+      "website": "Web opcional",
+      "service": "Área de interés",
+      "message": "Qué necesitas ordenar",
+      "consent": "Acepto la política de privacidad",
+      "submit": "Enviar diagnóstico"
+    },
+    "en": {
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "phone": "Phone optional",
+      "company": "Company",
+      "website": "Website optional",
+      "service": "Service interest",
+      "message": "What needs structure",
+      "consent": "I accept the privacy policy",
+      "submit": "Send diagnosis"
+    },
+    "fr": {
+      "first_name": "Prénom",
+      "last_name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone optionnel",
+      "company": "Entreprise",
+      "website": "Site optionnel",
+      "service": "Intérêt",
+      "message": "Ce qu'il faut structurer",
+      "consent": "J'accepte la politique de confidentialité",
+      "submit": "Envoyer diagnostic"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "rotata-static-growth-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static-first, Cloudflare-hosted, WordPress-exportable premium website for Rotata.",
+  "scripts": {
+    "build": "python3 scripts/build_site.py && python3 scripts/generate_sitemap.py && python3 scripts/generate_schema.py",
+    "validate": "python3 scripts/validate_links.py && python3 scripts/validate_seo.py",
+    "optimize:images": "python3 scripts/optimize_images.py",
+    "og": "python3 scripts/generate_og_images.py",
+    "wp:export": "python3 scripts/export_wordpress_theme.py",
+    "wp:zip": "python3 scripts/create_wp_zip.py",
+    "content:ideas": "python3 scripts/content_machine.py --ideas 10"
+  },
+  "engines": {
+    "node": ">=20",
+    "python": ">=3.11"
+  },
+  "license": "UNLICENSED"
+}

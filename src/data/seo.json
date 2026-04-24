@@ -1,0 +1,146 @@
+{
+  "home": {
+    "keyword": "B2B growth systems",
+    "routes": {
+      "es": "",
+      "en": "",
+      "fr": ""
+    }
+  },
+  "about": {
+    "keyword": "B2B growth partner",
+    "routes": {
+      "es": "about",
+      "en": "about",
+      "fr": "about"
+    }
+  },
+  "solutions": {
+    "keyword": "AI-driven marketing and sales systems",
+    "routes": {
+      "es": "solutions",
+      "en": "solutions",
+      "fr": "solutions"
+    }
+  },
+  "hubspot": {
+    "keyword": "HubSpot implementation Spain",
+    "routes": {
+      "es": "hubspot",
+      "en": "hubspot",
+      "fr": "hubspot"
+    }
+  },
+  "zoominfo": {
+    "keyword": "B2B data intelligence",
+    "routes": {
+      "es": "zoominfo",
+      "en": "zoominfo",
+      "fr": "zoominfo"
+    }
+  },
+  "outbound": {
+    "keyword": "B2B outbound system",
+    "routes": {
+      "es": "outbound",
+      "en": "outbound",
+      "fr": "outbound"
+    }
+  },
+  "synapsale": {
+    "keyword": "account engagement",
+    "routes": {
+      "es": "synapsale",
+      "en": "synapsale",
+      "fr": "synapsale"
+    }
+  },
+  "blog": {
+    "keyword": "B2B marketing insights",
+    "routes": {
+      "es": "blog",
+      "en": "blog",
+      "fr": "blog"
+    }
+  },
+  "roi": {
+    "keyword": "marketing sales ROI calculator",
+    "routes": {
+      "es": "calculadora-roi",
+      "en": "calculadora-roi",
+      "fr": "calculadora-roi"
+    }
+  },
+  "contact": {
+    "keyword": "B2B growth consultation",
+    "routes": {
+      "es": "contacto",
+      "en": "contacto",
+      "fr": "contacto"
+    }
+  },
+  "cases": {
+    "keyword": "B2B growth case studies",
+    "routes": {
+      "es": "cases",
+      "en": "cases",
+      "fr": "cases"
+    }
+  },
+  "process": {
+    "keyword": "B2B growth process",
+    "routes": {
+      "es": "process",
+      "en": "process",
+      "fr": "process"
+    }
+  },
+  "privacy": {
+    "keyword": "Privacy policy",
+    "routes": {
+      "es": "privacy",
+      "en": "privacy",
+      "fr": "privacy"
+    }
+  },
+  "legal": {
+    "keyword": "Legal notice",
+    "routes": {
+      "es": "legal",
+      "en": "legal",
+      "fr": "legal"
+    }
+  },
+  "cookies": {
+    "keyword": "Cookie policy",
+    "routes": {
+      "es": "cookies",
+      "en": "cookies",
+      "fr": "cookies"
+    }
+  },
+  "accessibility": {
+    "keyword": "Accessibility",
+    "routes": {
+      "es": "accessibility",
+      "en": "accessibility",
+      "fr": "accessibility"
+    }
+  },
+  "sitemap": {
+    "keyword": "Sitemap",
+    "routes": {
+      "es": "sitemap",
+      "en": "sitemap",
+      "fr": "sitemap"
+    }
+  },
+  "404": {
+    "keyword": "404",
+    "routes": {
+      "es": "404",
+      "en": "404",
+      "fr": "404"
+    }
+  }
+}

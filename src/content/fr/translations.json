@@ -1,0 +1,50 @@
+{
+  "language": "fr",
+  "navigation": {
+    "primary_cta": "Diagnostiquer",
+    "items": [
+      {
+        "label": "Accueil",
+        "page": "home"
+      },
+      {
+        "label": "Solutions",
+        "page": "solutions"
+      },
+      {
+        "label": "Services",
+        "page": "hubspot"
+      },
+      {
+        "label": "Partenaires",
+        "page": "zoominfo"
+      },
+      {
+        "label": "Insights",
+        "page": "blog"
+      },
+      {
+        "label": "À propos",
+        "page": "about"
+      },
+      {
+        "label": "Contact",
+        "page": "contact"
+      }
+    ]
+  },
+  "cookie": {
+    "title": "Confidentialité et cookies",
+    "body": "Nous utilisons des cookies nécessaires au fonctionnement du site et, avec consentement, analytics et marketing.",
+    "accept": "Tout accepter",
+    "reject": "Tout refuser",
+    "manage": "Gérer",
+    "save": "Enregistrer",
+    "categories": {
+      "necessary": "Nécessaires",
+      "analytics": "Analytics",
+      "marketing": "Marketing",
+      "preferences": "Préférences"
+    }
+  }
+}
