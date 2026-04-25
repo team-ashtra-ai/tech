@@ -25,6 +25,11 @@ SECTION_SIZE = (1600, 1120)
 HERO_SIZE = (1920, 1280)
 
 DEFAULT_POOL = [
+    "theme-sites/databricks-system.webp",
+    "theme-sites/datagrail-privacy.webp",
+    "theme-sites/atlan-context.webp",
+    "theme-sites/runpod-infra.webp",
+    "theme-sites/vectara-agent.webp",
     "blog/rotata-rotbot-auditando-errores-en-la-gestion-de-leads.png",
     "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
     "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
@@ -39,116 +44,211 @@ DEFAULT_POOL = [
 
 PAGE_POOLS = {
     "home": [
+        "theme-sites/databricks-system.webp",
+        "theme-sites/datagrail-privacy.webp",
+        "theme-sites/atlan-context.webp",
+        "theme-sites/runpod-infra.webp",
+        "theme-sites/vectara-agent.webp",
         "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
         "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
         "blog/rotata-busqueda-generativa-sge-de-google-visibilidad-b2b-rotata.png",
         "partners/rotata-zoominfo-x-rotata-transformando-el-marketing-b2b-en-espana.png",
     ],
     "about": [
+        "theme-sites/atlan-about.webp",
+        "theme-sites/databricks-about.webp",
+        "theme-sites/datagrail-about.webp",
+        "theme-sites/runpod-about.webp",
+        "theme-sites/vectara-about.webp",
         "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png",
         "blog/rotata-rotbot-auditando-errores-en-la-gestion-de-leads.png",
         "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png",
     ],
     "solutions": [
+        "theme-sites/databricks-solutions.webp",
+        "theme-sites/datagrail-solutions.webp",
+        "theme-sites/atlan-solutions.webp",
+        "theme-sites/runpod-solutions.webp",
+        "theme-sites/vectara-solutions.webp",
         "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
         "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
         "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png",
     ],
+    "services": [
+        "theme-sites/databricks-services.webp",
+        "theme-sites/datagrail-services.webp",
+        "theme-sites/atlan-services.webp",
+        "theme-sites/runpod-services.webp",
+        "theme-sites/vectara-services.webp",
+    ],
+    "system": [
+        "theme-sites/databricks-system.webp",
+        "theme-sites/datagrail-system.webp",
+        "theme-sites/atlan-system.webp",
+        "theme-sites/runpod-system.webp",
+        "theme-sites/vectara-system.webp",
+    ],
+    "partners": [
+        "theme-sites/databricks-partners.webp",
+        "theme-sites/datagrail-partners.webp",
+        "theme-sites/atlan-partners.webp",
+        "theme-sites/runpod-partners.webp",
+        "theme-sites/vectara-partners.webp",
+    ],
+    "insights": [
+        "theme-sites/databricks-insights.webp",
+        "theme-sites/datagrail-insights.webp",
+        "theme-sites/atlan-insights.webp",
+        "theme-sites/runpod-insights.webp",
+        "theme-sites/vectara-insights.webp",
+    ],
+    "contact": [
+        "theme-sites/databricks-contact.webp",
+        "theme-sites/datagrail-contact.webp",
+        "theme-sites/atlan-contact.webp",
+        "theme-sites/runpod-contact.webp",
+        "theme-sites/vectara-contact.webp",
+        "images/rotata-rotbot-ai-assistant.png",
+    ],
+    "legal": [
+        "theme-sites/databricks-legal.webp",
+        "theme-sites/datagrail-legal.webp",
+        "theme-sites/atlan-legal.webp",
+        "theme-sites/runpod-legal.webp",
+        "theme-sites/vectara-legal.webp",
+    ],
     "hubspot": [
+        "theme-sites/databricks-partners.webp",
         "partners/rotata-errores-de-estructura-en-hubspot-que-distorsionan-tus-informes.png",
         "partners/rotata-logo-hubspot-informe-2026.png",
         "partners/rotata-hubspot-provider-rotata-partner-hubspot-en-espana.png",
         "partners/rotata-logo-hubspot-informe-2025-v2.png",
     ],
     "zoominfo": [
+        "theme-sites/datagrail-partners.webp",
         "partners/rotata-zoominfo-x-rotata-transformando-el-marketing-b2b-en-espana.png",
         "partners/rotata-zoominfo-logo-2024.png",
         "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png",
     ],
     "outbound": [
+        "theme-sites/runpod-services.webp",
         "partners/rotata-la-growth-machine-prospeccion-automatizada-con-ia.png",
         "partners/rotata-la-growth-machine-web.png",
         "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png",
     ],
     "synapsale": [
+        "theme-sites/vectara-partners.webp",
         "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png",
         "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
         "partners/rotata-zoominfo-x-rotata-transformando-el-marketing-b2b-en-espana.png",
     ],
     "blog": [
+        "theme-sites/databricks-insights.webp",
+        "theme-sites/vectara-insights.webp",
         "blog/rotata-busqueda-generativa-sge-de-google-visibilidad-b2b-rotata.png",
         "blog/rotata-imagen-correo-spam.png",
         "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
         "blog/rotata-precision-del-marketing-abm-en-estrategias-b2b.png",
     ],
     "roi": [
+        "theme-sites/databricks-insights.webp",
+        "theme-sites/runpod-insights.webp",
         "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
         "blog/rotata-busqueda-generativa-sge-de-google-visibilidad-b2b-rotata.png",
         "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
     ],
-    "contact": [
-        "images/rotata-rotbot-ai-assistant.png",
-        "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png",
-        "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png",
-    ],
     "cases": [
+        "theme-sites/atlan-about.webp",
+        "theme-sites/databricks-about.webp",
         "blog/rotata-rotbot-auditando-errores-en-la-gestion-de-leads.png",
         "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
         "partners/rotata-la-growth-machine-web.png",
     ],
     "process": [
+        "theme-sites/runpod-about.webp",
+        "theme-sites/atlan-about.webp",
         "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
         "blog/rotata-busqueda-generativa-sge-de-google-visibilidad-b2b-rotata.png",
         "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png",
     ],
-    "privacy": ["blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png"],
-    "legal": ["blog/rotata-rotbot-auditando-errores-en-la-gestion-de-leads.png"],
-    "cookies": ["blog/rotata-imagen-correo-spam.png"],
-    "accessibility": ["blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png"],
-    "sitemap": ["blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png"],
+    "privacy": ["theme-sites/datagrail-legal.webp", "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png"],
+    "cookies": ["theme-sites/datagrail-legal.webp", "blog/rotata-imagen-correo-spam.png"],
+    "accessibility": ["theme-sites/vectara-legal.webp", "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png"],
+    "sitemap": ["theme-sites/atlan-legal.webp", "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png"],
 }
 
 VARIANT_POOLS = {
     "problem": [
+        "theme-sites/datagrail-solutions.webp",
+        "theme-sites/runpod-system.webp",
         "blog/rotata-rotbot-auditando-errores-en-la-gestion-de-leads.png",
         "partners/rotata-errores-de-estructura-en-hubspot-que-distorsionan-tus-informes.png",
         "blog/rotata-imagen-correo-spam.png",
     ],
     "cards": [
+        "theme-sites/databricks-services.webp",
+        "theme-sites/vectara-system.webp",
         "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png",
         "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png",
         "partners/rotata-la-growth-machine-web.png",
     ],
     "grid": [
+        "theme-sites/atlan-system.webp",
+        "theme-sites/databricks-solutions.webp",
         "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
         "blog/rotata-precision-del-marketing-abm-en-estrategias-b2b.png",
         "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png",
     ],
     "process": [
+        "theme-sites/runpod-about.webp",
+        "theme-sites/runpod-services.webp",
         "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
         "partners/rotata-la-growth-machine-prospeccion-automatizada-con-ia.png",
         "partners/rotata-la-growth-machine-web.png",
     ],
     "metrics": [
+        "theme-sites/vectara-insights.webp",
+        "theme-sites/databricks-system.webp",
         "blog/rotata-busqueda-generativa-sge-de-google-visibilidad-b2b-rotata.png",
         "blog/rotata-rotbot-y-el-proceso-de-generacion-de-leads-con-roi.png",
         "blog/rotata-datos-de-intencion-estrategia-precisa-en-marketing-b2b.png",
     ],
     "partners": [
+        "theme-sites/databricks-partners.webp",
+        "theme-sites/datagrail-partners.webp",
         "partners/rotata-zoominfo-x-rotata-transformando-el-marketing-b2b-en-espana.png",
         "partners/rotata-hubspot-provider-rotata-partner-hubspot-en-espana.png",
         "partners/rotata-la-growth-machine-web.png",
     ],
     "blog-preview": [
+        "theme-sites/databricks-insights.webp",
+        "theme-sites/vectara-insights.webp",
         "blog/rotata-busqueda-generativa-sge-de-google-visibilidad-b2b-rotata.png",
         "blog/rotata-precision-del-marketing-abm-en-estrategias-b2b.png",
         "blog/rotata-imagen-correo-spam.png",
     ],
     "text": [
+        "theme-sites/atlan-about.webp",
+        "theme-sites/vectara-legal.webp",
         "blog/rotata-descubriendo-las-necesidades-del-cliente-con-intent-data.png",
         "blog/rotata-chatgpt-image-apr-30-2025-11-09-08-am.png",
         "images/rotata-rotbot-ai-assistant.png",
     ],
+}
+
+PAGE_ALIASES = {
+    "process": ["about"],
+    "cases": ["about"],
+    "blog": ["insights"],
+    "newsletter": ["insights"],
+    "roi": ["insights"],
+    "contact-consult": ["contact"],
+    "privacy": ["legal"],
+    "cookies": ["legal"],
+    "accessibility": ["legal"],
+    "sitemap": ["legal"],
+    "legal-robots": ["legal"],
+    "404": ["legal"],
 }
 
 VARIANT_STYLE = {
@@ -372,8 +472,15 @@ def is_fresh(target: Path, source: Path) -> bool:
 
 
 def choose_source(page_key: str, variant: str, index: int) -> Path:
+    related = [page_key]
+    for alias in PAGE_ALIASES.get(page_key, []):
+        if alias not in related:
+            related.append(alias)
+    family = page_key.split("-", 1)[0]
+    if family not in related:
+        related.append(family)
     pools = [
-        available(PAGE_POOLS.get(page_key, [])),
+        *[available(PAGE_POOLS.get(key, [])) for key in related],
         available(VARIANT_POOLS.get(variant, [])),
         available(DEFAULT_POOL),
     ]

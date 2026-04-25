@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "python3 scripts/dev.py 8000",
     "serve": "python3 -m http.server 8000 -d dist",
-    "build": "python3 scripts/generate_section_visuals.py && python3 scripts/generate_showcase_assets.py && python3 scripts/build_site.py && python3 scripts/generate_sitemap.py && python3 scripts/generate_schema.py",
+    "build": "python3 scripts/generate_showcase_assets.py && python3 scripts/generate_section_visuals.py && python3 scripts/build_site.py && python3 scripts/generate_sitemap.py && python3 scripts/generate_schema.py",
     "validate": "python3 scripts/validate_links.py && python3 scripts/validate_seo.py",
     "blog:translate": "python3 scripts/translate_blog.py",
     "lang:generate": "python3 scripts/generate_languages.py --to-langs es fr",

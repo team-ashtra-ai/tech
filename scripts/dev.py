@@ -46,14 +46,6 @@ def file_state() -> dict[str, float]:
 
 def run_build() -> bool:
     print("[dev] building site...", flush=True)
-    section_visuals = subprocess.run(
-        ["python3", "scripts/generate_section_visuals.py"],
-        cwd=ROOT,
-        check=False,
-    )
-    if section_visuals.returncode != 0:
-        print("[dev] visual generation failed", flush=True)
-        return False
     showcase_assets = subprocess.run(
         ["python3", "scripts/generate_showcase_assets.py"],
         cwd=ROOT,
@@ -61,6 +53,14 @@ def run_build() -> bool:
     )
     if showcase_assets.returncode != 0:
         print("[dev] showcase asset generation failed", flush=True)
+        return False
+    section_visuals = subprocess.run(
+        ["python3", "scripts/generate_section_visuals.py"],
+        cwd=ROOT,
+        check=False,
+    )
+    if section_visuals.returncode != 0:
+        print("[dev] visual generation failed", flush=True)
         return False
     result = subprocess.run(
         ["python3", "scripts/build_site.py"],

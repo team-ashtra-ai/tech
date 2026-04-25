@@ -8,7 +8,7 @@
       "theme_color": "#f7efe5",
       "stylesheet": "/styles/theme-sites/databricks.css",
       "script": "/scripts/theme-sites/databricks.js",
-      "asset": "/assets/theme-sites/databricks-system.webp",
+      "asset": "/assets/theme-sites/databricks-home.webp",
       "label": {
         "es": "Databricks",
         "en": "Databricks",
@@ -28,7 +28,7 @@
       "theme_color": "#eef8f5",
       "stylesheet": "/styles/theme-sites/datagrail.css",
       "script": "/scripts/theme-sites/datagrail.js",
-      "asset": "/assets/theme-sites/datagrail-privacy.webp",
+      "asset": "/assets/theme-sites/datagrail-home.webp",
       "label": {
         "es": "DataGrail",
         "en": "DataGrail",
@@ -48,7 +48,7 @@
       "theme_color": "#ffffff",
       "stylesheet": "/styles/theme-sites/atlan.css",
       "script": "/scripts/theme-sites/atlan.js",
-      "asset": "/assets/theme-sites/atlan-context.webp",
+      "asset": "/assets/theme-sites/atlan-home.webp",
       "label": {
         "es": "Atlan",
         "en": "Atlan",
@@ -68,7 +68,7 @@
       "theme_color": "#07040d",
       "stylesheet": "/styles/theme-sites/runpod.css",
       "script": "/scripts/theme-sites/runpod.js",
-      "asset": "/assets/theme-sites/runpod-infra.webp",
+      "asset": "/assets/theme-sites/runpod-home.webp",
       "label": {
         "es": "Runpod",
         "en": "Runpod",
@@ -88,7 +88,7 @@
       "theme_color": "#f8fafc",
       "stylesheet": "/styles/theme-sites/vectara.css",
       "script": "/scripts/theme-sites/vectara.js",
-      "asset": "/assets/theme-sites/vectara-agent.webp",
+      "asset": "/assets/theme-sites/vectara-home.webp",
       "label": {
         "es": "Vectara",
         "en": "Vectara",

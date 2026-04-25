@@ -146,7 +146,16 @@ html.concept-menu-open { overflow: hidden; }
   border-top: 1px solid var(--concept-line, rgba(0,0,0,.1));
 }
 .concept-section:nth-of-type(even) { background: var(--concept-section-alt, transparent); }
-.concept-section-head { max-width: 900px; margin-bottom: 34px; }
+.concept-section-shell {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(380px, 1.08fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+}
+.concept-section-shell.is-reversed .concept-section-copy { order: 2; }
+.concept-section-shell.is-reversed .concept-section-visual { order: 1; }
+.concept-section-copy { display: grid; gap: 28px; }
+.concept-section-head { max-width: 900px; margin-bottom: 0; }
 .concept-section-head > span {
   display: inline-flex;
   margin-bottom: 16px;
@@ -177,6 +186,38 @@ html.concept-menu-open { overflow: hidden; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+.concept-section-visual {
+  position: relative;
+  margin: 0;
+  border: 1px solid var(--concept-line, rgba(0,0,0,.12));
+  border-radius: var(--concept-visual-radius, 16px);
+  overflow: hidden;
+  background: var(--concept-panel, #fff);
+  box-shadow: var(--concept-shadow, 0 30px 80px rgba(0,0,0,.12));
+}
+.concept-section-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  opacity: var(--concept-image-opacity, .96);
+}
+.concept-section-visual figcaption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--concept-line, rgba(255,255,255,.24));
+  border-radius: var(--concept-card-radius, 12px);
+  background: var(--concept-caption-bg, rgba(0,0,0,.58));
+  color: var(--concept-caption-text, #fff);
+  font-weight: 900;
 }
 .concept-metric-grid { grid-template-columns: repeat(4, 1fr); }
 .concept-process-list { grid-template-columns: repeat(4, 1fr); }
@@ -252,6 +293,7 @@ html.concept-menu-open { overflow: hidden; }
   .concept-nav-group,
   .concept-nav-link { display: none; }
   .concept-page-hero,
+  .concept-section-shell,
   .concept-contact-panel,
   .concept-roi-panel { grid-template-columns: 1fr; }
   .concept-card-grid,

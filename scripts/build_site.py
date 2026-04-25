@@ -1645,12 +1645,20 @@ def showcase_footer(site: dict, lang: str) -> str:
 
 def showcase_page_asset(site_id: str, page_key: str) -> str:
     group = page_meta(page_key).get("group") or "home"
-    if page_key == "home":
-        return showcase_by_id(site_id)["asset"]
+    exact = f"/assets/theme-sites/{site_id}-{page_key}.webp"
+    if (SRC / exact.lstrip("/")).exists():
+        return exact
     candidate = f"/assets/theme-sites/{site_id}-{group}.webp"
     if (SRC / candidate.lstrip("/")).exists():
         return candidate
     return showcase_by_id(site_id)["asset"]
+
+
+def showcase_section_asset(site_id: str, page_key: str, index: int) -> str:
+    exact = f"/assets/theme-sites/{site_id}-{page_key}-{index + 1:02d}.webp"
+    if (SRC / exact.lstrip("/")).exists():
+        return exact
+    return showcase_page_asset(site_id, page_key)
 
 
 def showcase_section_items(site_id: str, section: dict, variant: str) -> str:
@@ -1669,28 +1677,59 @@ def showcase_section_items(site_id: str, section: dict, variant: str) -> str:
     return '<div class="concept-card-grid">' + showcase_items(site_id, items, kind) + "</div>"
 
 
-def showcase_content_section(site_id: str, section: dict, index: int) -> str:
+def showcase_content_section(site_id: str, page_key: str, section: dict, index: int) -> str:
     variant = section.get("variant", "text")
     eyebrow = {
-        "problem": "Friction",
-        "cards": "System layer",
-        "grid": "Operating model",
-        "process": "Process",
-        "metrics": "Proof",
-        "partners": "Ecosystem",
-        "blog-preview": "Insights",
-        "text": "Context",
-    }.get(variant, "Rotata")
+        "es": {
+            "problem": "Fricción",
+            "cards": "Capa del sistema",
+            "grid": "Modelo operativo",
+            "process": "Proceso",
+            "metrics": "Prueba",
+            "partners": "Ecosistema",
+            "blog-preview": "Insights",
+            "text": "Contexto",
+        },
+        "en": {
+            "problem": "Friction",
+            "cards": "System layer",
+            "grid": "Operating model",
+            "process": "Process",
+            "metrics": "Proof",
+            "partners": "Ecosystem",
+            "blog-preview": "Insights",
+            "text": "Context",
+        },
+        "fr": {
+            "problem": "Friction",
+            "cards": "Couche système",
+            "grid": "Modèle opératoire",
+            "process": "Processus",
+            "metrics": "Preuve",
+            "partners": "Écosystème",
+            "blog-preview": "Insights",
+            "text": "Contexte",
+        },
+    }[CURRENT_LANG].get(variant, "Rotata")
     body = showcase_section_items(site_id, section, variant)
+    visual = showcase_section_asset(site_id, page_key, index)
     return f'''
     <section class="concept-section concept-section-{esc(variant)}" id="section-{index + 1:02d}">
-      <div class="concept-section-head">
-        <span>{index + 1:02d}</span>
-        <p class="concept-kicker">{esc(eyebrow)}</p>
-        <h2>{esc(section.get("heading", ""))}</h2>
-        <p>{esc(section.get("body", ""))}</p>
+      <div class="concept-section-shell{' is-reversed' if index % 2 else ''}">
+        <div class="concept-section-copy">
+          <div class="concept-section-head">
+            <span>{index + 1:02d}</span>
+            <p class="concept-kicker">{esc(eyebrow)}</p>
+            <h2>{esc(section.get("heading", ""))}</h2>
+            <p>{esc(section.get("body", ""))}</p>
+          </div>
+          {body}
+        </div>
+        <figure class="concept-section-visual" aria-hidden="true">
+          <img src="{esc(visual)}" alt="" loading="lazy" width="1600" height="1000">
+          <figcaption><span>{index + 1:02d}</span><strong>{esc(section.get("heading", ""))}</strong></figcaption>
+        </figure>
       </div>
-      {body}
     </section>'''
 
 
@@ -1716,7 +1755,7 @@ def showcase_detail_page(lang: str, site: dict, page_key: str) -> str:
     primary_href = showcase_url(site["id"], lang, translation.get("primary_cta_page", "contact-consult") if not translation.get("primary_cta_url") else "contact-consult")
     secondary_target = translation.get("secondary_cta_page", "solutions")
     secondary_href = showcase_url(site["id"], lang, secondary_target if secondary_target in PAGE_DEFS else "solutions")
-    sections = "".join(showcase_content_section(site["id"], section, index) for index, section in enumerate(translation.get("sections", [])))
+    sections = "".join(showcase_content_section(site["id"], page_key, section, index) for index, section in enumerate(translation.get("sections", [])))
     special = showcase_special_block(site["id"], page_key, lang, payload["render"])
     final_label = NAV["ui"][lang]["footer_cta"]
     return f'''
@@ -1772,7 +1811,7 @@ def showcase_mapping(lang: str, site: dict) -> dict[str, str]:
         "concept_menu_button": showcase_menu_button(lang),
         "concept_mobile_nav": showcase_mobile_nav(lang, site["id"], "home"),
         "showcase_switcher": showcase_switcher(site["id"], lang, "home"),
-        "asset": esc(site["asset"]),
+        "asset": esc(showcase_page_asset(site["id"], "home")),
         "contact_href": page_url("contact-consult", lang),
         "primary_href": showcase_cta_href(translation, lang, "primary_cta_url", "primary_cta_page", "contact-consult"),
         "primary_label": esc(translation.get("primary_cta", NAV["ui"][lang]["header_cta"])),
@@ -1859,11 +1898,11 @@ def showcase_head(lang: str, site: dict, page_key: str, title: str, description:
     <meta property="og:title" content="{esc(title)}">
     <meta property="og:description" content="{esc(description)}">
     <meta property="og:url" content="{canonical}">
-    <meta property="og:image" content="{SITE["site"]["base_url"].rstrip()}{site["asset"]}">
+    <meta property="og:image" content="{SITE["site"]["base_url"].rstrip()}{showcase_page_asset(site["id"], page_key)}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{esc(title)}">
     <meta name="twitter:description" content="{esc(description)}">
-    <meta name="twitter:image" content="{SITE["site"]["base_url"].rstrip()}{site["asset"]}">
+    <meta name="twitter:image" content="{SITE["site"]["base_url"].rstrip()}{showcase_page_asset(site["id"], page_key)}">
     <link rel="icon" href="/assets/logo/rotata-favicon.png">
     <link rel="apple-touch-icon" href="/assets/logo/rotata-apple-touch-icon.png">
     <link rel="stylesheet" href="{esc(site["stylesheet"])}">

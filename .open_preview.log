@@ -1617,3 +1617,42 @@ Generated schema modules
 127.0.0.1 - - [25/Apr/2026 14:19:22] "GET /en/ HTTP/1.1" 304 -
 127.0.0.1 - - [25/Apr/2026 14:19:22] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 304 -
 127.0.0.1 - - [25/Apr/2026 14:19:22] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:25:14] "GET /en/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:25:14] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:25:14] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+python3: can't open file '/home/ash/www.ash-tra.com/tech/scripts/generate_showcase_assets.py': [Errno 2] No such file or directory
+[dev] showcase asset generation failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+127.0.0.1 - - [25/Apr/2026 14:29:14] "GET /en/showcase/databricks/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:29:16] "GET /en/showcase/databricks/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:29:17] "GET /en/showcase/databricks/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:29:17] "GET /en/showcase/databricks/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:29:18] "GET /en/showcase/databricks/ HTTP/1.1" 304 -
+[dev] showcase asset generation failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/generate_section_visuals.py", line 524, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/generate_section_visuals.py", line 517, in main
+    visual_bytes = image_bytes(build_canvas(source, variant, SECTION_SIZE, hero=False))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/generate_section_visuals.py", line 393, in build_canvas
+    base = Image.open(source).convert("RGB")
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ash/.local/lib/python3.12/site-packages/PIL/Image.py", line 3711, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file '/home/ash/www.ash-tra.com/tech/src/assets/theme-sites/datagrail-services.webp'
+[dev] visual generation failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+[dev] showcase asset generation failed
+[dev] change detected, rebuilding...
+[dev] building site...
+[dev] visual generation failed

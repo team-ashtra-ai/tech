@@ -28,7 +28,7 @@ The public build is generated into `dist/` for Cloudflare Pages.
 - `src/styles/theme-sites/` stores independent CSS for the standalone concept sites.
 - `src/styles/themes.css` stores the base theme presets, while `src/styles/generated/theme-overrides.css` stores URL-generated theme slot overrides.
 - `src/assets/section-visuals/` stores generated hero and section artwork built from Rotata's image library.
-- `src/assets/theme-sites/` stores generated concept assets built by `scripts/generate_showcase_assets.py`.
+- `src/assets/theme-sites/` stores generated concept assets built by `scripts/generate_showcase_assets.py`, including per-concept home heroes plus exact page and section visuals for showcase detail routes.
 - `src/scripts/` stores consent-aware navigation, forms, analytics, language and animation JS.
 - `src/scripts/theme-sites/` stores concept-specific JS for the standalone showcase pages.
 - `scripts/` stores build, SEO, schema, validation, section-visual generation, image, theme-builder, content-machine and WordPress export tooling.
