@@ -1,16 +1,22 @@
-@media (max-width: 1180px) {
+@media (max-width: 1240px) {
   .nav-desktop,
   .header-actions > .btn-primary {
     display: none;
   }
 
   .menu-toggle {
-    display: inline-block;
+    display: inline-flex;
+  }
+
+  .header-shell {
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 
   .hero-grid,
   .section-shell,
-  .footer-grid {
+  .footer-cta-panel,
+  .newsletter-page-grid,
+  .newsletter-shell {
     grid-template-columns: 1fr;
   }
 
@@ -23,8 +29,34 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .footer-highlights {
+  .footer-desktop {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: grid;
+    gap: var(--space-20);
+  }
+}
+
+@media (max-width: 960px) {
+  .theme-demo-shell,
+  .utility-shell {
     grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
+  .theme-demo-summary {
+    white-space: normal;
+  }
+
+  .utility-line {
+    justify-self: start;
+    white-space: normal;
+  }
+
+  .theme-switcher {
+    justify-self: stretch;
   }
 }
 
@@ -52,12 +84,32 @@
 
   .hero {
     min-height: auto;
-    padding-top: 156px;
+    padding-top: 208px;
     padding-bottom: 104px;
   }
 
   .hero-scroll-cue {
     bottom: 18px;
+  }
+
+  .theme-demo-copy {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  .utility-controls {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand-column {
+    gap: var(--space-12);
+  }
+
+  .footer-cta-panel .btn {
+    width: 100%;
   }
 
   .cookie-banner {
@@ -73,14 +125,6 @@
     justify-content: flex-start;
   }
 
-  .footer-legal {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-legal-links {
-    justify-content: flex-start;
-  }
-
   .floating-actions {
     right: 12px;
     bottom: 84px;
@@ -90,15 +134,44 @@
     right: 12px;
     bottom: 148px;
   }
+
+  .newsletter-modal {
+    padding: 12px;
+  }
+
+  .newsletter-dialog {
+    max-height: min(96svh, 920px);
+  }
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    padding-top: 8px;
+  }
+
   .utility-line {
     display: none;
   }
 
   .utility-shell {
-    justify-content: flex-end;
+    min-height: 0;
+    justify-items: stretch;
+    padding: .4rem .7rem;
+  }
+
+  .theme-demo-shell {
+    padding: .45rem .7rem;
+  }
+
+  .utility-controls {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .55rem;
+  }
+
+  .language-switcher,
+  .utility-link {
+    flex: 1 1 auto;
   }
 
   h1 {
@@ -110,22 +183,24 @@
   }
 
   .hero {
-    padding-top: 144px;
+    padding-top: 196px;
   }
 
   .header-shell {
-    min-height: 72px;
+    min-height: 74px;
     padding-inline: .85rem;
   }
 
-  .button-row,
-  .footer-inline-tools {
+  .brand .logo-swap {
+    width: 132px;
+  }
+
+  .button-row {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .button-row .btn,
-  .footer-inline-tools .btn {
+  .button-row .btn {
     width: 100%;
   }
 
@@ -138,6 +213,22 @@
   .section-visual-caption {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .mobile-panel {
+    padding-inline: 16px;
+    padding-bottom: max(18px, env(safe-area-inset-bottom));
+  }
+
+  .mobile-link,
+  .mobile-group summary {
+    min-height: 56px;
+    font-size: clamp(1.18rem, 7vw, 1.9rem);
+  }
+
+  .mobile-subnav a {
+    min-height: 44px;
+    font-size: .98rem;
   }
 
   .cookie-copy {

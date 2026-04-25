@@ -2,6 +2,8 @@
 """Export the static Rotata source into a future-editable WordPress theme."""
 from __future__ import annotations
 
+import html
+import json
 import shutil
 from pathlib import Path
 
@@ -9,6 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 THEME = ROOT / "wordpress-export/rotata-theme"
 SRC = ROOT / "src"
+THEMES = json.loads((SRC / "data/themes.json").read_text(encoding="utf-8"))
+SHOWCASE = json.loads((SRC / "data/showcase-sites.json").read_text(encoding="utf-8"))
 
 
 def write(path: Path, content: str) -> None:
@@ -16,41 +20,118 @@ def write(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
+def esc(value: str) -> str:
+    return html.escape(str(value or ""), quote=True)
+
+
+def localized(value, lang: str = "es", fallback: str = ""):
+    if isinstance(value, dict):
+        if lang in value and value[lang] not in (None, ""):
+            return value[lang]
+        if "en" in value and value["en"] not in (None, ""):
+            return value["en"]
+        if value:
+            return next(iter(value.values()))
+        return fallback
+    return value if value is not None else fallback
+
+
+def default_theme() -> dict:
+    target = THEMES.get("default_theme")
+    for theme in THEMES["themes"]:
+        if theme["id"] == target:
+            return theme
+    return THEMES["themes"][0]
+
+
+def showcase_sites() -> list[dict]:
+    return SHOWCASE.get("sites", [])
+
+
+def default_showcase() -> dict:
+    target = SHOWCASE.get("default_site")
+    for site in showcase_sites():
+        if site["id"] == target:
+            return site
+    return showcase_sites()[0]
+
+
+def wordpress_theme_preview_bar(lang: str = "es") -> str:
+    default = default_showcase()
+    items = []
+    announcement_template = "Concepto abierto: {label}" if lang == "es" else "Concept opened: {label}"
+    for site in showcase_sites():
+        label = localized(site.get("label", site["id"]), lang, site["id"])
+        summary = localized(site.get("summary", ""), lang, "")
+        swatches = site.get("swatch") or []
+        style = "".join(
+            [
+                f"--theme-chip-a:{swatches[0]};" if len(swatches) > 0 else "",
+                f"--theme-chip-b:{swatches[1]};" if len(swatches) > 1 else "",
+                f"--theme-chip-c:{swatches[2]};" if len(swatches) > 2 else "",
+            ]
+        )
+        items.append(
+            f'<a class="theme-chip"'
+            f' href="<?php echo esc_url(home_url(\'/showcase/{esc(site["id"])}/\')); ?>"'
+            f' data-theme-label="{esc(label)}"'
+            f' data-theme-summary="{esc(summary)}"'
+            f' data-theme-color="{esc(site.get("theme_color", ""))}"'
+            f' style="{esc(style)}">'
+            f'<span class="theme-chip-swatch" aria-hidden="true"></span>'
+            f'<span class="theme-chip-label">{esc(label)}</span>'
+            f"</a>"
+        )
+
+    return (
+        '<div class="theme-demo-bar">'
+        '<div class="container theme-demo-shell">'
+        '<div class="theme-demo-copy">'
+        '<span class="theme-demo-label">Conceptos web</span>'
+        f'<p class="theme-demo-summary" data-theme-summary>{esc(localized(default.get("summary", ""), lang, ""))}</p>'
+        "</div>"
+        '<nav class="theme-switcher" aria-label="Selector de conceptos web">'
+        + "".join(items)
+        + "</nav>"
+        f'<span class="sr-only" aria-live="polite" data-theme-announcer>{esc(announcement_template.format(label=localized(default.get("label", default["id"]), lang, default["id"])))}</span>'
+        "</div>"
+        "</div>"
+    )
+
+
 def hydrate_wordpress_partial(markup: str) -> str:
     """Replace static-build placeholders with WordPress-safe defaults."""
     replacements = {
         "{{skip_label}}": "<?php esc_html_e('Saltar al contenido', 'rotata'); ?>",
         "{{home_label}}": "<?php esc_attr_e('Inicio de Rotata', 'rotata'); ?>",
-        "{{theme_label}}": "<?php esc_attr_e('Cambiar modo claro y oscuro', 'rotata'); ?>",
-        "{{theme_mode_label}}": "<?php esc_html_e('Dark', 'rotata'); ?>",
-        "{{theme_dark_label}}": "<?php esc_attr_e('Oscuro', 'rotata'); ?>",
-        "{{theme_light_label}}": "<?php esc_attr_e('Claro', 'rotata'); ?>",
-        "{{utility_label}}": "<?php esc_html_e('Sistemas B2B con CRM, datos, automatización y pipeline', 'rotata'); ?>",
+        "{{theme_preview_bar}}": wordpress_theme_preview_bar(),
+        "{{utility_label}}": "<?php esc_html_e('Construye el sistema detrás de tu crecimiento', 'rotata'); ?>",
         "{{close_label}}": "<?php esc_attr_e('Cerrar menú', 'rotata'); ?>",
         "{{home_url}}": "<?php echo esc_url(home_url('/')); ?>",
         "{{logo}}": "<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo.svg'); ?>",
-        "{{logo_white}}": "<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-white-logo-dark-ui.svg'); ?>",
-        "{{cta_url}}": "<?php echo esc_url(home_url('/contacto/')); ?>",
-        "{{cta_label}}": "<?php esc_html_e('Diagnosticar sistema', 'rotata'); ?>",
-        "{{footer_eyebrow}}": "<?php esc_html_e('Sistema B2B', 'rotata'); ?>",
-        "{{positioning}}": "<?php esc_html_e('El sistema detrás del crecimiento B2B.', 'rotata'); ?>",
-        "{{footer_summary}}": "<?php esc_html_e('Rotata estructura CRM, datos, automatización y pipeline dentro de un único sistema operativo comercial.', 'rotata'); ?>",
-        "{{footer_cta_url}}": "<?php echo esc_url(home_url('/contacto/')); ?>",
-        "{{footer_cta_label}}": "<?php esc_html_e('Diagnosticar sistema', 'rotata'); ?>",
-        "{{footer_nav_title}}": "<?php esc_html_e('Explorar', 'rotata'); ?>",
-        "{{footer_system_title}}": "<?php esc_html_e('Lo que ordenamos', 'rotata'); ?>",
-        "{{footer_system_items}}": "<span><?php esc_html_e('Arquitectura CRM', 'rotata'); ?></span><span><?php esc_html_e('Señales y priorización', 'rotata'); ?></span><span><?php esc_html_e('Automatización y handoffs', 'rotata'); ?></span><span><?php esc_html_e('Medición conectada al pipeline', 'rotata'); ?></span>",
-        "{{footer_highlights}}": "<article class=\"footer-highlight\"><span>01</span><strong><?php esc_html_e('Estructura primero', 'rotata'); ?></strong><p><?php esc_html_e('La herramienta entra después de definir la lógica operativa.', 'rotata'); ?></p></article><article class=\"footer-highlight\"><span>02</span><strong><?php esc_html_e('Una lectura compartida', 'rotata'); ?></strong><p><?php esc_html_e('Marketing, ventas y reporting trabajan sobre la misma estructura.', 'rotata'); ?></p></article><article class=\"footer-highlight\"><span>03</span><strong><?php esc_html_e('Movimiento medible', 'rotata'); ?></strong><p><?php esc_html_e('La mejora se lee en datos, velocidad y calidad de pipeline.', 'rotata'); ?></p></article>",
-        "{{contact_title}}": "<?php esc_html_e('Contacto', 'rotata'); ?>",
+        "{{logo_markup}}": "<span class=\"logo-swap\" aria-hidden=\"true\"><img class=\"brand-logo brand-logo-theme-light\" src=\"<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo.svg'); ?>\" width=\"154\" height=\"40\" alt=\"\" /><img class=\"brand-logo brand-logo-theme-dark\" src=\"<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo-dark.svg'); ?>\" width=\"154\" height=\"40\" alt=\"\" /></span>",
+        "{{cta_url}}": "<?php echo esc_url(home_url('/contact/consult/')); ?>",
+        "{{cta_label}}": "<?php esc_html_e('Consultar Rotata', 'rotata'); ?>",
+        "{{accessibility_url}}": "<?php echo esc_url(home_url('/legal/accessibility/')); ?>",
+        "{{accessibility_label}}": "<?php esc_html_e('Accesibilidad', 'rotata'); ?>",
+        "{{menu_label}}": "<?php esc_attr_e('Abrir menú', 'rotata'); ?>",
         "{{language_switcher}}": "",
         "{{nav_desktop}}": "<?php wp_nav_menu(['theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'nav-desktop', 'fallback_cb' => false]); ?>",
-        "{{nav_mobile}}": "<div class=\"mobile-panel\" id=\"mobile-menu\" data-mobile-menu hidden><button class=\"mobile-close\" type=\"button\" data-menu-close aria-label=\"<?php esc_attr_e('Cerrar menú', 'rotata'); ?>\">×</button><?php wp_nav_menu(['theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'nav-mobile', 'fallback_cb' => false]); ?></div>",
-        "{{footer_links}}": "<?php wp_nav_menu(['theme_location' => 'footer', 'container' => 'nav', 'container_class' => 'footer-links', 'fallback_cb' => false]); ?>",
-        "{{cookie_policy_url}}": "<?php echo esc_url(home_url('/cookies/')); ?>",
-        "{{cookie_preferences_label}}": "<?php esc_html_e('Preferencias de cookies', 'rotata'); ?>",
-        "{{cookie_policy_label}}": "<?php esc_html_e('Política de cookies', 'rotata'); ?>",
-        "{{funding_strip}}": "<div class=\"container funding-strip\"><img src=\"<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/partners/rotata-kit-digital-eu-funding.png'); ?>\" alt=\"Kit Digital, Gobierno de España, Red.es, Next Generation EU y Plan de Recuperación\"><span><?php esc_html_e('Programa Kit Digital y financiación europea, conservado desde el sitio original de Rotata.', 'rotata'); ?></span></div>",
-        "{{footer_legal}}": "<div class=\"footer-legal container\"><span>© <?php echo esc_html(date('Y')); ?> Rotata Consulting SL</span><span><?php esc_html_e('Diseñado para claridad operativa, señal comercial y crecimiento medible.', 'rotata'); ?></span><div class=\"footer-legal-links\"><a href=\"<?php echo esc_url(home_url('/privacy/')); ?>\"><?php esc_html_e('Privacidad', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/')); ?>\"><?php esc_html_e('Legal', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/cookies/')); ?>\" data-open-cookie-preferences><?php esc_html_e('Cookies', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/accessibility/')); ?>\"><?php esc_html_e('Accesibilidad', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/sitemap/')); ?>\"><?php esc_html_e('Mapa del sitio', 'rotata'); ?></a></div></div>",
+        "{{nav_mobile}}": "<div class=\"mobile-panel\" id=\"mobile-menu\" data-mobile-menu hidden><div class=\"mobile-panel-head\"><a class=\"brand\" href=\"<?php echo esc_url(home_url('/')); ?>\" aria-label=\"<?php esc_attr_e('Inicio de Rotata', 'rotata'); ?>\"><span class=\"logo-swap\" aria-hidden=\"true\"><img class=\"brand-logo brand-logo-theme-light\" src=\"<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo.svg'); ?>\" width=\"154\" height=\"40\" alt=\"\" /><img class=\"brand-logo brand-logo-theme-dark\" src=\"<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo-dark.svg'); ?>\" width=\"154\" height=\"40\" alt=\"\" /></span></a><button class=\"mobile-close\" type=\"button\" data-menu-close aria-label=\"<?php esc_attr_e('Cerrar menú', 'rotata'); ?>\">×</button></div><div class=\"mobile-panel-body\"><?php wp_nav_menu(['theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'nav-mobile', 'fallback_cb' => false]); ?></div><div class=\"mobile-panel-footer\"><a class=\"btn btn-primary\" href=\"<?php echo esc_url(home_url('/contact/consult/')); ?>\"><?php esc_html_e('Consulta', 'rotata'); ?></a></div></div>",
+        "{{footer_cta_heading}}": "<?php esc_html_e('Construye el sistema detrás de tu crecimiento', 'rotata'); ?>",
+        "{{footer_cta_text}}": "<?php esc_html_e('Convierte herramientas, datos y procesos desconectados en un sistema estructurado de crecimiento B2B.', 'rotata'); ?>",
+        "{{footer_cta_url}}": "<?php echo esc_url(home_url('/contact/consult/')); ?>",
+        "{{footer_cta_label}}": "<?php esc_html_e('Consulta', 'rotata'); ?>",
+        "{{brand_name}}": "Rotata",
+        "{{brand_tagline}}": "<?php esc_html_e('Construye el sistema detrás de tu crecimiento', 'rotata'); ?>",
+        "{{brand_summary}}": "<?php esc_html_e('Rotata diseña sistemas estructurados de crecimiento con soporte de IA para equipos B2B de marketing y ventas.', 'rotata'); ?>",
+        "{{brand_links}}": "<a href=\"https://www.linkedin.com/company/rotata-consulting-sl/\" data-track=\"linkedin_click\">LinkedIn</a><a href=\"mailto:info@rotata.com\">Email</a><a href=\"tel:+34649498272\"><?php esc_html_e('Teléfono', 'rotata'); ?></a><span><?php esc_html_e('España', 'rotata'); ?></span>",
+        "{{brand_location}}": "<?php esc_html_e('España', 'rotata'); ?>",
+        "{{brand_location_mobile}}": "<?php esc_html_e('España, servicio global', 'rotata'); ?>",
+        "{{footer_columns}}": "<section class=\"footer-column\"><h2 class=\"footer-heading\"><?php esc_html_e('Resumen', 'rotata'); ?></h2><nav class=\"footer-links\"><a href=\"<?php echo esc_url(home_url('/about/')); ?>\"><?php esc_html_e('Sobre', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/values/')); ?>\"><?php esc_html_e('Valores', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/mission/')); ?>\"><?php esc_html_e('Misión', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/process/')); ?>\"><?php esc_html_e('Proceso', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/cases/')); ?>\"><?php esc_html_e('Casos', 'rotata'); ?></a></nav></section><section class=\"footer-column\"><h2 class=\"footer-heading\"><?php esc_html_e('Solutions', 'rotata'); ?></h2><nav class=\"footer-links\"><a href=\"<?php echo esc_url(home_url('/solutions/pipeline/')); ?>\">Pipeline</a><a href=\"<?php echo esc_url(home_url('/solutions/intelligence/')); ?>\">Intelligence</a><a href=\"<?php echo esc_url(home_url('/solutions/conversion/')); ?>\">Conversion</a><a href=\"<?php echo esc_url(home_url('/solutions/alignment/')); ?>\">Alignment</a></nav></section><section class=\"footer-column\"><h2 class=\"footer-heading\"><?php esc_html_e('Services', 'rotata'); ?></h2><nav class=\"footer-links\"><a href=\"<?php echo esc_url(home_url('/services/crm/')); ?>\">CRM</a><a href=\"<?php echo esc_url(home_url('/services/data/')); ?>\">Data</a><a href=\"<?php echo esc_url(home_url('/services/outbound/')); ?>\">Outbound</a><a href=\"<?php echo esc_url(home_url('/services/signals/')); ?>\">Signals</a><a href=\"<?php echo esc_url(home_url('/services/sales/')); ?>\">Sales</a></nav></section><section class=\"footer-column\"><h2 class=\"footer-heading\"><?php esc_html_e('System', 'rotata'); ?></h2><nav class=\"footer-links\"><a href=\"<?php echo esc_url(home_url('/system/')); ?>\"><?php esc_html_e('Architecture', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/workflows/')); ?>\"><?php esc_html_e('Workflows', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/automation/')); ?>\"><?php esc_html_e('Automation', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/reporting/')); ?>\"><?php esc_html_e('Reporting', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/integrations/')); ?>\"><?php esc_html_e('Integrations', 'rotata'); ?></a></nav></section><section class=\"footer-column\"><h2 class=\"footer-heading\"><?php esc_html_e('Ecosystem', 'rotata'); ?></h2><nav class=\"footer-links\"><a href=\"<?php echo esc_url(home_url('/partners/')); ?>\"><?php esc_html_e('Partners', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/partners/hubspot/')); ?>\">HubSpot</a><a href=\"<?php echo esc_url(home_url('/partners/zoominfo/')); ?>\">ZoomInfo</a><a href=\"<?php echo esc_url(home_url('/partners/synapsale/')); ?>\">Synapsale</a><a href=\"<?php echo esc_url(home_url('/insights/roi/')); ?>\">ROI</a></nav></section><section class=\"footer-column\"><h2 class=\"footer-heading\"><?php esc_html_e('Insights', 'rotata'); ?></h2><nav class=\"footer-links\"><a href=\"<?php echo esc_url(home_url('/insights/blog/')); ?>\">Blog</a><a href=\"<?php echo esc_url(home_url('/insights/newsletter/')); ?>\">Newsletter</a><a href=\"<?php echo esc_url(home_url('/insights/roi/')); ?>\">ROI</a></nav></section><section class=\"footer-column\"><h2 class=\"footer-heading\"><?php esc_html_e('Legal', 'rotata'); ?></h2><nav class=\"footer-links\"><a href=\"<?php echo esc_url(home_url('/legal/privacy/')); ?>\"><?php esc_html_e('Privacidad', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/')); ?>\"><?php esc_html_e('Legal', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/cookies/')); ?>\">Cookies</a><a href=\"<?php echo esc_url(home_url('/legal/accessibility/')); ?>\"><?php esc_html_e('Accesibilidad', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/sitemap/')); ?>\"><?php esc_html_e('Mapa del sitio', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/robots/')); ?>\">Robots</a></nav></section>",
+        "{{footer_mobile_columns}}": "<details class=\"footer-accordion\"><summary><?php esc_html_e('Resumen', 'rotata'); ?></summary><div class=\"footer-accordion-links\"><a href=\"<?php echo esc_url(home_url('/about/')); ?>\"><?php esc_html_e('Sobre', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/values/')); ?>\"><?php esc_html_e('Valores', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/mission/')); ?>\"><?php esc_html_e('Misión', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/process/')); ?>\"><?php esc_html_e('Proceso', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/about/cases/')); ?>\"><?php esc_html_e('Casos', 'rotata'); ?></a></div></details><details class=\"footer-accordion\"><summary>Solutions</summary><div class=\"footer-accordion-links\"><a href=\"<?php echo esc_url(home_url('/solutions/pipeline/')); ?>\">Pipeline</a><a href=\"<?php echo esc_url(home_url('/solutions/intelligence/')); ?>\">Intelligence</a><a href=\"<?php echo esc_url(home_url('/solutions/conversion/')); ?>\">Conversion</a><a href=\"<?php echo esc_url(home_url('/solutions/alignment/')); ?>\">Alignment</a></div></details><details class=\"footer-accordion\"><summary>Services</summary><div class=\"footer-accordion-links\"><a href=\"<?php echo esc_url(home_url('/services/crm/')); ?>\">CRM</a><a href=\"<?php echo esc_url(home_url('/services/data/')); ?>\">Data</a><a href=\"<?php echo esc_url(home_url('/services/outbound/')); ?>\">Outbound</a><a href=\"<?php echo esc_url(home_url('/services/signals/')); ?>\">Signals</a><a href=\"<?php echo esc_url(home_url('/services/sales/')); ?>\">Sales</a></div></details><details class=\"footer-accordion\"><summary>System</summary><div class=\"footer-accordion-links\"><a href=\"<?php echo esc_url(home_url('/system/')); ?>\"><?php esc_html_e('Architecture', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/workflows/')); ?>\"><?php esc_html_e('Workflows', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/automation/')); ?>\"><?php esc_html_e('Automation', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/reporting/')); ?>\"><?php esc_html_e('Reporting', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/system/integrations/')); ?>\"><?php esc_html_e('Integrations', 'rotata'); ?></a></div></details><details class=\"footer-accordion\"><summary><?php esc_html_e('Ecosistema', 'rotata'); ?></summary><div class=\"footer-accordion-links\"><a href=\"<?php echo esc_url(home_url('/partners/')); ?>\"><?php esc_html_e('Partners', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/partners/hubspot/')); ?>\">HubSpot</a><a href=\"<?php echo esc_url(home_url('/partners/zoominfo/')); ?>\">ZoomInfo</a><a href=\"<?php echo esc_url(home_url('/partners/synapsale/')); ?>\">Synapsale</a><a href=\"<?php echo esc_url(home_url('/insights/roi/')); ?>\">ROI</a></div></details><details class=\"footer-accordion\"><summary>Insights</summary><div class=\"footer-accordion-links\"><a href=\"<?php echo esc_url(home_url('/insights/blog/')); ?>\">Blog</a><a href=\"<?php echo esc_url(home_url('/insights/newsletter/')); ?>\">Newsletter</a><a href=\"<?php echo esc_url(home_url('/insights/roi/')); ?>\">ROI</a></div></details><details class=\"footer-accordion\"><summary><?php esc_html_e('Legal', 'rotata'); ?></summary><div class=\"footer-accordion-links\"><a href=\"<?php echo esc_url(home_url('/legal/privacy/')); ?>\"><?php esc_html_e('Privacidad', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/')); ?>\"><?php esc_html_e('Legal', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/cookies/')); ?>\">Cookies</a><a href=\"<?php echo esc_url(home_url('/legal/accessibility/')); ?>\"><?php esc_html_e('Accesibilidad', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/sitemap/')); ?>\"><?php esc_html_e('Mapa del sitio', 'rotata'); ?></a><a href=\"<?php echo esc_url(home_url('/legal/robots/')); ?>\">Robots</a></div></details>",
+        "{{funding_strip}}": "<div class=\"container funding-strip\"><img src=\"<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/partners/rotata-kit-digital-eu-funding.png'); ?>\" alt=\"Kit Digital, Gobierno de España, Red.es, Next Generation EU y Plan de Recuperación\"><span><?php esc_html_e('Financiado por la Unión Europea a través del programa Kit Digital, con fondos Next Generation EU del Mecanismo de Recuperación y Resiliencia.', 'rotata'); ?></span></div>",
+        "{{footer_bottom}}": "© <?php echo esc_html(date('Y')); ?> Rotata Consulting SL",
         "{{eyebrow}}": "<?php esc_html_e('Cookies', 'rotata'); ?>",
         "{{title}}": "<?php esc_html_e('Privacidad y cookies', 'rotata'); ?>",
         "{{body}}": "<?php esc_html_e('Usamos cookies necesarias para que el sitio funcione. Si aceptas, activamos también analítica, marketing y preferencias para mejorar la experiencia.', 'rotata'); ?>",
@@ -58,7 +139,7 @@ def hydrate_wordpress_partial(markup: str) -> str:
         "{{necessary_only}}": "<?php esc_html_e('Solo necesarias', 'rotata'); ?>",
         "{{reject}}": "<?php esc_html_e('Rechazar', 'rotata'); ?>",
         "{{policy}}": "<?php esc_html_e('Leer política', 'rotata'); ?>",
-        "{{policy_url}}": "<?php echo esc_url(home_url('/cookies/')); ?>",
+        "{{policy_url}}": "<?php echo esc_url(home_url('/legal/cookies/')); ?>",
     }
     for token, value in replacements.items():
         markup = markup.replace(token, value)
@@ -116,9 +197,10 @@ add_action('wp_enqueue_scripts', 'rotata_assets');
     header = hydrate_wordpress_partial((SRC / "partials/header/header.html").read_text(encoding="utf-8"))
     footer = hydrate_wordpress_partial((SRC / "partials/footer/footer.html").read_text(encoding="utf-8"))
     cookie_banner = hydrate_wordpress_partial((SRC / "partials/cookie/cookie-consent.html").read_text(encoding="utf-8"))
+    default = default_theme()
     write(
         THEME / "header.php",
-        "<!doctype html><html <?php language_attributes(); ?>><head><?php wp_head(); ?></head><body <?php body_class(); ?>>\n"
+        f"<!doctype html><html <?php language_attributes(); ?> data-design-theme=\"{esc(default['id'])}\" data-theme-surface=\"{esc(default.get('surface', 'dark'))}\"><head><?php wp_head(); ?></head><body <?php body_class(); ?>>\n"
         + header
         + "\n<main id=\"main\">\n",
     )
@@ -130,7 +212,7 @@ add_action('wp_enqueue_scripts', 'rotata_assets');
 <aside class=\"rotbot-panel\" id=\"rotbot-panel\" data-rotbot-panel hidden>
   <div class=\"rotbot-head\"><img src=\"<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/images/rotata-rotbot-ai-assistant.png'); ?>\" alt=\"\"><div><strong>Soy Rotbot</strong><span><?php esc_html_e('Asistente de sistemas B2B', 'rotata'); ?></span></div><button class=\"rotbot-close\" type=\"button\" data-rotbot-close aria-label=\"Close\">×</button></div>
   <div class=\"rotbot-messages\" data-rotbot-messages><p class=\"rotbot-message bot\"><?php esc_html_e('Hola. Puedo ayudarte a ubicar el problema: CRM, datos, outbound, ROI o automatización.', 'rotata'); ?></p></div>
-  <div class=\"rotbot-prompts\"><a href=\"<?php echo esc_url(home_url('/contacto/')); ?>\" data-track=\"cta_click\"><?php esc_html_e('Hablar con Rotata', 'rotata'); ?></a></div>
+  <div class=\"rotbot-prompts\"><a href=\"<?php echo esc_url(home_url('/contact/')); ?>\" data-track=\"cta_click\"><?php esc_html_e('Hablar con Rotata', 'rotata'); ?></a></div>
 </aside>"""
     write(
         THEME / "footer.php",
@@ -187,7 +269,7 @@ $icon = $args['icon'] ?? get_template_directory_uri() . '/assets/images/assets/i
 """,
         "cta-primary.php": """<?php
 $heading = $args['heading'] ?? __('Construyamos tu sistema de crecimiento', 'rotata');
-$href = $args['href'] ?? home_url('/contacto/');
+$href = $args['href'] ?? home_url('/contact/consult/');
 $label = $args['label'] ?? __('Diagnosticar sistema', 'rotata');
 ?>
 <section class="section final-cta">

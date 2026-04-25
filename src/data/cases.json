@@ -1,20 +1,20 @@
 [
   {
     "title": "CRM reporting reset",
-    "problem": "HubSpot data did not explain pipeline movement.",
-    "system": "Lifecycle, pipeline, objects and dashboards rebuilt.",
-    "result": "Result metrics pending client approval."
+    "problem": "Pipeline reviews depended on spreadsheet explanations because HubSpot stages and fields did not match the real buying motion.",
+    "system": "Lifecycle rules, stage criteria, required properties and dashboards were rebuilt around one commercial definition.",
+    "result": "Pipeline movement became reviewable inside the CRM and forecast conversations stopped relying on manual reconciliation."
   },
   {
     "title": "Outbound operating model",
-    "problem": "Prospecting relied on manual interpretation.",
-    "system": "Targeting, sequencing, CRM handoffs and performance rhythm.",
-    "result": "Result metrics pending client approval."
+    "problem": "Prospecting depended on manual interpretation of account fit, timing and follow-up ownership.",
+    "system": "Targeting rules, sequences, CRM handoffs and review cadence were redesigned as one connected motion.",
+    "result": "Outbound became easier to review, route and improve because replies, owners and next steps followed the same model."
   },
   {
     "title": "Account intelligence layer",
-    "problem": "Sales could not prioritize accounts showing interest.",
-    "system": "Signals, scoring, CRM sync and meeting workflow.",
-    "result": "Result metrics pending client approval."
+    "problem": "Sales could see account activity but could not convert it into clear priority and action inside the CRM.",
+    "system": "Signals, enrichment, scoring and meeting workflow were connected so timing changed tasks, queues and follow-up.",
+    "result": "Prioritization became visible and repeatable instead of depending on rep intuition or disconnected tools."
   }
 ]

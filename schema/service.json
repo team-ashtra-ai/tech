@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Structured systems for B2B growth",
+    "name": "The solution is a connected revenue system",
     "serviceType": "AI-driven marketing and sales systems",
     "provider": {
       "@type": "Organization",
@@ -12,8 +12,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "HubSpot, structured for how your business actually works",
-    "serviceType": "HubSpot implementation Spain",
+    "name": "Pipeline becomes readable when the structure is explicit",
+    "serviceType": "B2B pipeline design",
     "provider": {
       "@type": "Organization",
       "name": "Rotata Consulting SL"
@@ -22,8 +22,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Better data, used properly",
-    "serviceType": "B2B data intelligence",
+    "name": "Intelligence works when signals change the workflow",
+    "serviceType": "B2B account intelligence",
     "provider": {
       "@type": "Organization",
       "name": "Rotata Consulting SL"
@@ -32,7 +32,57 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Outbound that is structured, not improvised",
+    "name": "Conversion improves when follow-up is designed",
+    "serviceType": "B2B conversion system",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Alignment happens when teams read the same system",
+    "serviceType": "marketing sales alignment system",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Services are designed to reinforce one system",
+    "serviceType": "B2B growth services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "CRM should hold the operating model, not just the records",
+    "serviceType": "CRM architecture service",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Data matters when it changes who gets action first",
+    "serviceType": "B2B data enrichment service",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Outbound works when targeting and timing are structured",
     "serviceType": "B2B outbound system",
     "provider": {
       "@type": "Organization",
@@ -42,8 +92,68 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Focus on accounts that actually show interest",
-    "serviceType": "account engagement",
+    "name": "Signals matter when they change priority and timing",
+    "serviceType": "account signals service",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Sales execution closes the loop inside the system",
+    "serviceType": "B2B sales workflow service",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Architecture is the product",
+    "serviceType": "growth system architecture",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Workflows keep the system moving",
+    "serviceType": "revenue workflow design",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automation should protect speed, signal and control",
+    "serviceType": "sales automation system",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Reporting should make decisions defensible",
+    "serviceType": "pipeline reporting system",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rotata Consulting SL"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Integrations matter when they preserve one logic",
+    "serviceType": "CRM integrations architecture",
     "provider": {
       "@type": "Organization",
       "name": "Rotata Consulting SL"

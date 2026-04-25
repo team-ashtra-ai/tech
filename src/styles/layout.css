@@ -16,9 +16,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--color-accent-2) 12%, transparent), transparent 16rem),
-    radial-gradient(circle at 88% 84%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 16rem);
+  background: var(--section-background-accent);
   opacity: .5;
   pointer-events: none;
   z-index: 0;
@@ -31,7 +29,7 @@
 
 .hero {
   min-height: min(980px, 100svh);
-  padding: 184px 0 112px;
+  padding: var(--hero-top-offset) 0 112px;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -48,9 +46,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .9;
+  opacity: var(--hero-image-opacity);
   transform: scale(1.02);
-  filter: saturate(1.06) contrast(1.05);
+  filter: var(--hero-image-filter);
 }
 
 .hero::before,
@@ -67,9 +65,7 @@
 }
 
 .hero::after {
-  background:
-    radial-gradient(circle at 70% 35%, rgba(149, 240, 234, .12), transparent 18rem),
-    radial-gradient(circle at 82% 68%, rgba(255, 106, 124, .16), transparent 24rem);
+  background: var(--hero-after-background);
 }
 
 .hero-grid {
@@ -95,9 +91,9 @@
 .hero-proof span {
   padding: .72rem .95rem;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
+  border-radius: var(--button-radius);
   background: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(var(--panel-blur));
   color: color-mix(in srgb, var(--color-text) 86%, var(--color-muted));
   font-size: .86rem;
   font-weight: 780;
@@ -106,13 +102,13 @@
 .hero-visual {
   position: relative;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
+  border-radius: var(--visual-radius);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, .05), transparent 22%),
+    linear-gradient(180deg, var(--panel-top-highlight), transparent 22%),
     color-mix(in srgb, var(--color-panel) 94%, transparent);
   box-shadow: var(--shadow-hero);
   overflow: hidden;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(var(--panel-blur));
 }
 
 .hero-visual-head {
@@ -148,7 +144,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: color-mix(in srgb, var(--color-border-strong) 72%, transparent);
-  border-radius: calc(var(--radius-lg) - 6px);
+  border-radius: calc(var(--card-radius) + 6px);
   overflow: hidden;
 }
 
@@ -185,7 +181,7 @@
   min-height: 88px;
   padding: 1rem 1rem 1.1rem;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--card-radius);
   background: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
 }
 
@@ -213,14 +209,14 @@
   gap: .75rem;
   padding: .6rem .95rem;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
+  border-radius: var(--button-radius);
   background: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
   font-size: .78rem;
   letter-spacing: .14em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--color-muted);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(var(--panel-blur));
 }
 
 .hero-scroll-cue span {
@@ -260,7 +256,7 @@
 }
 
 .section-number {
-  color: color-mix(in srgb, var(--color-accent-2) 48%, var(--color-text));
+  color: var(--section-number-color);
   font-family: var(--font-heading);
   font-size: clamp(2.8rem, 7vw, 5rem);
   line-height: .9;
@@ -282,10 +278,10 @@
   position: relative;
   margin: 0;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
+  border-radius: var(--visual-radius);
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, .06), transparent 18%),
+    linear-gradient(180deg, var(--panel-top-highlight-strong), transparent 18%),
     var(--color-panel);
   box-shadow: var(--shadow-card);
   min-height: 340px;
@@ -308,9 +304,9 @@
   gap: var(--space-16);
   padding: .95rem 1rem;
   border: 1px solid var(--color-border);
-  border-radius: calc(var(--radius-lg) - 8px);
+  border-radius: var(--card-radius);
   background: color-mix(in srgb, var(--color-panel-strong) 94%, transparent);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(var(--panel-blur));
 }
 
 .section-visual-caption span {

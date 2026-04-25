@@ -1,0 +1,1619 @@
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 68 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] preview server running at http://127.0.0.1:8000
+127.0.0.1 - - [24/Apr/2026 20:20:36] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 20:20:37] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 20:20:37] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 20:20:37] "GET /styles/components.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 20:20:37] "GET /styles/responsive.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 20:20:38] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 20:20:38] "GET /scripts/consent.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 20:20:38] "GET /assets/logo/rotata-favicon.png HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 22, in <module>
+    NAV = load_json(SRC / "data/navigation.json")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 19, in load_json
+    return json.loads(path.read_text(encoding="utf-8"))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/src/data/navigation.json'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 772, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 760, in main
+    html_out = standard_page(lang, page_key)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 627, in standard_page
+    body += render_template(partial("cta/cta-primary.html"), {"heading": esc(t.get("final_cta", "")), "href": page_url("contact", lang), "label": esc(NAV[lang]["primary_cta"])})
+                                                                                                                                                      ~~~^^^^^^
+KeyError: 'es'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 949, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 937, in main
+    html_out = standard_page(lang, page_key)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 804, in standard_page
+    body += render_template(partial("cta/cta-primary.html"), {"heading": esc(t.get("final_cta", "")), "href": page_url("contact", lang), "label": esc(NAV[lang]["primary_cta"])})
+                                                                                                                                                      ~~~^^^^^^
+KeyError: 'es'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 977, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 961, in main
+    if page_payload(page_key, lang)["render"] == "blog":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 139, in page_payload
+    compose_section(item["page"], item["index"], lang) for item in meta["section_sources"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 96, in compose_section
+    section = deepcopy(source_translation(source_page, lang)["sections"][index])
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 128 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /en/about/ HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/global.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/global.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /assets/section-visuals/hero-about.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /assets/partners/rotata-kit-digital-eu-funding.png HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /assets/logo/rotata-b2b-growth-system-logo.svg HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /assets/images/rotata-rotbot-ai-assistant.png HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/tokens.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/layout.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/typography.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/navigation.css HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/forms.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/cards.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/animations.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /styles/responsive.css HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /assets/section-visuals/about-01-grid.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/consent.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/navigation.js HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/language.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/forms.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/analytics.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/animations.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /scripts/widgets.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:03] "GET /assets/section-visuals/about-02-problem.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-03-cards.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/icons/rotata-crm-icon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/icons/rotata-automation-icon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-04-process.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-05-grid.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-06-metrics.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-07-grid.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-08-grid.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-09-cards.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-10-partners.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:01:09] "GET /assets/section-visuals/about-11-grid.webp HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:26:39] "GET /en/about/ HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:26:39] "GET /styles/components.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:26:39] "GET /styles/navigation.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:26:39] "GET /styles/responsive.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:26:39] "GET /scripts/consent.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:26:39] "GET /scripts/navigation.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:26:39] "GET /assets/logo/rotata-favicon.png HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+127.0.0.1 - - [24/Apr/2026 22:36:10] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:36:10] "GET /styles/global.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:10] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:10] "GET /styles/tokens.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:10] "GET /styles/layout.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /styles/typography.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /styles/components.css HTTP/1.1" 304 -
+Generated 128 sitemap URLs
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /styles/navigation.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /styles/forms.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /styles/cards.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /styles/animations.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /styles/responsive.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /scripts/navigation.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:36:11] "GET /scripts/forms.js HTTP/1.1" 304 -
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 128 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 128 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [24/Apr/2026 22:41:26] "GET /en/ HTTP/1.1" 200 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 117 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 77 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 106 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1006, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 985, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 959, in copy_static
+    shutil.copytree(SRC / folder, DIST / folder)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 600, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 554, in _copytree
+    raise Error(errors)
+shutil.Error: [('/home/ash/www.ash-tra.com/tech/src/assets/icons/rotata-data-icon.svg', '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-data-icon.svg', '[Errno 2] No such file or directory'), ('/home/ash/www.ash-tra.com/tech/src/assets/icons/rotata-automation-icon.svg', '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-automation-icon.svg', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-automation-icon.svg'"), ('/home/ash/www.ash-tra.com/tech/src/assets/icons/rotata-pipeline-icon.svg', '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-pipeline-icon.svg', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-pipeline-icon.svg'"), ('/home/ash/www.ash-tra.com/tech/src/assets/icons/rotata-system-icon.svg', '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-system-icon.svg', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-system-icon.svg'"), ('/home/ash/www.ash-tra.com/tech/src/assets/icons/rotata-ai-icon.svg', '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-ai-icon.svg', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/icons/rotata-ai-icon.svg'"), (<DirEntry 'icons'>, '/home/ash/www.ash-tra.com/tech/dist/assets/icons', '[Errno 2] No such file or directory'), ('/home/ash/www.ash-tra.com/tech/src/assets/section-visuals', '/home/ash/www.ash-tra.com/tech/dist/assets/section-visuals', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/section-visuals'"), ('/home/ash/www.ash-tra.com/tech/src/assets/diagrams', '/home/ash/www.ash-tra.com/tech/dist/assets/diagrams', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/diagrams'"), ('/home/ash/www.ash-tra.com/tech/src/assets/og', '/home/ash/www.ash-tra.com/tech/dist/assets/og', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/og'"), ('/home/ash/www.ash-tra.com/tech/src/assets/blog', '/home/ash/www.ash-tra.com/tech/dist/assets/blog', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/blog'")]
+[dev] build failed
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /assets/partners/rotata-kit-digital-eu-funding.png HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /assets/images/rotata-rotbot-ai-assistant.png HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /scripts/global.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /styles/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /styles/navigation.css HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /styles/responsive.css HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /scripts/consent.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /scripts/navigation.js HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:55:12] "GET /scripts/widgets.js HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/section-visuals/home-02-cards.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/icons/rotata-data-icon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/section-visuals/home-03-grid.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/section-visuals/home-04-process.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/section-visuals/home-05-metrics.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/section-visuals/home-06-partners.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/section-visuals/home-07-blog-preview.webp HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/blog/rotata-imagen-correo-spam.png HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/partners/rotata-errores-de-estructura-en-hubspot-que-distorsionan-tus-informes.png HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:55:15] "GET /assets/partners/rotata-logo-hubspot-informe-2026.png HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 128 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [24/Apr/2026 22:56:06] "GET /en/contact/ HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2026 22:56:06] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:56:06] "GET /assets/section-visuals/hero-contact.webp HTTP/1.1" 404 -
+127.0.0.1 - - [24/Apr/2026 22:56:06] "GET /styles/navigation.css HTTP/1.1" 304 -
+127.0.0.1 - - [24/Apr/2026 22:56:45] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:56:45] "GET /assets/section-visuals/contact-01-text.webp HTTP/1.1" 404 -
+127.0.0.1 - - [24/Apr/2026 22:57:40] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:57:40] "GET /assets/section-visuals/contact-02-process.webp HTTP/1.1" 404 -
+127.0.0.1 - - [24/Apr/2026 22:57:41] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:57:41] "GET /assets/section-visuals/contact-03-cards.webp HTTP/1.1" 404 -
+127.0.0.1 - - [24/Apr/2026 22:57:43] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:57:43] "GET /assets/section-visuals/contact-04-grid.webp HTTP/1.1" 404 -
+127.0.0.1 - - [24/Apr/2026 22:57:43] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:57:43] "GET /assets/section-visuals/contact-05-grid.webp HTTP/1.1" 404 -
+127.0.0.1 - - [24/Apr/2026 22:57:43] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:57:43] "GET /assets/section-visuals/contact-06-problem.webp HTTP/1.1" 404 -
+127.0.0.1 - - [24/Apr/2026 22:57:43] code 404, message File not found
+127.0.0.1 - - [24/Apr/2026 22:57:43] "GET /assets/section-visuals/contact-07-metrics.webp HTTP/1.1" 404 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 85 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+[dev] visual generation failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 53 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: PosixPath('/home/ash/www.ash-tra.com/tech/dist')
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: PosixPath('/home/ash/www.ash-tra.com/tech/dist')
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 671, in _rmtree_safe_fd
+    orig_st = orig_entry.stat(follow_symlinks=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/insights/blog/descubre-el-marketing-abm'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 156 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: PosixPath('/home/ash/www.ash-tra.com/tech/dist')
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1218, in copy_static
+    DIST.mkdir(parents=True)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: PosixPath('/home/ash/www.ash-tra.com/tech/dist')
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1220, in copy_static
+    shutil.copytree(SRC / folder, DIST / folder)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 600, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 554, in _copytree
+    raise Error(errors)
+shutil.Error: [('/home/ash/www.ash-tra.com/tech/src/assets/logo/rotata-b2b-growth-system-logo-dark.webp', '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-dark.webp', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-dark.webp'"), ('/home/ash/www.ash-tra.com/tech/src/assets/logo/rotata-b2b-growth-system-logo-dark-solid.webp', '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-dark-solid.webp', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-dark-solid.webp'"), ('/home/ash/www.ash-tra.com/tech/src/assets/logo/rotata-b2b-growth-system-logo.png', '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo.png', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo.png'"), ('/home/ash/www.ash-tra.com/tech/src/assets/logo/rotata-b2b-growth-system-logo-dark.svg', '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-dark.svg', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-dark.svg'"), ('/home/ash/www.ash-tra.com/tech/src/assets/logo/rotata-apple-touch-icon.webp', '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-apple-touch-icon.webp', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-apple-touch-icon.webp'"), ('/home/ash/www.ash-tra.com/tech/src/assets/logo/rotata-b2b-growth-system-logo-solid.png', '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-solid.png', "[Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/logo/rotata-b2b-growth-system-logo-solid.png'"), ('/home/ash/www.ash-tra.com/tech/src/assets/video', '/home/ash/www.ash-tra.com/tech/dist/assets/video', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/video'"), ('/home/ash/www.ash-tra.com/tech/src/assets/images', '/home/ash/www.ash-tra.com/tech/dist/assets/images', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/images'"), ('/home/ash/www.ash-tra.com/tech/src/assets/partners', '/home/ash/www.ash-tra.com/tech/dist/assets/partners', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/partners'"), ('/home/ash/www.ash-tra.com/tech/src/assets/diagrams', '/home/ash/www.ash-tra.com/tech/dist/assets/diagrams', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/diagrams'"), ('/home/ash/www.ash-tra.com/tech/src/assets/og', '/home/ash/www.ash-tra.com/tech/dist/assets/og', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/og'"), ('/home/ash/www.ash-tra.com/tech/src/assets/blog', '/home/ash/www.ash-tra.com/tech/dist/assets/blog', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/blog'"), ('/home/ash/www.ash-tra.com/tech/src/assets/profile', '/home/ash/www.ash-tra.com/tech/dist/assets/profile', "[Errno 17] File exists: '/home/ash/www.ash-tra.com/tech/dist/assets/profile'")]
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ash/www.ash-tra.com/tech/dist/assets/section-visuals'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: PosixPath('/home/ash/www.ash-tra.com/tech/dist')
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: '/home/ash/www.ash-tra.com/tech/dist/insights/blog'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: '/home/ash/www.ash-tra.com/tech/dist/en'
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 99 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: PosixPath('/home/ash/www.ash-tra.com/tech/dist')
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: PosixPath('/home/ash/www.ash-tra.com/tech/dist')
+[dev] build failed
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Traceback (most recent call last):
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1268, in <module>
+    main()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1246, in main
+    copy_static()
+  File "/home/ash/www.ash-tra.com/tech/scripts/build_site.py", line 1217, in copy_static
+    shutil.rmtree(DIST)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/home/ash/.pyenv/versions/3.12.12/lib/python3.12/shutil.py", line 662, in _rmtree_safe_fd
+    os.rmdir(name, dir_fd=dirfd)
+OSError: [Errno 39] Directory not empty: '/home/ash/www.ash-tra.com/tech/dist/assets/section-visuals'
+[dev] build failed
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] preview server running at http://127.0.0.1:8000
+127.0.0.1 - - [25/Apr/2026 07:20:10] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:13] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:13] "GET /styles/global.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:13] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:13] "GET /scripts/global.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:13] "GET /assets/partners/rotata-kit-digital-eu-funding.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:13] "GET /assets/logo/rotata-b2b-growth-system-logo.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/tokens.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/layout.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/typography.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/navigation.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/forms.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/cards.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/animations.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /styles/responsive.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /assets/images/rotata-rotbot-ai-assistant.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /assets/logo/rotata-b2b-growth-system-logo-dark.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/consent.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/navigation.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/language.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/newsletter.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/forms.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/analytics.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/animations.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:14] "GET /scripts/widgets.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 07:20:15] "GET /assets/section-visuals/home-02-grid.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:20:15] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/section-visuals/home-03-cards.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/icons/rotata-pipeline-icon.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/section-visuals/home-04-grid.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/icons/rotata-crm-icon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/icons/rotata-data-icon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/icons/rotata-system-icon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/section-visuals/home-05-process.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/section-visuals/home-06-metrics.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/section-visuals/home-07-partners.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:25:49] "GET /assets/section-visuals/home-08-grid.webp HTTP/1.1" 200 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/global.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /assets/logo/rotata-b2b-growth-system-logo-dark.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /scripts/global.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /assets/partners/rotata-kit-digital-eu-funding.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/themes.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/tokens.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/layout.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/typography.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/components.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/navigation.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/forms.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/cards.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/animations.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /styles/responsive.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /assets/images/rotata-rotbot-ai-assistant.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /assets/section-visuals/home-02-grid.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /scripts/themes.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /scripts/consent.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /scripts/navigation.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /scripts/forms.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /scripts/widgets.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:44] "GET /scripts/newsletter.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:13:45] "GET /assets/logo/rotata-favicon.png HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/global.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /scripts/global.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /assets/logo/rotata-b2b-growth-system-logo.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/tokens.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/themes.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/layout.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/typography.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/components.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/navigation.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/forms.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/cards.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /styles/responsive.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /assets/section-visuals/home-03-cards.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /assets/section-visuals/home-04-grid.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /assets/section-visuals/home-05-process.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /assets/section-visuals/home-06-metrics.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /assets/section-visuals/home-07-partners.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /assets/section-visuals/home-08-grid.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /scripts/navigation.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /scripts/themes.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /scripts/language.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /scripts/analytics.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:16] "GET /scripts/animations.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:17] "GET /en/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 09:50:25] "GET /en/ HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 159 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [25/Apr/2026 10:11:13] "GET /en/showcase/databricks/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:15] "GET /en/showcase/databricks/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:15] "GET /styles/theme-sites/databricks.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:15] "GET /scripts/theme-sites/databricks.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:15] "GET /assets/theme-sites/databricks-system.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:31] "GET /en/showcase/datagrail/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:31] "GET /styles/theme-sites/datagrail.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:31] "GET /scripts/theme-sites/datagrail.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:31] "GET /assets/theme-sites/datagrail-privacy.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:32] "GET /en/showcase/atlan/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:32] "GET /styles/theme-sites/atlan.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:32] "GET /scripts/theme-sites/atlan.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:32] "GET /assets/theme-sites/atlan-context.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:33] "GET /en/showcase/runpod/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:33] "GET /styles/theme-sites/runpod.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:33] "GET /scripts/theme-sites/runpod.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:33] "GET /assets/theme-sites/runpod-infra.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:34] "GET /en/showcase/vectara/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:34] "GET /styles/theme-sites/vectara.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:34] "GET /scripts/theme-sites/vectara.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:11:34] "GET /assets/theme-sites/vectara-agent.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:18:21] "GET /en/showcase/datagrail/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:21] "GET /styles/theme-sites/datagrail.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:21] "GET /assets/logo/rotata-b2b-growth-system-logo-dark.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:21] "GET /scripts/theme-sites/datagrail.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:21] "GET /assets/theme-sites/datagrail-privacy.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:24] "GET /en/showcase/atlan/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:24] "GET /styles/theme-sites/atlan.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:24] "GET /scripts/theme-sites/atlan.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:24] "GET /assets/theme-sites/atlan-context.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:26] "GET /en/showcase/runpod/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:26] "GET /styles/theme-sites/runpod.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:26] "GET /scripts/theme-sites/runpod.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:27] "GET /assets/theme-sites/runpod-infra.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:28] "GET /en/showcase/vectara/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:29] "GET /styles/theme-sites/vectara.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:29] "GET /scripts/theme-sites/vectara.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:18:29] "GET /assets/theme-sites/vectara-agent.webp HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 30 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] preview server running at http://127.0.0.1:8000
+127.0.0.1 - - [25/Apr/2026 10:45:06] "GET /en/showcase/databricks/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:08] "GET /en/showcase/databricks/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:08] "GET /styles/theme-sites/databricks.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:08] "GET /scripts/theme-sites/databricks.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:45:13] "GET /en/showcase/datagrail/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:13] "GET /styles/theme-sites/datagrail.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:13] "GET /scripts/theme-sites/datagrail.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:45:13] "GET /assets/theme-sites/datagrail-privacy.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:15] "GET /en/showcase/atlan/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:15] "GET /styles/theme-sites/atlan.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:15] "GET /scripts/theme-sites/atlan.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:45:17] "GET /en/showcase/runpod/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:17] "GET /styles/theme-sites/runpod.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:17] "GET /scripts/theme-sites/runpod.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:45:17] "GET /assets/theme-sites/runpod-infra.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:19] "GET /en/showcase/vectara/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:19] "GET /styles/theme-sites/vectara.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 10:45:19] "GET /scripts/theme-sites/vectara.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:45:21] "GET /en/showcase/runpod/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:45:21] "GET /assets/theme-sites/runpod-infra.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 10:45:23] "GET /en/showcase/atlan/ HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 174 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 5 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 729 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 44 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 729 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 44 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 729 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 44 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 729 sitemap URLs
+Generated schema modules
+[dev] build complete
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 44 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 729 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [25/Apr/2026 12:23:36] "GET /en/showcase/databricks/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:36] "GET /en/showcase/databricks/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:37] "GET /styles/theme-sites/databricks.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:37] "GET /styles/theme-sites/shared-pages.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:37] "GET /scripts/theme-sites/databricks.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:37] "GET /assets/logo/rotata-b2b-growth-system-logo.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:23:37] "GET /assets/logo/rotata-b2b-growth-system-logo-dark.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:23:37] "GET /scripts/theme-sites/shared.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:55] "GET /en/showcase/datagrail/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:55] "GET /styles/theme-sites/datagrail.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:55] "GET /scripts/theme-sites/datagrail.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:55] "GET /assets/theme-sites/datagrail-privacy.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:58] "GET /en/showcase/atlan/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:58] "GET /styles/theme-sites/atlan.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:23:58] "GET /scripts/theme-sites/atlan.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:24:00] "GET /en/showcase/runpod/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:24:00] "GET /styles/theme-sites/runpod.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:24:00] "GET /scripts/theme-sites/runpod.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:24:00] "GET /assets/theme-sites/runpod-infra.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:24:02] "GET /en/showcase/vectara/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:24:02] "GET /styles/theme-sites/vectara.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:24:02] "GET /scripts/theme-sites/vectara.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:47:20] "GET /en/showcase/runpod/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:20] "GET /styles/theme-sites/runpod.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:20] "GET /styles/theme-sites/shared-pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:20] "GET /scripts/theme-sites/runpod.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:20] "GET /scripts/theme-sites/shared.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:20] "GET /assets/theme-sites/runpod-infra.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:28] "GET /en/showcase/atlan/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:28] "GET /styles/theme-sites/atlan.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:28] "GET /scripts/theme-sites/atlan.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:43] "GET /en/showcase/datagrail/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:43] "GET /styles/theme-sites/datagrail.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:43] "GET /scripts/theme-sites/datagrail.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:43] "GET /assets/theme-sites/datagrail-privacy.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:50] "GET /en/showcase/databricks/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:50] "GET /styles/theme-sites/databricks.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:47:50] "GET /scripts/theme-sites/databricks.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:05] "GET /en/showcase/databricks/about/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:05] "GET /assets/theme-sites/databricks-about.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:07] "GET /en/showcase/databricks/about/values/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /en/services/crm/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/global.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /assets/section-visuals/hero-services-crm.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/global.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /assets/partners/rotata-kit-digital-eu-funding.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/tokens.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/themes.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/layout.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/typography.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/components.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/navigation.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/forms.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/cards.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/animations.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /styles/responsive.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /assets/images/rotata-rotbot-ai-assistant.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /assets/section-visuals/services-crm-01-text.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /assets/section-visuals/services-crm-02-grid.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/consent.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/navigation.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/themes.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/language.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/forms.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/analytics.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/animations.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/widgets.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:19] "GET /scripts/newsletter.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:48:42] "GET /en/showcase/databricks/legal/privacy/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:42] "GET /assets/theme-sites/databricks-legal.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:47] "GET /en/showcase/databricks/contact/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:47] "GET /assets/theme-sites/databricks-contact.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:49] "GET /en/showcase/databricks/insights/blog/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:50] "GET /assets/theme-sites/databricks-insights.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:51] "GET /en/showcase/databricks/partners/hubspot/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:51] "GET /assets/theme-sites/databricks-partners.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:53] "GET /en/showcase/databricks/system/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:53] "GET /assets/theme-sites/databricks-system.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:57] "GET /en/showcase/databricks/services/crm/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:48:57] "GET /assets/theme-sites/databricks-services.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:49:05] "GET /en/showcase/databricks/solutions/pipeline/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:49:05] "GET /assets/theme-sites/databricks-solutions.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 12:54:30] "GET /en/showcase/vectara/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:54:30] "GET /styles/theme-sites/vectara.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 12:54:30] "GET /scripts/theme-sites/vectara.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:00:08] "GET /styles/theme-sites/shared-pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:00:08] code 404, message File not found
+127.0.0.1 - - [25/Apr/2026 13:00:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Apr/2026 13:18:01] "GET /en/showcase/vectara/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:18:01] "GET /styles/theme-sites/vectara.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:18:01] "GET /styles/theme-sites/shared-pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:18:01] "GET /scripts/theme-sites/vectara.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:18:01] "GET /scripts/theme-sites/shared.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:18:01] "GET /assets/logo/rotata-favicon.png HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:18:04] "GET /en/showcase/vectara/ HTTP/1.1" 304 -
+[dev] change detected, rebuilding...
+[dev] building site...
+Generated visuals in /home/ash/www.ash-tra.com/tech/src/assets/section-visuals
+Generated 44 showcase assets in /home/ash/www.ash-tra.com/tech/src/assets/theme-sites
+Built /home/ash/www.ash-tra.com/tech/dist
+Generated 729 sitemap URLs
+Generated schema modules
+[dev] build complete
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /en/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/global.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /scripts/global.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/tokens.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/themes.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/layout.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/typography.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/components.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/navigation.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/forms.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/cards.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /styles/responsive.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:19] "GET /assets/logo/rotata-b2b-growth-system-logo-dark.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:20] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:20] "GET /scripts/navigation.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:20] "GET /scripts/themes.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:20] "GET /scripts/forms.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:20] "GET /scripts/newsletter.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:22] "GET /en/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:49] "GET /en/showcase/databricks/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:50] "GET /styles/theme-sites/databricks.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:50] "GET /styles/theme-sites/shared-pages.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:50] "GET /scripts/theme-sites/databricks.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:50] "GET /scripts/theme-sites/shared.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:53] "GET /en/showcase/datagrail/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:53] "GET /styles/theme-sites/datagrail.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:53] "GET /scripts/theme-sites/datagrail.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:53] "GET /assets/theme-sites/datagrail-privacy.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:54] "GET /en/showcase/atlan/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:54] "GET /styles/theme-sites/atlan.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:54] "GET /scripts/theme-sites/atlan.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:55] "GET /en/showcase/runpod/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:55] "GET /styles/theme-sites/runpod.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:55] "GET /scripts/theme-sites/runpod.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:55] "GET /assets/theme-sites/runpod-infra.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:57] "GET /en/showcase/vectara/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:17:57] "GET /styles/theme-sites/vectara.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:17:57] "GET /scripts/theme-sites/vectara.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:18:04] "GET /en/showcase/vectara/about/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:04] "GET /assets/theme-sites/vectara-about.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:05] "GET /en/showcase/vectara/about/values/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:05] "GET /en/showcase/vectara/about/mission/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:06] "GET /en/showcase/vectara/about/process/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:06] "GET /en/showcase/vectara/about/cases/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:16] "GET /en/showcase/vectara/solutions/pipeline/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:16] "GET /assets/theme-sites/vectara-solutions.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:17] "GET /en/showcase/vectara/solutions/intelligence/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:17] "GET /en/showcase/vectara/solutions/conversion/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:17] "GET /en/showcase/vectara/solutions/alignment/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:20] "GET /en/showcase/vectara/services/crm/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:20] "GET /assets/theme-sites/vectara-services.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:20] "GET /en/showcase/vectara/services/data/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:21] "GET /en/showcase/vectara/services/outbound/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:21] "GET /en/showcase/vectara/services/signals/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:22] "GET /en/showcase/vectara/services/sales/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:24] "GET /en/showcase/vectara/system/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:24] "GET /assets/theme-sites/vectara-system.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:25] "GET /en/showcase/vectara/system/workflows/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:25] "GET /en/showcase/vectara/system/automation/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:26] "GET /en/showcase/vectara/system/reporting/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:26] "GET /en/showcase/vectara/system/integrations/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:28] "GET /en/showcase/vectara/partners/hubspot/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:28] "GET /assets/theme-sites/vectara-partners.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:28] "GET /en/showcase/vectara/partners/zoominfo/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:29] "GET /en/showcase/vectara/partners/synapsale/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:31] "GET /en/showcase/vectara/insights/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:31] "GET /assets/theme-sites/vectara-insights.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:33] "GET /en/showcase/vectara/insights/blog/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:34] "GET /en/showcase/vectara/insights/newsletter/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:34] "GET /en/showcase/vectara/insights/roi/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:35] "GET /en/showcase/vectara/contact/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:35] "GET /assets/theme-sites/vectara-contact.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:36] "GET /en/showcase/vectara/contact/consult/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:37] "GET /en/showcase/vectara/legal/privacy/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:37] "GET /assets/theme-sites/vectara-legal.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:38] "GET /en/showcase/vectara/legal/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:38] "GET /en/showcase/vectara/legal/cookies/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:39] "GET /en/showcase/vectara/legal/accessibility/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:39] "GET /en/showcase/vectara/legal/sitemap/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:18:40] "GET /en/showcase/vectara/legal/robots/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 14:19:22] "GET /en/ HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:19:22] "GET /assets/section-visuals/hero-home.webp HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 14:19:22] "GET /assets/section-visuals/home-01-problem.webp HTTP/1.1" 304 -

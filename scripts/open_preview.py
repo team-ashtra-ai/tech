@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""Open the local English preview in the default browser."""
+"""Start the local dev server when needed and open the English concept preview."""
 from __future__ import annotations
 
+import os
+import subprocess
 import sys
 import time
 import urllib.error
 import urllib.request
 import webbrowser
+from pathlib import Path
 
 
-URL = "http://127.0.0.1:8000/en/"
-TIMEOUT_SECONDS = 10
+ROOT = Path(__file__).resolve().parents[1]
+URL = "http://127.0.0.1:8000/en/showcase/databricks/"
+TIMEOUT_SECONDS = 30
 POLL_SECONDS = 0.5
 
 
@@ -22,18 +26,42 @@ def is_ready() -> bool:
         return False
 
 
-def main() -> int:
+def start_dev_server() -> subprocess.Popen[str]:
+    log_path = ROOT / ".open_preview.log"
+    log_file = log_path.open("a", encoding="utf-8")
+    process = subprocess.Popen(
+        ["python3", "scripts/dev.py", "8000"],
+        cwd=ROOT,
+        stdout=log_file,
+        stderr=subprocess.STDOUT,
+        text=True,
+        start_new_session=True,
+    )
+    print(f"Started local dev server in background (PID {process.pid}).")
+    print(f"Server log: {log_path}")
+    return process
+
+
+def wait_until_ready() -> bool:
     deadline = time.time() + TIMEOUT_SECONDS
     while time.time() < deadline:
         if is_ready():
-            webbrowser.open(URL)
-            print(f"Opened {URL}")
-            return 0
+            return True
         time.sleep(POLL_SECONDS)
+    return False
 
-    print(f"Preview server is not responding at {URL}", file=sys.stderr)
-    print("Run `npm run dev` first, then run this script again.", file=sys.stderr)
-    return 1
+
+def main() -> int:
+    if not is_ready():
+        start_dev_server()
+        if not wait_until_ready():
+            print(f"Preview server did not start at {URL}", file=sys.stderr)
+            print("Check `.open_preview.log` for the startup error.", file=sys.stderr)
+            return 1
+
+    webbrowser.open(URL)
+    print(f"Opened {URL}")
+    return 0
 
 
 if __name__ == "__main__":

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # during builds, so watching them creates a rebuild loop.
 WATCH_DIRS = [ROOT / "src", ROOT / "scripts"]
 WATCH_EXTENSIONS = {".py", ".json", ".html", ".css", ".js", ".md", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".avif", ".ico", ".mp4"}
-IGNORED_DIRS = {ROOT / "src" / "assets" / "section-visuals"}
+IGNORED_DIRS = {ROOT / "src" / "assets" / "section-visuals", ROOT / "src" / "assets" / "theme-sites"}
 
 
 class ReusableTCPServer(socketserver.TCPServer):
@@ -53,6 +53,14 @@ def run_build() -> bool:
     )
     if section_visuals.returncode != 0:
         print("[dev] visual generation failed", flush=True)
+        return False
+    showcase_assets = subprocess.run(
+        ["python3", "scripts/generate_showcase_assets.py"],
+        cwd=ROOT,
+        check=False,
+    )
+    if showcase_assets.returncode != 0:
+        print("[dev] showcase asset generation failed", flush=True)
         return False
     result = subprocess.run(
         ["python3", "scripts/build_site.py"],

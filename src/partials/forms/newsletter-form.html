@@ -1,1 +1,11 @@
-<form class="form newsletter-form" data-form="newsletter"><label>Email<input type="email" name="email" required></label><button class="btn btn-secondary" type="submit">Subscribe</button><p class="form-status" role="status"></p></form>
+<form class="form newsletter-form" data-form="newsletter" novalidate>
+  {{fields}}
+  <input type="text" name="website_confirm" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input type="hidden" name="source_page" value="{{source_page}}">
+  <input type="hidden" name="language" value="{{language}}">
+  <input type="hidden" name="subscription_type" value="newsletter">
+  <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+  <input type="hidden" name="referrer">
+  <button class="btn btn-primary" type="submit">{{submit}}</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>

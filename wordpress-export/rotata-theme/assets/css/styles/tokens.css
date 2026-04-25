@@ -1,4 +1,4 @@
-/* Rotata design tokens: premium, dark-forward, static-first. */
+/* Shared design tokens and fallbacks for the theme demo system. */
 :root {
   color-scheme: dark;
   --color-ink: #050c16;
@@ -25,14 +25,28 @@
   --color-border-strong: rgba(246, 243, 237, .22);
   --color-grid: rgba(246, 243, 237, .06);
   --color-focus: #95f0ea;
-  --color-hero-overlay: linear-gradient(90deg, rgba(6, 12, 21, .92) 0%, rgba(7, 14, 25, .74) 44%, rgba(7, 14, 25, .34) 78%);
   --body-background:
     radial-gradient(circle at 12% 14%, rgba(79, 200, 255, .18), transparent 28rem),
     radial-gradient(circle at 86% 18%, rgba(255, 106, 124, .14), transparent 24rem),
     radial-gradient(circle at 50% 120%, rgba(149, 240, 234, .08), transparent 36rem),
     linear-gradient(180deg, #050c16, #08111d 28%, #091522 52%, #060f1a);
+  --body-atmosphere:
+    radial-gradient(circle at 18% 18%, rgba(79, 200, 255, .12), transparent 18rem),
+    radial-gradient(circle at 82% 20%, rgba(255, 106, 124, .1), transparent 18rem),
+    radial-gradient(circle at 50% 100%, rgba(149, 240, 234, .1), transparent 28rem);
+  --body-grid-size: 88px;
+  --body-grid-opacity: .34;
+  --color-hero-overlay: linear-gradient(90deg, rgba(6, 12, 21, .92) 0%, rgba(7, 14, 25, .74) 44%, rgba(7, 14, 25, .34) 78%);
+  --hero-after-background:
+    radial-gradient(circle at 70% 35%, rgba(149, 240, 234, .12), transparent 18rem),
+    radial-gradient(circle at 82% 68%, rgba(255, 106, 124, .16), transparent 24rem);
+  --footer-background:
+    radial-gradient(circle at 16% 12%, rgba(79, 200, 255, .1), transparent 18rem),
+    radial-gradient(circle at 86% 18%, rgba(255, 106, 124, .14), transparent 20rem),
+    linear-gradient(180deg, rgba(6, 12, 21, 0), rgba(6, 12, 21, .74) 14%, rgba(6, 12, 21, .94));
   --font-heading: "Space Grotesk", "Aptos Display", "Segoe UI", sans-serif;
   --font-body: "Manrope", "Aptos", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Aptos Mono", "Consolas", monospace;
   --space-4: .25rem;
   --space-8: .5rem;
   --space-12: .75rem;
@@ -58,6 +72,35 @@
   --radius-lg: 34px;
   --radius-xl: 42px;
   --radius-pill: 999px;
+  --header-shell-radius: 999px;
+  --utility-shell-radius: 999px;
+  --nav-shell-radius: 999px;
+  --button-radius: 999px;
+  --card-radius: 22px;
+  --visual-radius: 42px;
+  --field-radius: 18px;
+  --eyebrow-radius: 999px;
+  --hero-top-offset: 224px;
+  --panel-blur: 20px;
+  --panel-top-highlight: rgba(255, 255, 255, .05);
+  --panel-top-highlight-strong: rgba(255, 255, 255, .06);
+  --eyebrow-bg: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
+  --eyebrow-border: color-mix(in srgb, var(--color-signal) 18%, var(--color-border));
+  --eyebrow-color: var(--color-signal);
+  --btn-primary-bg: linear-gradient(135deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 48%, var(--color-gold)));
+  --btn-primary-color: #fff;
+  --btn-primary-shadow: 0 18px 44px color-mix(in srgb, var(--color-accent) 28%, transparent);
+  --btn-secondary-bg: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
+  --btn-secondary-border: var(--color-border);
+  --btn-secondary-color: var(--color-text);
+  --section-background-accent:
+    radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--color-accent-2) 12%, transparent), transparent 16rem),
+    radial-gradient(circle at 88% 84%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 16rem);
+  --section-number-color: color-mix(in srgb, var(--color-accent-2) 48%, var(--color-text));
+  --heading-letter-spacing: -.035em;
+  --heading-line-height: .96;
+  --hero-image-opacity: .9;
+  --hero-image-filter: saturate(1.06) contrast(1.05);
   --shadow-soft: 0 34px 90px rgba(0, 0, 0, .34);
   --shadow-card: 0 20px 56px rgba(2, 10, 18, .32);
   --shadow-hard: 0 10px 28px rgba(2, 9, 17, .5);
@@ -69,37 +112,4 @@
   --z-menu: 80;
   --z-cookie: 100;
   --z-widget: 90;
-}
-
-[data-theme="light"] {
-  color-scheme: light;
-  --color-ink: #eef4fb;
-  --color-ink-2: #ffffff;
-  --color-body: #f3f7fb;
-  --color-primary: #355ea2;
-  --color-surface: #ffffff;
-  --color-surface-2: #edf3fb;
-  --color-surface-3: #e4edf8;
-  --color-panel: rgba(255, 255, 255, .76);
-  --color-panel-soft: rgba(255, 255, 255, .6);
-  --color-panel-strong: rgba(255, 255, 255, .9);
-  --color-header: rgba(243, 247, 251, .34);
-  --color-text: #14233a;
-  --color-muted: #5b6c86;
-  --color-accent: #df4960;
-  --color-accent-2: #297bd7;
-  --color-signal: #007a79;
-  --color-gold: #c4862e;
-  --color-border: rgba(20, 35, 58, .12);
-  --color-border-strong: rgba(20, 35, 58, .2);
-  --color-grid: rgba(20, 35, 58, .06);
-  --body-background:
-    radial-gradient(circle at 12% 14%, rgba(41, 123, 215, .16), transparent 24rem),
-    radial-gradient(circle at 88% 12%, rgba(223, 73, 96, .12), transparent 24rem),
-    radial-gradient(circle at 52% 110%, rgba(0, 122, 121, .08), transparent 34rem),
-    linear-gradient(180deg, #f3f7fb, #f8fbff 28%, #eef4fb 56%, #f4f8fd);
-  --shadow-soft: 0 28px 78px rgba(39, 65, 105, .16);
-  --shadow-card: 0 18px 52px rgba(39, 65, 105, .12);
-  --shadow-hard: 0 10px 24px rgba(39, 65, 105, .18);
-  --shadow-hero: 0 34px 90px rgba(39, 65, 105, .14);
 }

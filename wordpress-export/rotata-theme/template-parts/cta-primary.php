@@ -1,6 +1,6 @@
 <?php
 $heading = $args['heading'] ?? __('Construyamos tu sistema de crecimiento', 'rotata');
-$href = $args['href'] ?? home_url('/contacto/');
+$href = $args['href'] ?? home_url('/contact/consult/');
 $label = $args['label'] ?? __('Diagnosticar sistema', 'rotata');
 ?>
 <section class="section final-cta">

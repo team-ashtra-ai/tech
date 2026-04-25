@@ -1,29 +1,27 @@
-<!doctype html><html <?php language_attributes(); ?>><head><?php wp_head(); ?></head><body <?php body_class(); ?>>
+<!doctype html><html <?php language_attributes(); ?> data-design-theme="system-noir" data-theme-surface="dark"><head><?php wp_head(); ?></head><body <?php body_class(); ?>>
 <a class="skip-link" href="#main"><?php esc_html_e('Saltar al contenido', 'rotata'); ?></a>
 <header class="site-header" data-site-header>
+  <div class="theme-demo-bar"><div class="container theme-demo-shell"><div class="theme-demo-copy"><span class="theme-demo-label">Conceptos web</span><p class="theme-demo-summary" data-theme-summary>Concepto editorial claro con producto, plataforma y bloques de prueba visibles.</p></div><nav class="theme-switcher" aria-label="Selector de conceptos web"><a class="theme-chip" href="<?php echo esc_url(home_url('/showcase/databricks/')); ?>" data-theme-label="Databricks" data-theme-summary="Concepto editorial claro con producto, plataforma y bloques de prueba visibles." data-theme-color="#f7efe5" style="--theme-chip-a:#ff5f2e;--theme-chip-b:#171717;--theme-chip-c:#f7efe5;"><span class="theme-chip-swatch" aria-hidden="true"></span><span class="theme-chip-label">Databricks</span></a><a class="theme-chip" href="<?php echo esc_url(home_url('/showcase/datagrail/')); ?>" data-theme-label="DataGrail" data-theme-summary="Concepto de privacidad operativa con agente, riesgo y controles humanos." data-theme-color="#eef8f5" style="--theme-chip-a:#102a43;--theme-chip-b:#18b88f;--theme-chip-c:#eef8f5;"><span class="theme-chip-swatch" aria-hidden="true"></span><span class="theme-chip-label">DataGrail</span></a><a class="theme-chip" href="<?php echo esc_url(home_url('/showcase/atlan/')); ?>" data-theme-label="Atlan" data-theme-summary="Concepto de capa de contexto con grafo, logos y narrativa de observación." data-theme-color="#ffffff" style="--theme-chip-a:#2026d2;--theme-chip-b:#00b28a;--theme-chip-c:#ffffff;"><span class="theme-chip-swatch" aria-hidden="true"></span><span class="theme-chip-label">Atlan</span></a><a class="theme-chip" href="<?php echo esc_url(home_url('/showcase/runpod/')); ?>" data-theme-label="Runpod" data-theme-summary="Concepto oscuro de infraestructura con consola, flujo de despliegue y brillo técnico." data-theme-color="#07040d" style="--theme-chip-a:#5d29f0;--theme-chip-b:#17b8ff;--theme-chip-c:#07040d;"><span class="theme-chip-swatch" aria-hidden="true"></span><span class="theme-chip-label">Runpod</span></a><a class="theme-chip" href="<?php echo esc_url(home_url('/showcase/vectara/')); ?>" data-theme-label="Vectara" data-theme-summary="Concepto enterprise de agentes gobernados, guardrails y resultados auditables." data-theme-color="#f8fafc" style="--theme-chip-a:#0060e5;--theme-chip-b:#111827;--theme-chip-c:#f8fafc;"><span class="theme-chip-swatch" aria-hidden="true"></span><span class="theme-chip-label">Vectara</span></a></nav><span class="sr-only" aria-live="polite" data-theme-announcer>Concepto abierto: Databricks</span></div></div>
   <div class="utility-bar">
     <div class="container utility-shell">
-      <span class="utility-line"><?php esc_html_e('Sistemas B2B con CRM, datos, automatización y pipeline', 'rotata'); ?></span>
+      <span class="utility-line"><?php esc_html_e('Construye el sistema detrás de tu crecimiento', 'rotata'); ?></span>
       <div class="utility-controls">
         
-        <button class="theme-toggle" type="button" data-theme-toggle data-theme-dark-label="<?php esc_attr_e('Oscuro', 'rotata'); ?>" data-theme-light-label="<?php esc_attr_e('Claro', 'rotata'); ?>" aria-label="<?php esc_attr_e('Cambiar modo claro y oscuro', 'rotata'); ?>">
-          <span aria-hidden="true"></span>
-          <em data-theme-label><?php esc_html_e('Dark', 'rotata'); ?></em>
-        </button>
+        <a class="utility-link" href="<?php echo esc_url(home_url('/legal/accessibility/')); ?>"><?php esc_html_e('Accesibilidad', 'rotata'); ?></a>
       </div>
     </div>
   </div>
   <div class="container header-shell">
     <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php esc_attr_e('Inicio de Rotata', 'rotata'); ?>">
-      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo.svg'); ?>" width="154" height="40" alt="Rotata" />
+      <span class="logo-swap" aria-hidden="true"><img class="brand-logo brand-logo-theme-light" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo.svg'); ?>" width="154" height="40" alt="" /><img class="brand-logo brand-logo-theme-dark" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo-dark.svg'); ?>" width="154" height="40" alt="" /></span>
     </a>
     <?php wp_nav_menu(['theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'nav-desktop', 'fallback_cb' => false]); ?>
     <div class="header-actions">
-      <a class="btn btn-primary" data-track="cta_click" href="<?php echo esc_url(home_url('/contacto/')); ?>"><?php esc_html_e('Diagnosticar sistema', 'rotata'); ?></a>
-      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      <a class="btn btn-primary" data-track="cta_click" href="<?php echo esc_url(home_url('/contact/consult/')); ?>"><?php esc_html_e('Consultar Rotata', 'rotata'); ?></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="<?php esc_attr_e('Abrir menú', 'rotata'); ?>"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="mobile-panel" id="mobile-menu" data-mobile-menu hidden><button class="mobile-close" type="button" data-menu-close aria-label="<?php esc_attr_e('Cerrar menú', 'rotata'); ?>">×</button><?php wp_nav_menu(['theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'nav-mobile', 'fallback_cb' => false]); ?></div>
+  <div class="mobile-panel" id="mobile-menu" data-mobile-menu hidden><div class="mobile-panel-head"><a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php esc_attr_e('Inicio de Rotata', 'rotata'); ?>"><span class="logo-swap" aria-hidden="true"><img class="brand-logo brand-logo-theme-light" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo.svg'); ?>" width="154" height="40" alt="" /><img class="brand-logo brand-logo-theme-dark" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/assets/logo/rotata-b2b-growth-system-logo-dark.svg'); ?>" width="154" height="40" alt="" /></span></a><button class="mobile-close" type="button" data-menu-close aria-label="<?php esc_attr_e('Cerrar menú', 'rotata'); ?>">×</button></div><div class="mobile-panel-body"><?php wp_nav_menu(['theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'nav-mobile', 'fallback_cb' => false]); ?></div><div class="mobile-panel-footer"><a class="btn btn-primary" href="<?php echo esc_url(home_url('/contact/consult/')); ?>"><?php esc_html_e('Consulta', 'rotata'); ?></a></div></div>
 </header>
 
 <main id="main">

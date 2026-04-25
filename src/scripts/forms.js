@@ -8,18 +8,33 @@ const messages = {
     required: "Completa los campos obligatorios.",
     connection: "Hubo un problema de conexión. Escribe a info@rotata.com.",
     success: "Solicitud recibida. Rotata revisará el contexto y responderá con los siguientes pasos.",
+    forms: {
+      newsletter: {
+        success: "Suscripción recibida. Te enviaremos los próximos insights de IA y marketing digital.",
+      },
+    },
     locale: "es-ES",
   },
   en: {
     required: "Please complete the required fields.",
     connection: "There was a connection issue. Please email info@rotata.com.",
     success: "Request received. Rotata will review the context and respond with next steps.",
+    forms: {
+      newsletter: {
+        success: "Subscription received. We will send the latest in AI and digital marketing.",
+      },
+    },
     locale: "en-GB",
   },
   fr: {
     required: "Merci de compléter les champs obligatoires.",
     connection: "Un problème de connexion est survenu. Écrivez à info@rotata.com.",
     success: "Demande reçue. Rotata va revoir le contexte et répondre avec les prochaines étapes.",
+    forms: {
+      newsletter: {
+        success: "Inscription reçue. Nous vous enverrons les prochains insights sur l'IA et le marketing digital.",
+      },
+    },
     locale: "fr-FR",
   },
 }[lang.startsWith("en") ? "en" : lang.startsWith("fr") ? "fr" : "es"];
@@ -37,6 +52,7 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
     event.preventDefault();
     const status = form.querySelector(".form-status");
     const honeypot = form.querySelector(".honeypot");
+    const formMessages = messages.forms?.[form.dataset.form] || {};
     if (honeypot && honeypot.value) return;
     let valid = true;
     form.querySelectorAll("[required]").forEach((field) => {
@@ -45,7 +61,7 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
       valid = valid && ok;
     });
     if (!valid) {
-      status.textContent = messages.required;
+      status.textContent = formMessages.required || messages.required;
       return;
     }
     const payload = Object.fromEntries(new FormData(form).entries());
@@ -54,11 +70,12 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
       try {
         await fetch(config.formsEndpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       } catch (error) {
-        status.textContent = messages.connection;
+        status.textContent = formMessages.connection || messages.connection;
         return;
       }
     }
-    status.textContent = messages.success;
+    status.textContent = formMessages.success || messages.success;
+    form.dispatchEvent(new CustomEvent("rotata:form-success", { bubbles: true, detail: { form: form.dataset.form, payload } }));
     form.reset();
   });
 });

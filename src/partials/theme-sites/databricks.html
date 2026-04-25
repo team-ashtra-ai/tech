@@ -1,0 +1,95 @@
+<div class="db-site">
+  <header class="db-header">
+    <a class="db-brand" href="{{home_url}}" aria-label="Rotata home">{{logo_markup}}</a>
+    <nav class="db-nav" aria-label="Rotata platform navigation">{{concept_nav}}</nav>
+    {{concept_menu_button}}
+    <div class="db-header-actions">
+      <a href="{{contact_href}}">Login</a>
+      <a href="{{contact_href}}">Try Rotata</a>
+    </div>
+  </header>
+  {{concept_mobile_nav}}
+  {{showcase_switcher}}
+  <main>
+    <section class="db-hero" style="--hero-bg:url('{{asset}}')">
+      <div class="db-hero-copy">
+        <p>{{eyebrow}}</p>
+        <h1>{{h1}}</h1>
+        <span>{{intro}}</span>
+        <div class="db-actions">
+          <a class="db-primary" href="{{primary_href}}">{{primary_label}}</a>
+          <a class="db-secondary" href="#platform">{{secondary_label}}</a>
+        </div>
+      </div>
+      <div class="db-dashboard" aria-label="Rotata product dashboard preview">
+        <div class="db-dashboard-rail">
+          <strong>rotata</strong>
+          <span>Dashboard</span>
+          <span>Pipeline</span>
+          <span>Automation</span>
+          <span>Reporting</span>
+        </div>
+        <div class="db-dashboard-main">
+          <div class="db-window-head"><span></span><span></span><span></span></div>
+          <h2>Project Dashboard</h2>
+          <div class="db-chart">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="db-status-grid">
+            <span>Lifecycle model</span>
+            <span>Routing active</span>
+            <span>Decision view</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="db-trust" id="why">
+      <p>Trusted by data and revenue teams</p>
+      <div>{{partners}}</div>
+    </section>
+    <section class="db-platform" id="platform">
+      <div class="db-section-head">
+        <p>THE ROTATA PLATFORM</p>
+        <h2>{{section_two_heading}}</h2>
+      </div>
+      <div class="db-tab-row">
+        <span>Platform</span><span>Database</span><span>AI</span><span>Business intelligence</span><span>Governance</span><span>Data engineering</span>
+      </div>
+      <div class="db-tabs" data-db-tabs>{{service_cards}}</div>
+    </section>
+    <section class="db-split" id="solutions">
+      <div>
+        <p>FEATURED SYSTEMS</p>
+        <h2>{{section_three_heading}}</h2>
+        <span>{{section_three_body}}</span>
+      </div>
+      <div class="db-feature-grid">{{grid_items}}</div>
+    </section>
+    <section class="db-customer">
+      <div class="db-proof-copy">
+        <p>CUSTOMER OPERATING PROOF</p>
+        <h2>{{section_five_heading}}</h2>
+      </div>
+      <div class="db-metrics">{{metrics}}</div>
+    </section>
+    <section class="db-spotlight" id="resources">
+      <div class="db-section-head">
+        <p>IN THE SPOTLIGHT</p>
+        <h2>{{section_eight_heading}}</h2>
+      </div>
+      <div class="db-spotlight-grid">{{resource_cards}}</div>
+    </section>
+    <section class="db-cta" id="contact">
+      <h2>{{final_cta}}</h2>
+      <a href="{{contact_href}}">Browse demos</a>
+      <a href="{{contact_href}}">Try it free</a>
+    </section>
+  </main>
+  <footer class="db-footer" id="footer">
+    <div class="db-footer-brand">
+      {{logo_markup}}
+      <p>{{footer_summary}}</p>
+    </div>
+    <div class="concept-footer-grid">{{footer_columns}}</div>
+  </footer>
+</div>

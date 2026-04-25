@@ -1,25 +1,23 @@
 <a class="skip-link" href="#main">{{skip_label}}</a>
 <header class="site-header" data-site-header>
+  {{theme_preview_bar}}
   <div class="utility-bar">
     <div class="container utility-shell">
       <span class="utility-line">{{utility_label}}</span>
       <div class="utility-controls">
         {{language_switcher}}
-        <button class="theme-toggle" type="button" data-theme-toggle data-theme-dark-label="{{theme_dark_label}}" data-theme-light-label="{{theme_light_label}}" aria-label="{{theme_label}}">
-          <span aria-hidden="true"></span>
-          <em data-theme-label>{{theme_mode_label}}</em>
-        </button>
+        <a class="utility-link" href="{{accessibility_url}}">{{accessibility_label}}</a>
       </div>
     </div>
   </div>
   <div class="container header-shell">
     <a class="brand" href="{{home_url}}" aria-label="{{home_label}}">
-      <img src="{{logo}}" width="154" height="40" alt="Rotata" />
+      {{logo_markup}}
     </a>
     {{nav_desktop}}
     <div class="header-actions">
       <a class="btn btn-primary" data-track="cta_click" href="{{cta_url}}">{{cta_label}}</a>
-      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="{{menu_label}}"><span></span><span></span><span></span></button>
     </div>
   </div>
   {{nav_mobile}}

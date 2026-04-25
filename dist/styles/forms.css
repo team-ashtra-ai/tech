@@ -21,7 +21,7 @@ textarea,
 select {
   width: 100%;
   border: 1px solid var(--color-border);
-  border-radius: 18px;
+  border-radius: var(--field-radius);
   background: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
   color: var(--color-text);
   padding: .95rem 1rem;

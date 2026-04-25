@@ -1,10 +1,16 @@
 {
   "service_interests": [
-    "CRM architecture",
-    "HubSpot",
-    "ZoomInfo",
+    "CRM",
+    "Data",
     "Outbound",
-    "Synapsale",
+    "Signals",
+    "Sales",
+    "Pipeline",
+    "Intelligence",
+    "Conversion",
+    "Alignment",
+    "Reporting",
+    "Integrations",
     "ROI",
     "Analytics",
     "Other"
@@ -45,6 +51,47 @@
       "message": "Ce qu'il faut structurer",
       "consent": "J'accepte la politique de confidentialité",
       "submit": "Envoyer diagnostic"
+    }
+  },
+  "newsletter": {
+    "es": {
+      "eyebrow": "Newsletter",
+      "heading": "¿Te gusta el blog?",
+      "body": "Suscríbete ahora y recibe lo último en IA y marketing digital.",
+      "first_name": "Nombre *",
+      "last_name": "Apellidos",
+      "email": "Email *",
+      "communications_consent": "Acepto recibir comunicaciones de Rotata Consulting SL.",
+      "privacy_prefix": "He leído y acepto la ",
+      "privacy_link": "Política de Privacidad",
+      "privacy_suffix": ".",
+      "submit": "Suscribirme"
+    },
+    "en": {
+      "eyebrow": "Newsletter",
+      "heading": "Do you like the blog?",
+      "body": "Subscribe now and receive the latest in AI and digital marketing.",
+      "first_name": "First Name *",
+      "last_name": "Last Name",
+      "email": "Email *",
+      "communications_consent": "I agree to receive communications from Rotata Consulting SL.",
+      "privacy_prefix": "I have read and agree to the ",
+      "privacy_link": "Privacy Policy",
+      "privacy_suffix": ".",
+      "submit": "Submit"
+    },
+    "fr": {
+      "eyebrow": "Newsletter",
+      "heading": "Vous aimez le blog ?",
+      "body": "Abonnez-vous maintenant et recevez les dernieres infos en IA et marketing digital.",
+      "first_name": "Prenom *",
+      "last_name": "Nom",
+      "email": "Email *",
+      "communications_consent": "J'accepte de recevoir des communications de Rotata Consulting SL.",
+      "privacy_prefix": "J'ai lu et j'accepte la ",
+      "privacy_link": "Politique de confidentialite",
+      "privacy_suffix": ".",
+      "submit": "Envoyer"
     }
   }
 }

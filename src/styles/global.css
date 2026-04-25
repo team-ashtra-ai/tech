@@ -1,4 +1,5 @@
 @import url("./tokens.css");
+@import url("./themes.css");
 @import url("./layout.css");
 @import url("./typography.css");
 @import url("./components.css");
@@ -40,16 +41,13 @@ body::before {
   background:
     linear-gradient(var(--color-grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
-  background-size: 88px 88px;
+  background-size: var(--body-grid-size) var(--body-grid-size);
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, .55), transparent 78%);
-  opacity: .34;
+  opacity: var(--body-grid-opacity);
 }
 
 body::after {
-  background:
-    radial-gradient(circle at 18% 18%, rgba(79, 200, 255, .12), transparent 18rem),
-    radial-gradient(circle at 82% 20%, rgba(255, 106, 124, .1), transparent 18rem),
-    radial-gradient(circle at 50% 100%, rgba(149, 240, 234, .1), transparent 28rem);
+  background: var(--body-atmosphere);
   filter: blur(26px);
   opacity: .7;
 }
