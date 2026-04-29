@@ -1,7 +1,0 @@
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPoint",
-  "telephone": "+34 649 49 82 72",
-  "contactType": "sales",
-  "email": "info@rotata.com"
-}

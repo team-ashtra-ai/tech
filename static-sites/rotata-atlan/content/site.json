@@ -1,0 +1,22 @@
+{
+  "name": "Rotata Atlan variation",
+  "theme": "atlan",
+  "reference": {
+    "name": "Atlan",
+    "url": "https://atlan.com/"
+  },
+  "description": "Context-layer inspired system intelligence interface for Rotata revenue operations.",
+  "positioning": "A B2B growth system company that designs and implements structured, AI-driven marketing and sales systems.",
+  "core_message": "We build the system behind your growth.",
+  "deployment": {
+    "platform": "Cloudflare Pages",
+    "build_command": "",
+    "output_directory": "/"
+  },
+  "locales": [
+    "en",
+    "es",
+    "fr"
+  ],
+  "required_pages_per_locale": 38
+}

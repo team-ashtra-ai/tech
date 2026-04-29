@@ -1,0 +1,161 @@
+<!doctype html><html lang="es" data-design-theme="system-noir" data-theme-surface="dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07131f">
+<title>¿Sabes cómo evitar que tus correos B2B acaben en spam? | Rotata</title><meta name="description" content="La guía B2B para que tus emails lleguen, se lean y generen pipeline Imagina que hoy te piden liderar una campaña de email en la que tu empresa tiene puestas [">
+<link rel="canonical" href="https://rotata.es/es/insights/blog/evitar-correos-b2b-acaben-en-spam/">
+<link rel="alternate" hreflang="es" href="https://rotata.es/es/insights/blog/evitar-correos-b2b-acaben-en-spam/"><link rel="alternate" hreflang="en" href="https://rotata.es/en/insights/blog/evitar-correos-b2b-acaben-en-spam/"><link rel="alternate" hreflang="fr" href="https://rotata.es/fr/insights/blog/evitar-correos-b2b-acaben-en-spam/">
+<meta property="og:type" content="article"><meta property="og:title" content="¿Sabes cómo evitar que tus correos B2B acaben en spam?"><meta property="og:description" content="La guía B2B para que tus emails lleguen, se lean y generen pipeline Imagina que hoy te piden liderar una campaña de email en la que tu empresa tiene puestas ["><meta property="og:image" content="https://rotata.es/assets/blog/rotata-imagen-correo-spam.png"><meta property="og:url" content="https://rotata.es/es/insights/blog/evitar-correos-b2b-acaben-en-spam/">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="¿Sabes cómo evitar que tus correos B2B acaben en spam?"><meta name="twitter:description" content="La guía B2B para que tus emails lleguen, se lean y generen pipeline Imagina que hoy te piden liderar una campaña de email en la que tu empresa tiene puestas ["><meta name="twitter:image" content="https://rotata.es/assets/blog/rotata-imagen-correo-spam.png">
+<link rel="icon" href="/assets/logo/rotata-favicon.png"><link rel="apple-touch-icon" href="/assets/logo/rotata-apple-touch-icon.png">
+<script>
+(() => {
+try {
+const theme = localStorage.getItem("rotata-design-theme");
+const surface = localStorage.getItem("rotata-design-surface");
+const color = localStorage.getItem("rotata-design-theme-color");
+if (theme) document.documentElement.dataset.designTheme = theme;
+if (surface) document.documentElement.dataset.themeSurface = surface;
+if (color) {
+const meta = document.querySelector('meta[name="theme-color"]');
+if (meta) meta.setAttribute("content", color);
+}
+} catch (error) {}
+})();
+</script>
+<link rel="stylesheet" href="/styles/site.css">
+<script>window.ROTATA_CONFIG = {"ga4Id": "", "gtmId": "", "linkedinPartnerId": "", "clarityId": "", "hubspotPortalId": "", "hubspotFormId": "", "formsEndpoint": ""};</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "¿Sabes cómo evitar que tus correos B2B acaben en spam?", "description": "La guía B2B para que tus emails lleguen, se lean y generen pipeline Imagina que hoy te piden liderar una campaña de email en la que tu empresa tiene puestas [", "datePublished": "2025-10-14", "author": {"@type": "Person", "name": "Ignacio San Luis Castellano"}, "publisher": {"@type": "Organization", "name": "Rotata Consulting SL", "logo": {"@type": "ImageObject", "url": "https://rotata.es/assets/logo/rotata-b2b-growth-system-logo.svg"}}, "image": "https://rotata.es/assets/blog/rotata-imagen-correo-spam.png", "mainEntityOfPage": "https://rotata.es/es/insights/blog/evitar-correos-b2b-acaben-en-spam/", "inLanguage": "es"}</script>
+</head><body class="page page-article">
+<a class="concept-skip-link" href="#main">Skip to content</a>
+<div data-partial="header" data-partial-locale="es"><noscript><nav class="concept-partial-fallback" aria-label="Basic navigation"><a href="/es/">Home</a><a href="/es/about/">About</a><a href="/es/solutions/">Solutions</a><a href="/es/services/">Services</a><a href="/es/system/">System</a><a href="/es/contact/">Contact</a></nav></noscript></div>
+<main id="main" class="site-main">
+<article class="article-shell">
+<p class="eyebrow">HubSpot</p>
+<h1>¿Sabes cómo evitar que tus correos B2B acaben en spam?</h1>
+<p class="lead">La guía B2B para que tus emails lleguen, se lean y generen pipeline Imagina que hoy te piden liderar una campaña de email en la que tu empresa tiene puestas […]</p>
+<p><small>Ignacio San Luis Castellano · 14 Oct 2025 · 8 min</small></p>
+<img src="/assets/blog/rotata-imagen-correo-spam.png" alt="lustración de Rotbot, el personaje de Rotata, observando una bandeja de entrada con un correo marcado como spam. Representa los problemas de entregabilidad en campañas de email marketing B2B." loading="eager" style="border-radius:28px;border:1px solid var(--color-border);margin:2rem 0;">
+<div class="article-content"><h2>La guía B2B para que tus emails lleguen, se lean y generen pipeline</h2>
+<p>Imagina que hoy te piden liderar una campaña de email en la que tu empresa tiene puestas grandes expectativas: se trata de abrir conversaciones con cuentas de alto valor y posicionar a tu empresa como un canal fiable para generar pipeline ahora y en el futuro, y no quieres que tus correos B2B acaben en spam. La manera más rápida de arruinarlo, y por la que se suele empezar, es por el asunto del correo. La manera correcta es empezar por donde casi nadie lo hace: la capa de autenticación, la salud del dominio y la reputación. Te cuento el camino completo, en orden, con el porqué y los riesgos de cada decisión.</p>
+<p></p>
+<h2><strong>La base invisible: SPF, DKIM, DMARC y BIMI</strong></h2>
+<p>Antes de entrar al detalle con estos cuatro conceptos, piensa que hablamos de estándares técnicos de autenticación e identidad del remitente. Si lo tuyo no es la tecnología y esto te suena muy técnico no te preocupes, tu papel no es configurarlo, pero si validar con tu equipo de IT que está hecho. Aquí tienes una explicación de alto nivel de cada uno de estos elementos:</p>
+<p></p>
+<ul>
+<li><strong>SPF</strong> es la lista de quién puede enviar correos en nombre de tu dominio. Así los receptores (Gmail, Outlook, Yahoo…) saben que, por ejemplo, <a href="https://rotata.es/partner/partner-hubspot-espana/" target="_blank" rel="noreferrer noopener"><strong><em>HubSpot</em></strong> </a>o SendGrid están autorizados. Si no está bien, tus correos pueden parecer falsos y acabar en spam.</li>
+</ul>
+<ul>
+<li><strong>DKIM</strong> garantiza que el mensaje no ha sido manipulado en el camino, lo que protege tanto tu reputación como la seguridad del receptor. Sin DKIM, cualquiera podría falsificar tus correos, y los proveedores podrían empezar a desconfiar de todo lo que venga de tu dominio.</li>
+</ul>
+<ul>
+<li><strong>DMARC</strong> une todo esto: se asegura de que el dominio visible para el usuario sea realmente el tuyo y establece qué hacer si algo falla (permitir, poner en cuarentena o rechazar el mensaje). Si DMARC no está configurado, los mensajes dudosos pueden pasar sin control, lo que aumenta el riesgo de suplantación o de que tus correos acaben en carpetas de spam.</li>
+</ul>
+<ul>
+<li><strong>BIMI</strong>, por su parte, añade una capa visual de confianza: muestra tu logotipo en la bandeja de entrada, reforzando el reconocimiento de marca y la seguridad percibida por el destinatario. Es especialmente útil en campañas de marca o newsletters, donde el reconocimiento visual impulsa la apertura y la confianza.</li>
+<li></li>
+</ul>
+<p><strong><em>Es muy importante destacar que estos aspectos técnicos no son un valor añadido, son requerimientos esenciales para que tenga sentido empezar a enviar correos</em></strong>. Si SPF/DKIM/DMARC no alinean, no sigas, solo conseguirás que correos B2B acaben en spam, es mejor retrasar un día que perder la reputación del dominio durante semanas. Habla con tu equipo de IT y asegúrate de que todo funciona correctamente.</p>
+<h2><strong>Prepara el dominio y protege tu reputación</strong></h2>
+<p>Antes de enviar tu primera campaña, asegúrate de que el dominio o subdominio desde el que enviarás está preparado. Utilizar un subdominio específico para las campañas tiene una ventaja clara: separa la reputación del correo comercial del resto de la comunicación corporativa, evitando que un problema en tus envíos afecte a toda la organización. Por ejemplo, podrías usar <strong>mail.tuempresa.com</strong> o <strong>news.tuempresa.com</strong> para tus campañas, mientras que tu correo habitual sigue siendo <strong>info@tuempresa.com</strong>; así, si algo va mal en los envíos de marketing, el correo corporativo no se ve afectado. Si acabas de configurarlo, comienza poco a poco. Enviar cientos de correos desde un dominio recién creado es como aparecer de golpe en una fiesta y empezar a gritar: nadie confiará en ti. Empieza con contactos activos, envíos pequeños y consistentes, y ve aumentando gradualmente. Así, los filtros aprenden que eres un remitente legítimo.</p>
+<p></p>
+<p>Por ejemplo, si lanzas una nueva newsletter de tu empresa, podrías empezar enviándola solo al equipo interno y a algunos clientes de confianza. Cuando veas que todo funciona bien —los correos llegan, se abren y se leen—, amplías poco a poco a listas más grandes. De esa manera, el servidor aprende a confiar en tu dominio y tú ganas seguridad de que todo está funcionando correctamente antes de escalar.</p>
+<p></p>
+<h2><strong>Limpieza y calidad de la base de datos</strong></h2>
+<p>Tu base de datos es el combustible del email marketing, pero si está sucia, el motor se para. Antes de cada envío, revisa que tus contactos sean actuales, que las direcciones no estén duplicadas o mal escritas y que nadie haya sido agregado sin su consentimiento. Piensa que enviar a quien no te espera es como aparecer sin invitación: puede que te abran la puerta, pero nadie te garantiza que tu visita sea bienvenida.</p>
+<p></p>
+<p>Por ejemplo, imagina que haces una campaña para presentar una nueva funcionalidad de tu producto. Si tu lista incluye contactos antiguos o inactivos, muchos no recordarán quién eres y marcarán tu correo como spam. En cambio, si filtras por quienes interactuaron en los últimos tres meses o descargaron un recurso reciente, tus tasas de apertura y respuesta se dispararán. Un “report spam” duele más que un “unsubscribe”, porque además de perder al contacto, afecta la reputación de tu dominio y puede hacer que los siguientes correos ni siquiera lleguen a la bandeja de entrada.</p>
+<p></p>
+<h2><strong>Un único objetivo por campaña</strong></h2>
+<p>Cuando prepares tu próxima campaña, escoge un solo objetivo claro: o conseguir una reunión, o lograr una respuesta, o incentivar una descarga. Intentar tres cosas a la vez —reunión, demo y descarga— suele confundir al lector y reduce la eficacia. Centra todo el mensaje en esa acción: desde el asunto y el texto previo que acompaña al asunto hasta el cuerpo del correo y la llamada a la acción (CTA). Así cada parte del mensaje empuja en la misma dirección y se evita perder atención en distracciones.</p>
+<p></p>
+<p>Por ejemplo, si el objetivo es obtener una conversación, la CTA podría ser “¿Te encaja una llamada de 15 minutos esta semana para ver si tiene sentido?”. Si el objetivo es despertar interés, se puede proponer “Te envío un resumen de una página y me dices si encaja”. En ambos casos, el consejo es mantener una sola acción por correo; las demás se pueden abordar en los mensajes siguientes.</p>
+<p></p>
+<h2><strong>Escribir para personas (y para los filtros)</strong></h2>
+<p>El texto de tus correos debe sonar humano, no publicitario. Aquí es donde conviene tener a mano el artículo de <strong>HubSpot “The Ultimate List of Email Spam Trigger Words”</strong> (<a href="https://blog.hubspot.com/blog/tabid/6307/bid/30684/the-ultimate-list-of-email-spam-trigger-words.aspx" target="_blank" rel="noreferrer noopener"><strong><em>https://blog.hubspot.com/blog/tabid/6307/bid/30684/the-ultimate-list-of-email-spam-trigger-words.aspx</em></strong></a>). Evita las palabras y tonos que los filtros asocian con spam: urgencias exageradas, promesas imposibles o gritos de venta. En lugar de “¡GRAN DESCUENTO!” o “¡OFERTA ÚNICA!”, explica qué gana el lector y por qué merece su tiempo. Es mejor un “Te comparto un recurso que puede ahorrarte trabajo” que un “¡Aprovecha hoy y multiplica tus resultados!”.</p>
+<p></p>
+<p>El asunto no está para impresionar, sino para ser creíble. Piensa en él como la frase que usarías si tuvieras tres segundos para convencer a alguien de abrir tu correo. El texto de vista previa, por su parte, debe complementar el mensaje, no repetirlo. Por ejemplo, si el asunto es “Cómo reducir el tiempo de tus campañas sin gastar más”, el texto de vista previa puede añadir contexto: “Te cuento las tres automatizaciones que más tiempo ahorran”. Si prometes algo en el asunto, asegúrate de cumplirlo en el cuerpo: los filtros y los lectores detectan la incoherencia enseguida.</p>
+<p></p>
+<h2><strong>Personaliza con sentido</strong></h2>
+<p>La personalización no va de poner nombres entre corchetes. Va de demostrar que sabes con quién hablas. Si escribes a una directora de marketing, menciónale un reto que sepas que enfrenta su equipo o un dato relevante de su sector, como las dificultades para integrar nuevas herramientas o medir el retorno de una campaña. Por ejemplo, puedes escribirle algo tan sencillo como: “He visto que vuestro equipo está trabajando con varias plataformas de automatización; justo hemos ayudado a otras empresas del sector a simplificar ese proceso”. Pero no te pases: usar información privada o excesiva genera rechazo. La buena personalización es la que aporta contexto, no la que invade.</p>
+<p></p>
+<h2><strong>Diseña una secuencia que respire</strong></h2>
+<p>No todo se decide con un solo correo. Las campañas efectivas combinan varios mensajes espaciados y, sobre todo, distintos canales. Por ejemplo, el primer correo puede presentar la propuesta, el segundo profundizar en un beneficio y el tercero invitar a conversar o agendar una reunión. Mientras tanto, puedes reforzar el mensaje desde otros frentes: una interacción en LinkedIn para agradecer una publicación o comentar algo relevante, seguida de una llamada breve para cerrar la conversación iniciada por correo.</p>
+<p></p>
+<p>Imagina que envías un primer email con un recurso útil, unos días después te conectas por LinkedIn y agradeces su interés, y finalmente haces una llamada para ofrecerte a resolver dudas. Esa combinación mantiene la conversación viva sin resultar insistente y genera una relación más natural. En definitiva, una buena secuencia respira y fluye entre canales, como una charla que se retoma en distintos momentos.</p>
+<p></p>
+<h2><strong>Evalúa lo que importa</strong></h2>
+<p>Medir importa tanto como enviar. Las aperturas te dicen quién te vio, pero las respuestas y conversiones te dicen quién realmente te creyó. Mide todo lo que conecta con negocio: tasa de entrega, aperturas, clics, respuestas, conversiones y reuniones agendadas. Cada métrica te cuenta una historia distinta. Por ejemplo, una tasa de entrega baja puede indicar problemas de reputación o errores de configuración técnica; una tasa de apertura alta con pocas respuestas sugiere que el asunto atrae, pero el contenido no convence; una tasa de clics baja puede revelar falta de claridad en la llamada a la acción; y una tasa de respuesta positiva baja te dirá que quizá el mensaje no está llegando al público correcto.</p>
+<p></p>
+<p>Para mejorar los resultados, revisa los informes con espíritu analítico: prueba distintos asuntos y textos de vista previa, varía el horario de envío o el día de la semana, y experimenta con diferentes longitudes y tonos. Documenta lo que aprendas en cada campaña, porque los patrones de comportamiento se repiten y anticiparlos te da ventaja. Recuerda que los datos no son el fin, sino el mapa: te muestran por dónde avanzar y qué caminos evitar.</p>
+<p></p>
+<h2><strong>Ética y constancia: el verdadero diferenciador</strong></h2>
+<p>El email marketing no va de encontrar el truco, sino de construir confianza. No exageres resultados, no fuerces urgencias falsas, no disfraces promociones como exclusivas. A largo plazo, los contactos que confían en ti abren, leen y responden más. Recuerda que autenticación impecable, base limpia, mensajes honestos y cadencia humana son la combinación que realmente construye marca y pipeline. Esa es la diferencia entre enviar correos y generar relaciones.</p>
+<p></p>
+<h2>¿Quieres sabe mas sobre como optimizar tu estrategia de email marketing?</h2>
+<p>Reserva una sesión de diagnóstico gratuita y te ayudaremos a identificar los puntos de mejora y las oportunidades de crecimiento. <strong><em><a href="https://meetings.hubspot.com/isanluiscastellano/business-calendar-expert">Agenda</a>.</em></strong></p>
+<p></p></div>
+</article>
+<section class="section"><div class="container wide"><div class="section-heading"><p class="eyebrow">Related</p><h2>Lecturas relacionadas</h2></div><div class="grid-3"><article class="blog-card"><a href="/es/insights/blog/errores-estructura-hubspot-informes/"><img src="/assets/partners/rotata-errores-de-estructura-en-hubspot-que-distorsionan-tus-informes.png" alt="Autor de Rotata señalándose la sien, rodeado de gráficos de HubSpot, pipeline y reporting que ilustran errores de estructura en el CRM." loading="lazy"><span>HubSpot</span><h3>Errores de estructura en HubSpot que distorsionan tus informes</h3><p>Muchas empresas implantan HubSpot con una expectativa lógica: ordenar su actividad comercial, ganar visibilidad y medir mejor. El problema es que un CRM no corrige por sí solo un proceso […]</p><small>15 Abr 2026 · 8 min</small></a></article>
+<article class="blog-card"><a href="/es/insights/blog/informe-hubspot-state-of-marketing-2026-tendencias-clave-en-marketing-b2b/"><img src="/assets/partners/rotata-logo-hubspot-informe-2026.png" alt="Portada del informe State of Marketing 2026 de HubSpot sobre tendencias de marketing impulsadas por inteligencia artificial" loading="lazy"><span>HubSpot</span><h3>Informe HubSpot State of Marketing 2026: tendencias clave en marketing B2B</h3><p>El Informe HubSpot State of Marketing 2026 analiza cómo la inteligencia artificial, la automatización y la orientación a resultados están redefiniendo el marketing B2B. En un contexto de mayor presión […]</p><small>02 Feb 2026 · 4 min</small></a></article>
+<article class="blog-card"><a href="/es/insights/blog/busqueda-generativa-sge-google-b2b/"><img src="/assets/blog/rotata-busqueda-generativa-sge-de-google-visibilidad-b2b-rotata.png" alt="Ilustración de Rotbot señalando un embudo de ventas y un panel con ROI, representando cómo la búsqueda generativa (SGE) de Google impacta la visibilidad B2B." loading="lazy"><span>CRM</span><h3>Google puede eclipsar tu web: ¿Estás siendo víctima de la búsqueda generativa (SGE)?</h3><p>Por Ignacio San Luis Castellano, CEO de Rotata ¿Te has fijado en que, en muchas búsquedas, la búsqueda generativa (SGE) de Google ya muestra una respuesta de IA antes de […]</p><small>12 Ago 2025 · 8 min</small></a></article>
+</div></div></section>
+<section class="section final-cta"><div class="container cta-panel"><p class="eyebrow">Rotata</p><h2>Ordenemos tu sistema de crecimiento</h2><a class="btn btn-primary" data-track="cta_click" href="/es/contact/consult/">Consulta</a></div></section>
+<div class="newsletter-modal" data-newsletter-modal hidden>
+<button class="newsletter-backdrop" type="button" data-newsletter-close tabindex="-1" aria-hidden="true"></button>
+<section class="newsletter-dialog glass-panel" role="dialog" aria-modal="true" aria-labelledby="newsletter-modal-title" data-newsletter-dialog>
+<button class="newsletter-close" type="button" data-newsletter-close aria-label="Cerrar">×</button>
+<div class="newsletter-shell">
+<div class="newsletter-copy">
+<p class="eyebrow">Newsletter</p>
+<h2 id="newsletter-modal-title">¿Te gusta el blog?</h2>
+<p class="lead">Suscríbete ahora y recibe lo último en IA y marketing digital.</p>
+</div>
+<div class="newsletter-form-wrap">
+<form class="form newsletter-form" data-form="newsletter" novalidate>
+<div class="form-grid">
+<label>Nombre *<input name="first_name" autocomplete="given-name" required></label>
+<label>Apellidos<input name="last_name" autocomplete="family-name"></label>
+</div>
+<label>Email *<input name="email" type="email" autocomplete="email" required></label>
+<label class="consent-line"><input type="checkbox" name="newsletter_consent" required> <span>Acepto recibir comunicaciones de Rotata Consulting SL.</span></label>
+<label class="consent-line"><input type="checkbox" name="privacy_consent" required> <span>He leído y acepto la <a href="/es/legal/privacy/">Política de Privacidad</a>.</span></label>
+<input type="text" name="website_confirm" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="source_page" value="article:evitar-correos-b2b-acaben-en-spam">
+<input type="hidden" name="language" value="es">
+<input type="hidden" name="subscription_type" value="newsletter">
+<input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+<input type="hidden" name="referrer">
+<button class="btn btn-primary" type="submit">Suscribirme</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</section>
+</div>
+</main><div data-partial="footer" data-partial-locale="es"></div>
+
+<div class="floating-actions" aria-label="Quick actions">
+<button class="float-button back-to-top" type="button" data-back-to-top aria-label="Volver arriba">↑</button>
+<a class="float-button whatsapp" href="https://wa.me/34649498272?text=Hola%20Rotata%2C%20quiero%20revisar%20mi%20sistema%20de%20crecimiento%20B2B." aria-label="Hablar por WhatsApp" data-track="whatsapp_click">WA</a>
+<button class="float-button rotbot-button" type="button" data-rotbot-toggle aria-expanded="false" aria-controls="rotbot-panel" aria-label="Abrir Soy Rotbot">
+<img src="/assets/images/rotata-rotbot-ai-assistant.png" alt="">
+</button>
+</div>
+<aside class="rotbot-panel" id="rotbot-panel" data-rotbot-panel hidden>
+<div class="rotbot-head">
+<img src="/assets/images/rotata-rotbot-ai-assistant.png" alt="">
+<div><strong>Soy Rotbot</strong><span>Asistente de sistemas B2B</span></div>
+<button class="rotbot-close" type="button" data-rotbot-close aria-label="Close">×</button>
+</div>
+<div class="rotbot-messages" data-rotbot-messages>
+<p class="rotbot-message bot">Hola. Puedo ayudarte a ubicar el problema: CRM, datos, outbound, ROI o automatización.</p>
+</div>
+<div class="rotbot-prompts">
+<button type="button" data-rotbot-prompt data-rotbot-reply="Primero revisaríamos datos, lifecycle stages, pipeline, workflows y dashboards. Después priorizamos lo que bloquea decisiones.">Quiero ordenar HubSpot</button>
+<button type="button" data-rotbot-prompt data-rotbot-reply="La ruta suele ser targeting, señales de cuenta, mensajes, secuencias y medición conectada al CRM.">Necesito más reuniones cualificadas</button>
+<button type="button" data-rotbot-prompt data-rotbot-reply="Usa la calculadora ROI y después podemos revisar supuestos comerciales, conversión y velocidad de pipeline.">Calcular ROI</button>
+<a href="/es/insights/roi/" data-track="roi_widget_click">Calcular ROI</a>
+<a href="/es/contact/" data-track="cta_click">Hablar con Rotata</a>
+</div>
+</aside>
+<script type="module" src="/scripts/partials.js"></script>
+<script type="module" src="/scripts/site.js"></script></body></html>

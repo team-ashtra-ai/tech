@@ -1,0 +1,22 @@
+{
+  "name": "Rotata Databricks variation",
+  "theme": "databricks",
+  "reference": {
+    "name": "Databricks",
+    "url": "https://www.databricks.com/"
+  },
+  "description": "Data-and-AI platform inspired architecture interface for Rotata growth systems.",
+  "positioning": "A B2B growth system company that designs and implements structured, AI-driven marketing and sales systems.",
+  "core_message": "We build the system behind your growth.",
+  "deployment": {
+    "platform": "Cloudflare Pages",
+    "build_command": "",
+    "output_directory": "/"
+  },
+  "locales": [
+    "en",
+    "es",
+    "fr"
+  ],
+  "required_pages_per_locale": 38
+}

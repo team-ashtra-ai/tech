@@ -1,0 +1,22 @@
+{
+  "name": "Rotata Runpod variation",
+  "theme": "runpod",
+  "reference": {
+    "name": "Runpod",
+    "url": "https://www.runpod.io/"
+  },
+  "description": "GPU-infrastructure inspired execution layer for Rotata workflow and automation control.",
+  "positioning": "A B2B growth system company that designs and implements structured, AI-driven marketing and sales systems.",
+  "core_message": "We build the system behind your growth.",
+  "deployment": {
+    "platform": "Cloudflare Pages",
+    "build_command": "",
+    "output_directory": "/"
+  },
+  "locales": [
+    "en",
+    "es",
+    "fr"
+  ],
+  "required_pages_per_locale": 38
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Rotata Vectara variation",
+  "theme": "vectara",
+  "reference": {
+    "name": "Vectara",
+    "url": "https://www.vectara.com/"
+  },
+  "description": "Agentic-search inspired answer and guardrail interface for Rotata commercial decisions.",
+  "positioning": "A B2B growth system company that designs and implements structured, AI-driven marketing and sales systems.",
+  "core_message": "We build the system behind your growth.",
+  "deployment": {
+    "platform": "Cloudflare Pages",
+    "build_command": "",
+    "output_directory": "/"
+  },
+  "locales": [
+    "en",
+    "es",
+    "fr"
+  ],
+  "required_pages_per_locale": 38
+}
