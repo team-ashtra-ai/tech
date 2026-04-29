@@ -1,0 +1,119 @@
+@import url("./tokens.css");
+@import url("./themes.css");
+@import url("./layout.css");
+@import url("./typography.css");
+@import url("./components.css");
+@import url("./navigation.css");
+@import url("./forms.css");
+@import url("./cards.css");
+@import url("./animations.css");
+@import url("./responsive.css");
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-body);
+}
+
+body {
+  margin: 0;
+  position: relative;
+  background: var(--body-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  min-width: 320px;
+  overflow-x: clip;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: var(--body-grid-size) var(--body-grid-size);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, .55), transparent 78%);
+  opacity: var(--body-grid-opacity);
+}
+
+body::after {
+  background: var(--body-atmosphere);
+  filter: blur(26px);
+  opacity: .7;
+}
+
+.site-main {
+  position: relative;
+  isolation: isolate;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--color-accent-2) 38%, transparent);
+  text-underline-offset: .22em;
+  transition: color var(--motion-fast), text-decoration-color var(--motion-fast);
+}
+
+a:hover {
+  color: var(--color-text);
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 42%, transparent);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 42%, transparent);
+  color: #fff;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 999;
+  background: var(--color-text);
+  color: var(--color-ink);
+  padding: .75rem 1rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hard);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}

@@ -1605,6 +1605,7 @@ SITE_PREFIX = {
 
 def showcase_header(site: dict, lang: str, page_key: str) -> str:
     prefix = SITE_PREFIX[site["id"]]
+    home = showcase_url(site["id"], lang)
     contact = showcase_url(site["id"], lang, "contact-consult")
     action_labels = {
         "databricks": ("Login", "Try Rotata"),
@@ -1613,17 +1614,39 @@ def showcase_header(site: dict, lang: str, page_key: str) -> str:
         "runpod": ("Contact Sales", "Sign Up"),
         "vectara": ("Log in", "Book a demo"),
     }[site["id"]]
-    top = ""
     if site["id"] == "datagrail":
-        top = '<div class="dg-announcement">Introducing Vera for Rotata: a human-governed system agent. <a href="#main">Learn more.</a></div>'
-    elif site["id"] == "runpod":
+        note_label, note_text, note_cta = {
+            "es": ("Agente Vera", "Controles humanos para el sistema de crecimiento.", "Mapear sistema"),
+            "en": ("Vera agent", "Human controls for the growth system.", "Map system"),
+            "fr": ("Agent Vera", "Controles humains pour le systeme de croissance.", "Cartographier"),
+        }[lang]
+        return (
+            '<header class="dg-header concept-site-header">'
+            '<div class="dg-header-note">'
+            f'<a class="dg-note-primary" href="#main"><span class="dg-note-pill">{esc(note_label)}</span><span class="dg-note-text">{esc(note_text)}</span></a>'
+            f'<a class="dg-note-link" href="{contact}">{esc(note_cta)}</a>'
+            '</div>'
+            '<div class="dg-header-main">'
+            f'<a class="dg-brand" href="{home}" aria-label="Rotata home">{theme_logo_markup(154, 40)}</a>'
+            f'<nav class="dg-nav" aria-label="Rotata concept navigation">{showcase_nav(lang, site["id"], page_key)}</nav>'
+            '<div class="dg-header-actions">'
+            f'<a class="dg-action dg-action-secondary" href="{contact}">{esc(action_labels[0])}</a>'
+            f'<a class="dg-action dg-action-primary" href="{contact}">{esc(action_labels[1])}</a>'
+            f'{showcase_menu_button(lang)}'
+            '</div>'
+            '</div>'
+            '</header>'
+            + showcase_mobile_nav(lang, site["id"], page_key)
+        )
+    top = ""
+    if site["id"] == "runpod":
         top = '<div class="rp-topline">Rotata x system operators: pipeline infrastructure challenge is live <a href="#main">Read more</a></div>'
     elif site["id"] == "vectara":
         top = '<div class="vc-blog-strip">Read more about how Rotata is pioneering system engineering. <a href="#main">Read the blog</a></div>'
     return (
         top
         + f'<header class="{prefix}-header concept-site-header">'
-        + f'<a class="{prefix}-brand" href="{showcase_url(site["id"], lang)}" aria-label="Rotata home">{theme_logo_markup(154, 40)}</a>'
+        + f'<a class="{prefix}-brand" href="{home}" aria-label="Rotata home">{theme_logo_markup(154, 40)}</a>'
         + f'<nav class="{prefix}-nav" aria-label="Rotata concept navigation">{showcase_nav(lang, site["id"], page_key)}</nav>'
         + showcase_menu_button(lang)
         + f'<div class="concept-actions"><a href="{contact}">{esc(action_labels[0])}</a><a href="{contact}">{esc(action_labels[1])}</a></div>'
@@ -1807,6 +1830,7 @@ def showcase_mapping(lang: str, site: dict) -> dict[str, str]:
     return {
         "home_url": page_url("home", lang),
         "logo_markup": theme_logo_markup(154, 40),
+        "concept_header": showcase_header(site, lang, "home"),
         "concept_nav": showcase_nav(lang, site["id"], "home"),
         "concept_menu_button": showcase_menu_button(lang),
         "concept_mobile_nav": showcase_mobile_nav(lang, site["id"], "home"),

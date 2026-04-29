@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Rotata growth system overlay</title>
+  <desc id="desc">Abstract CRM pipeline network with structured data nodes.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#136888" stop-opacity=".9"/>
+      <stop offset=".55" stop-color="#253657" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#E7304D" stop-opacity=".75"/>
+    </linearGradient>
+    <radialGradient id="r" cx="50%" cy="40%" r="55%">
+      <stop offset="0" stop-color="#E6F5F8" stop-opacity=".45"/>
+      <stop offset=".42" stop-color="#136888" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#08151D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="1400" height="900" fill="#08151D"/>
+  <rect width="1400" height="900" fill="url(#r)"/>
+  <g opacity=".42">
+    <path d="M88 702 C260 520 362 590 512 410 S865 270 1040 370 1210 515 1322 280" fill="none" stroke="url(#g)" stroke-width="3"/>
+    <path d="M130 330 C315 270 420 360 570 280 S850 94 1050 190 1190 255 1300 150" fill="none" stroke="#9BE1E5" stroke-width="1.5" stroke-dasharray="10 14"/>
+  </g>
+  <g fill="none" stroke="#9BE1E5" stroke-opacity=".22">
+    <path d="M140 140h1120M140 260h1120M140 380h1120M140 500h1120M140 620h1120M140 740h1120"/>
+    <path d="M220 90v720M420 90v720M620 90v720M820 90v720M1020 90v720M1220 90v720"/>
+  </g>
+  <g>
+    <circle cx="240" cy="650" r="12" fill="#E7304D"/>
+    <circle cx="510" cy="410" r="15" fill="#9BE1E5"/>
+    <circle cx="830" cy="285" r="13" fill="#E6F5F8"/>
+    <circle cx="1110" cy="415" r="16" fill="#136888"/>
+    <circle cx="1260" cy="270" r="11" fill="#E7304D"/>
+  </g>
+  <g filter="url(#blur)" opacity=".45">
+    <circle cx="740" cy="420" r="170" fill="#136888"/>
+    <circle cx="1080" cy="290" r="130" fill="#E7304D"/>
+  </g>
+</svg>

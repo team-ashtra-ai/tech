@@ -1,0 +1,115 @@
+/* Shared design tokens and fallbacks for the theme demo system. */
+:root {
+  color-scheme: dark;
+  --color-ink: #050c16;
+  --color-ink-2: #091220;
+  --color-body: #060f1a;
+  --color-primary: #23385b;
+  --color-surface: #0c1727;
+  --color-surface-2: #101d31;
+  --color-surface-3: #15253c;
+  --color-panel: rgba(12, 23, 39, .7);
+  --color-panel-soft: rgba(13, 22, 36, .54);
+  --color-panel-strong: rgba(8, 15, 27, .9);
+  --color-header: rgba(5, 11, 20, .24);
+  --color-text: #f6f3ed;
+  --color-muted: #a8b5c7;
+  --color-accent: #ff6a7c;
+  --color-accent-2: #4fc8ff;
+  --color-signal: #95f0ea;
+  --color-gold: #f2c070;
+  --color-success: #36d9a0;
+  --color-warning: #f0be61;
+  --color-error: #ff6b7d;
+  --color-border: rgba(246, 243, 237, .12);
+  --color-border-strong: rgba(246, 243, 237, .22);
+  --color-grid: rgba(246, 243, 237, .06);
+  --color-focus: #95f0ea;
+  --body-background:
+    radial-gradient(circle at 12% 14%, rgba(79, 200, 255, .18), transparent 28rem),
+    radial-gradient(circle at 86% 18%, rgba(255, 106, 124, .14), transparent 24rem),
+    radial-gradient(circle at 50% 120%, rgba(149, 240, 234, .08), transparent 36rem),
+    linear-gradient(180deg, #050c16, #08111d 28%, #091522 52%, #060f1a);
+  --body-atmosphere:
+    radial-gradient(circle at 18% 18%, rgba(79, 200, 255, .12), transparent 18rem),
+    radial-gradient(circle at 82% 20%, rgba(255, 106, 124, .1), transparent 18rem),
+    radial-gradient(circle at 50% 100%, rgba(149, 240, 234, .1), transparent 28rem);
+  --body-grid-size: 88px;
+  --body-grid-opacity: .34;
+  --color-hero-overlay: linear-gradient(90deg, rgba(6, 12, 21, .92) 0%, rgba(7, 14, 25, .74) 44%, rgba(7, 14, 25, .34) 78%);
+  --hero-after-background:
+    radial-gradient(circle at 70% 35%, rgba(149, 240, 234, .12), transparent 18rem),
+    radial-gradient(circle at 82% 68%, rgba(255, 106, 124, .16), transparent 24rem);
+  --footer-background:
+    radial-gradient(circle at 16% 12%, rgba(79, 200, 255, .1), transparent 18rem),
+    radial-gradient(circle at 86% 18%, rgba(255, 106, 124, .14), transparent 20rem),
+    linear-gradient(180deg, rgba(6, 12, 21, 0), rgba(6, 12, 21, .74) 14%, rgba(6, 12, 21, .94));
+  --font-heading: "Space Grotesk", "Aptos Display", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Aptos", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Aptos Mono", "Consolas", monospace;
+  --space-4: .25rem;
+  --space-8: .5rem;
+  --space-12: .75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-56: 3.5rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-112: 7rem;
+  --space-128: 8rem;
+  --container-small: 760px;
+  --container-medium: 980px;
+  --container-large: 1200px;
+  --container-wide: 1360px;
+  --container-hero: 1440px;
+  --radius-sm: 12px;
+  --radius-md: 22px;
+  --radius-lg: 34px;
+  --radius-xl: 42px;
+  --radius-pill: 999px;
+  --header-shell-radius: 999px;
+  --utility-shell-radius: 999px;
+  --nav-shell-radius: 999px;
+  --button-radius: 999px;
+  --card-radius: 22px;
+  --visual-radius: 42px;
+  --field-radius: 18px;
+  --eyebrow-radius: 999px;
+  --hero-top-offset: 224px;
+  --panel-blur: 20px;
+  --panel-top-highlight: rgba(255, 255, 255, .05);
+  --panel-top-highlight-strong: rgba(255, 255, 255, .06);
+  --eyebrow-bg: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
+  --eyebrow-border: color-mix(in srgb, var(--color-signal) 18%, var(--color-border));
+  --eyebrow-color: var(--color-signal);
+  --btn-primary-bg: linear-gradient(135deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 48%, var(--color-gold)));
+  --btn-primary-color: #fff;
+  --btn-primary-shadow: 0 18px 44px color-mix(in srgb, var(--color-accent) 28%, transparent);
+  --btn-secondary-bg: color-mix(in srgb, var(--color-panel-soft) 92%, transparent);
+  --btn-secondary-border: var(--color-border);
+  --btn-secondary-color: var(--color-text);
+  --section-background-accent:
+    radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--color-accent-2) 12%, transparent), transparent 16rem),
+    radial-gradient(circle at 88% 84%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 16rem);
+  --section-number-color: color-mix(in srgb, var(--color-accent-2) 48%, var(--color-text));
+  --heading-letter-spacing: -.035em;
+  --heading-line-height: .96;
+  --hero-image-opacity: .9;
+  --hero-image-filter: saturate(1.06) contrast(1.05);
+  --shadow-soft: 0 34px 90px rgba(0, 0, 0, .34);
+  --shadow-card: 0 20px 56px rgba(2, 10, 18, .32);
+  --shadow-hard: 0 10px 28px rgba(2, 9, 17, .5);
+  --shadow-hero: 0 42px 120px rgba(0, 0, 0, .46);
+  --motion-fast: 180ms cubic-bezier(.2, .8, .2, 1);
+  --motion-medium: 320ms cubic-bezier(.2, .8, .2, 1);
+  --motion-slow: 640ms cubic-bezier(.2, .8, .2, 1);
+  --z-header: 60;
+  --z-menu: 80;
+  --z-cookie: 100;
+  --z-widget: 90;
+}

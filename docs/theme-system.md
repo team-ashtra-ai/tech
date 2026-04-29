@@ -31,6 +31,8 @@ Spanish and French variants are generated at `/showcase/<id>/` and `/fr/showcase
 
 The concepts are reference-inspired only. They reuse Rotata positioning and generated Rotata assets; they do not copy reference text or proprietary assets.
 
+DataGrail uses the generated `showcase_header()` path for both its home route and subpages, so its redesigned header, desktop nav and mobile menu stay in one source path while the home body remains in `src/partials/theme-sites/datagrail.html`.
+
 ## URL Builder
 
 The older token builder is still available for future experiments, but it does not create complete concept sites. Use it only to analyze a reference URL into token overrides:
