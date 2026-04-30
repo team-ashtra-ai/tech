@@ -1,0 +1,7 @@
+{
+  "contact_endpoint": "https://formspree.io/f/REPLACE_WITH_FORM_ID",
+  "newsletter_endpoint": "https://formspree.io/f/REPLACE_WITH_FORM_ID",
+  "method": "POST",
+  "provider": "Formspree",
+  "note": "Replace the endpoint IDs before production. The endpoint lives in JSON so HTML stays static."
+}

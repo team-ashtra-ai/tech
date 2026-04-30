@@ -1,0 +1,22 @@
+{
+  "name": "Rotata DataGrail variation",
+  "theme": "datagrail",
+  "reference": {
+    "name": "DataGrail",
+    "url": "https://www.datagrail.io/"
+  },
+  "description": "Privacy-agent inspired operating control interface for Rotata system clarity.",
+  "positioning": "A B2B growth system company that designs and implements structured, AI-driven marketing and sales systems.",
+  "core_message": "We build the system behind your growth.",
+  "deployment": {
+    "platform": "Cloudflare Pages",
+    "build_command": "",
+    "output_directory": "/"
+  },
+  "locales": [
+    "en",
+    "es",
+    "fr"
+  ],
+  "required_pages_per_locale": 38
+}
