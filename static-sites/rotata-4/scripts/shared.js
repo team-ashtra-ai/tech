@@ -199,9 +199,7 @@ const injectSupportLayer = () => {
   const chatClose = panel.querySelector("[data-concept-chat-close]");
   const chatLog = panel.querySelector("[data-concept-chat-log]");
 
-  const setTop = () => topButton?.classList.toggle("is-visible", window.scrollY > 520);
-  setTop();
-  window.addEventListener("scroll", setTop, { passive: true });
+  topButton?.classList.add("is-visible");
   topButton?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
   const setChat = (open) => {
